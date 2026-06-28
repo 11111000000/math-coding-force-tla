@@ -10,360 +10,152 @@
     --bg-card: #111827;
     --bg-card-hover: #1a2332;
     --border: #1e293b;
-    --border-accent: #3b82f6;
     --text: #e2e8f0;
     --text-dim: #94a3b8;
     --text-bright: #f8fafc;
     --accent: #60a5fa;
     --accent-dim: #3b82f6;
     --green: #34d399;
-    --amber: #fbbf24;
-    --red: #f87171;
     --purple: #a78bfa;
+    --amber: #fbbf24;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
+    background: var(--bg); color: var(--text); line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* ── Nav ── */
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    background: rgba(11, 15, 25, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  nav .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-  }
-  nav .logo {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-bright);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
+  /* Nav */
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(11,15,25,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  nav .container { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .logo { font-size: 14px; font-weight: 700; color: var(--text-bright); text-decoration: none; letter-spacing: -0.02em; }
   nav .logo span { color: var(--accent); }
-  nav .links { display: flex; gap: 24px; }
-  nav .links a {
-    font-size: 13px;
-    color: var(--text-dim);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  nav .links a:hover { color: var(--text-bright); }
+  nav .right { display: flex; align-items: center; gap: 20px; }
+  nav .links { display: flex; gap: 20px; }
+  nav .links a, nav .lang-switch a { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  nav .links a:hover, nav .lang-switch a:hover { color: var(--text-bright); }
+  nav .lang-switch { display: flex; gap: 6px; padding-left: 16px; border-left: 1px solid var(--border); }
+  nav .lang-switch a { font-size: 12px; font-weight: 600; padding: 2px 6px; border-radius: 3px; }
+  nav .lang-switch a.active { color: var(--accent); background: rgba(59,130,246,0.12); }
 
-  /* ── Hero ── */
-  .hero {
-    padding: 140px 0 80px;
-    text-align: center;
-  }
-  .hero-badge {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border: 1px solid var(--accent-dim);
-    padding: 4px 12px;
-    border-radius: 4px;
-    margin-bottom: 32px;
-  }
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800;
-    color: var(--text-bright);
-    line-height: 1.15;
-    margin-bottom: 24px;
-    letter-spacing: -0.03em;
-  }
+  /* Hero */
+  .hero { padding: 140px 0 80px; text-align: center; }
+  .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-dim); padding: 4px 12px; border-radius: 4px; margin-bottom: 32px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; color: var(--text-bright); line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.03em; }
   .hero h1 .dim { color: var(--text-dim); font-weight: 400; }
-  .hero p {
-    font-size: 17px;
-    color: var(--text-dim);
-    max-width: 580px;
-    margin: 0 auto 40px;
-    line-height: 1.8;
-  }
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.2s;
-    border: 1px solid transparent;
-  }
-  .btn-primary {
-    background: var(--accent-dim);
-    color: #fff;
-    border-color: var(--accent-dim);
-  }
+  .hero p { font-size: 17px; color: var(--text-dim); max-width: 580px; margin: 0 auto 40px; line-height: 1.8; }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-family: inherit; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 6px; transition: all 0.2s; border: 1px solid transparent; }
+  .btn-primary { background: var(--accent-dim); color: #fff; border-color: var(--accent-dim); }
   .btn-primary:hover { background: #2563eb; }
-  .btn-secondary {
-    background: transparent;
-    color: var(--text);
-    border-color: var(--border);
-  }
+  .btn-secondary { background: transparent; color: var(--text); border-color: var(--border); }
   .btn-secondary:hover { border-color: var(--text-dim); background: var(--bg-card); }
 
-  /* ── Pipeline ── */
+  /* Section */
   .section { padding: 80px 0; }
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 12px;
-  }
-  .section h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text-bright);
-    margin-bottom: 16px;
-    letter-spacing: -0.02em;
-  }
-  .section > .container > p {
-    color: var(--text-dim);
-    max-width: 600px;
-    margin-bottom: 48px;
-  }
+  .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .section h2 { font-size: 28px; font-weight: 700; color: var(--text-bright); margin-bottom: 16px; letter-spacing: -0.02em; }
+  .section > .container > p { color: var(--text-dim); max-width: 600px; margin-bottom: 48px; }
 
-  .pipeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 2px;
-  }
-  .pipeline-step {
-    background: var(--bg-card);
-    padding: 24px 16px;
-    text-align: center;
-    position: relative;
-    transition: background 0.2s;
-  }
-  .pipeline-step:hover { background: var(--bg-card-hover); }
+  /* Pipeline — 7 in a row */
+  .pipeline { display: flex; gap: 2px; }
+  .pipeline-step { flex: 1; min-width: 0; background: var(--bg-card); padding: 20px 8px; text-align: center; transition: background 0.2s; }
   .pipeline-step:first-child { border-radius: 8px 0 0 8px; }
   .pipeline-step:last-child { border-radius: 0 8px 8px 0; }
-  .pipeline-step .num {
-    font-size: 11px;
-    color: var(--accent);
-    margin-bottom: 8px;
-    font-weight: 700;
-  }
-  .pipeline-step .name {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-bright);
-    margin-bottom: 4px;
-  }
-  .pipeline-step .file {
-    font-size: 11px;
-    color: var(--text-dim);
-  }
-  .pipeline-arrow {
-    display: none;
+  .pipeline-step:hover { background: var(--bg-card-hover); }
+  .pipeline-step .num { font-size: 11px; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
+  .pipeline-step .name { font-size: 12px; font-weight: 600; color: var(--text-bright); margin-bottom: 2px; }
+  .pipeline-step .file { font-size: 10px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 700px) {
+    .pipeline { flex-wrap: wrap; }
+    .pipeline-step { flex: 0 0 calc(50% - 1px); border-radius: 0 !important; }
+    .pipeline-step:nth-child(odd) { border-radius: 8px 0 0 8px !important; }
+    .pipeline-step:nth-child(even) { border-radius: 0 8px 8px 0 !important; }
+    .pipeline-step:nth-last-child(-n+2) { border-radius: 0 0 8px 8px !important; }
   }
 
-  /* ── Proof cards ── */
-  .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
-  .proof-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 24px;
-    transition: border-color 0.2s;
-  }
+  /* Proof */
+  .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 800px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .proof-grid { grid-template-columns: 1fr; } }
+  .proof-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; transition: border-color 0.2s; }
   .proof-card:hover { border-color: var(--accent-dim); }
-  .proof-card .status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--green);
-    margin-bottom: 12px;
-  }
-  .proof-card .status::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--green);
-  }
-  .proof-card h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-bright);
-    margin-bottom: 8px;
-  }
-  .proof-card p {
-    font-size: 12px;
-    color: var(--text-dim);
-    line-height: 1.6;
-  }
-  .proof-card .meta {
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    gap: 16px;
-    font-size: 11px;
-    color: var(--text-dim);
-  }
+  .proof-card .status { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); margin-bottom: 12px; }
+  .proof-card .status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .proof-card h3 { font-size: 15px; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
+  .proof-card p { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+  .proof-card .meta { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; gap: 16px; font-size: 11px; color: var(--text-dim); }
   .proof-card .meta span { color: var(--text); font-weight: 600; }
 
-  /* ── Principles ── */
-  .principles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-  }
-  .principle {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px;
-  }
-  .principle .icon {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-  .principle h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-bright);
-    margin-bottom: 8px;
-  }
-  .principle p {
-    font-size: 13px;
-    color: var(--text-dim);
-    line-height: 1.7;
-  }
+  /* Principles */
+  .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 800px) { .principles { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .principles { grid-template-columns: 1fr; } }
+  .principle { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 28px; }
+  .principle .icon { font-size: 20px; margin-bottom: 12px; }
+  .principle h3 { font-size: 15px; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
+  .principle p { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
 
-  /* ── Code block ── */
-  .code-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-  @media (max-width: 700px) {
-    .code-section { grid-template-columns: 1fr; }
-  }
-  .code-block {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .code-block .header {
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border);
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .code-block .header .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
-  .code-block pre {
-    padding: 20px;
-    font-size: 12px;
-    line-height: 1.8;
-    overflow-x: auto;
-    color: var(--text);
-  }
+  /* Code */
+  .code-section { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  @media (max-width: 700px) { .code-section { grid-template-columns: 1fr; } }
+  .code-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .code-block .header { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 12px; font-weight: 600; color: var(--text-dim); display: flex; align-items: center; gap: 8px; }
+  .code-block .header .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .code-block pre { padding: 20px; font-size: 12px; line-height: 1.8; overflow-x: auto; color: var(--text); }
   .code-block .comment { color: #6b7280; }
   .code-block .keyword { color: var(--purple); }
   .code-block .string { color: var(--green); }
   .code-block .type { color: var(--amber); }
   .code-block .fn { color: var(--accent); }
 
-  /* ── Footer ── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 40px 0;
-    text-align: center;
-  }
-  footer p {
-    font-size: 12px;
-    color: var(--text-dim);
-  }
-  footer a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+  /* Footer */
+  footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; }
+  footer p { font-size: 12px; color: var(--text-dim); }
+  footer a { color: var(--accent); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
-  /* ── Divider ── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0;
-  }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-  /* ── Animations ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate {
-    animation: fadeUp 0.6s ease-out forwards;
-    opacity: 0;
-  }
+  /* Animations */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .animate { animation: fadeUp 0.6s ease-out forwards; opacity: 0; }
   .delay-1 { animation-delay: 0.1s; }
   .delay-2 { animation-delay: 0.2s; }
   .delay-3 { animation-delay: 0.3s; }
-  .delay-4 { animation-delay: 0.4s; }
+
+  /* i18n: hide non-active */
+  [data-lang] { display: none; }
+  [data-lang="en"] { display: block; }
+  span[data-lang], a[data-lang], div[data-lang] { display: none; }
+  span[data-lang="en"], a[data-lang="en"], div[data-lang="en"] { display: inline; }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="container">
-    <a href="/" class="logo">Math<span>Coding</span>Fractal</a>
-    <div class="links">
-      <a href="/docs/">Knowledge Base</a>
-      <a href="https://github.com/11111000000/math-coding">GitHub</a>
+    <a href="/math-coding/" class="logo">Math<span>Coding</span>Fractal</a>
+    <div class="right">
+      <div class="links">
+        <a href="/math-coding/docs/">
+          <span data-lang="en">Knowledge Base</span>
+          <span data-lang="ru">База знаний</span>
+          <span data-lang="zh">知识库</span>
+        </a>
+        <a href="https://github.com/11111000000/math-coding">GitHub</a>
+      </div>
+      <div class="lang-switch">
+        <a href="#" onclick="setLang('en');return false" data-lang="en" class="active">EN</a>
+        <a href="#" onclick="setLang('en');return false" data-lang="ru">EN</a>
+        <a href="#" onclick="setLang('ru');return false" data-lang="ru" class="active">RU</a>
+        <a href="#" onclick="setLang('zh');return false" data-lang="ru">中文</a>
+        <a href="#" onclick="setLang('en');return false" data-lang="zh">EN</a>
+        <a href="#" onclick="setLang('ru');return false" data-lang="zh">RU</a>
+        <a href="#" onclick="setLang('zh');return false" data-lang="zh" class="active">中文</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -371,18 +163,29 @@
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge animate">Artifact-Centered Development</div>
+    <div class="hero-badge animate" data-lang="en">Artifact-Centered Development</div>
+    <div class="hero-badge animate" data-lang="ru">Разработка вокруг артефактов</div>
+    <div class="hero-badge animate" data-lang="zh">以产物为中心的开发</div>
+
     <h1 class="animate delay-1">
-      From <span class="dim">vibe-coding</span><br>
-      to <span style="color: var(--accent)">math-coding</span>
+      <span data-lang="en">From <span class="dim">vibe-coding</span><br>to <span style="color:var(--accent)">math-coding</span></span>
+      <span data-lang="ru">От <span class="dim">вайб-кодинга</span><br>к <span style="color:var(--accent)">мат-кодингу</span></span>
+      <span data-lang="zh">从 <span class="dim">氛围编程</span><br>到 <span style="color:var(--accent)">数学编程</span></span>
     </h1>
+
     <p class="animate delay-2">
-      A methodology that replaces prompt-confidence with verified formal models.
-      Every assumption explicit. Every property checked. Every claim backed by evidence.
+      <span data-lang="en">A methodology that replaces prompt-confidence with verified formal models. Every assumption explicit. Every property checked. Every claim backed by evidence.</span>
+      <span data-lang="ru">Методология, заменяющая уверенность промпта верифицированными формальными моделями. Каждое допущение явное. Каждое свойство проверено. Каждое утверждение подтверждено evidence.</span>
+      <span data-lang="zh">一种用经过验证的形式化模型取代提示词置信度的方法论。每个假设明确。每个属性经过检查。每个声明都有证据支持。</span>
     </p>
+
     <div class="hero-buttons animate delay-3">
-      <a href="/docs/" class="btn btn-primary">Read the Docs</a>
-      <a href="https://github.com/11111000000/math-coding" class="btn btn-secondary">View on GitHub</a>
+      <a href="/math-coding/docs/" class="btn btn-primary">
+        <span data-lang="en">Read the Docs</span>
+        <span data-lang="ru">Читать документацию</span>
+        <span data-lang="zh">阅读文档</span>
+      </a>
+      <a href="https://github.com/11111000000/math-coding" class="btn btn-secondary">GitHub</a>
     </div>
   </div>
 </section>
@@ -392,44 +195,70 @@
 <!-- Pipeline -->
 <section class="section">
   <div class="container">
-    <div class="section-label">The Pipeline</div>
-    <h2>Seven stages from problem to verified code</h2>
-    <p>Every task follows the same cycle. No step is optional. No artifact is transient.</p>
+    <div class="section-label">
+      <span data-lang="en">The Pipeline</span>
+      <span data-lang="ru">Пайплайн</span>
+      <span data-lang="zh">流水线</span>
+    </div>
+    <h2>
+      <span data-lang="en">Seven stages from problem to verified code</span>
+      <span data-lang="ru">Семь стадий от задачи до верифицированного кода</span>
+      <span data-lang="zh">从问题到验证代码的七个阶段</span>
+    </h2>
+    <p>
+      <span data-lang="en">Every task follows the same cycle. No step is optional. No artifact is transient.</span>
+      <span data-lang="ru">Каждая задача проходит один и тот же цикл. Ни один шаг не является опциональным. Ни один артефакт не является временным.</span>
+      <span data-lang="zh">每个任务都遵循相同的周期。没有可选步骤。没有临时产物。</span>
+    </p>
 
     <div class="pipeline">
       <div class="pipeline-step">
         <div class="num">01</div>
-        <div class="name">Problem</div>
+        <div class="name" data-lang="en">Problem</div>
+        <div class="name" data-lang="ru">Задача</div>
+        <div class="name" data-lang="zh">问题</div>
         <div class="file">problem.md</div>
       </div>
       <div class="pipeline-step">
         <div class="num">02</div>
-        <div class="name">Assumptions</div>
+        <div class="name" data-lang="en">Assumptions</div>
+        <div class="name" data-lang="ru">Допущения</div>
+        <div class="name" data-lang="zh">假设</div>
         <div class="file">assumptions.yaml</div>
       </div>
       <div class="pipeline-step">
         <div class="num">03</div>
-        <div class="name">Formalize</div>
+        <div class="name" data-lang="en">Formalize</div>
+        <div class="name" data-lang="ru">Формализация</div>
+        <div class="name" data-lang="zh">形式化</div>
         <div class="file">Model.tla</div>
       </div>
       <div class="pipeline-step">
         <div class="num">04</div>
-        <div class="name">Verify</div>
+        <div class="name" data-lang="en">Verify</div>
+        <div class="name" data-lang="ru">Верификация</div>
+        <div class="name" data-lang="zh">验证</div>
         <div class="file">verification.json</div>
       </div>
       <div class="pipeline-step">
         <div class="num">05</div>
-        <div class="name">Refine</div>
+        <div class="name" data-lang="en">Refine</div>
+        <div class="name" data-lang="ru">Рефинемент</div>
+        <div class="name" data-lang="zh">精化</div>
         <div class="file">refinement.md</div>
       </div>
       <div class="pipeline-step">
         <div class="num">06</div>
-        <div class="name">Implement</div>
+        <div class="name" data-lang="en">Implement</div>
+        <div class="name" data-lang="ru">Реализация</div>
+        <div class="name" data-lang="zh">实现</div>
         <div class="file">implementation/</div>
       </div>
       <div class="pipeline-step">
         <div class="num">07</div>
-        <div class="name">Trace</div>
+        <div class="name" data-lang="en">Trace</div>
+        <div class="name" data-lang="ru">Трассировка</div>
+        <div class="name" data-lang="zh">追溯</div>
         <div class="file">traceability.json</div>
       </div>
     </div>
@@ -441,49 +270,54 @@
 <!-- Proof -->
 <section class="section">
   <div class="container">
-    <div class="section-label">Verified Evidence</div>
-    <h2>Four packets, mechanically proven</h2>
-    <p>Each packet has passed SANY (parsing) and TLC (bounded model checking). The evidence is machine-readable.</p>
+    <div class="section-label">
+      <span data-lang="en">Verified Evidence</span>
+      <span data-lang="ru">Верифицированные доказательства</span>
+      <span data-lang="zh">已验证的证据</span>
+    </div>
+    <h2>
+      <span data-lang="en">Four packets, mechanically proven</span>
+      <span data-lang="ru">Четыре пакета, механически доказанных</span>
+      <span data-lang="zh">四个数据包，经过机械验证</span>
+    </h2>
+    <p>
+      <span data-lang="en">Each packet has passed SANY (parsing) and TLC (bounded model checking). The evidence is machine-readable.</span>
+      <span data-lang="ru">Каждый пакет прошёл SANY (парсинг) и TLC (ограниченная проверка моделей). Evidence доступен в машиночитаемой форме.</span>
+      <span data-lang="zh">每个数据包都通过了SANY（解析）和TLC（有界模型检查）。证据为机器可读格式。</span>
+    </p>
 
     <div class="proof-grid">
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>minimal-spec</h3>
-        <p>Simplest state machine. Two states, two proved theorems. The atom of the methodology.</p>
-        <div class="meta">
-          <div>States <span>2</span></div>
-          <div>TLA+</div>
-        </div>
+        <p data-lang="en">Simplest state machine. Two states, two proved theorems. The atom of the methodology.</p>
+        <p data-lang="ru">Простейший автомат. Два состояния, две доказанные теоремы. Атом методологии.</p>
+        <p data-lang="zh">最简单的状态机。两个状态，两个已证明的定理。方法论的原子。</p>
+        <div class="meta"><div>States <span>2</span></div><div>TLA+</div></div>
       </div>
-
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>ui-modal-dialog</h3>
-        <p>Desktop confirmation dialog. 7 visible states, fairness properties, liveness guarantees.</p>
-        <div class="meta">
-          <div>States <span>8</span></div>
-          <div>TLA+</div>
-        </div>
+        <p data-lang="en">Desktop confirmation dialog. 7 visible states, fairness properties, liveness guarantees.</p>
+        <p data-lang="ru">Десктопный диалог подтверждения. 7 видимых состояний, свойства fairness, гарантии liveness.</p>
+        <p data-lang="zh">桌面确认对话框。7个可见状态，公平性属性，活性保证。</p>
+        <div class="meta"><div>States <span>8</span></div><div>TLA+</div></div>
       </div>
-
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>self-spec</h3>
-        <p>The methodology describes itself. 7 states. The fractal property made concrete.</p>
-        <div class="meta">
-          <div>States <span>7</span></div>
-          <div>TLA+</div>
-        </div>
+        <p data-lang="en">The methodology describes itself. 7 states. The fractal property made concrete.</p>
+        <p data-lang="ru">Методология описывает сама себя. 7 состояний. Фрактальное свойство в concrete форме.</p>
+        <p data-lang="zh">方法论描述自身。7个状态。分形属性的具体化。</p>
+        <div class="meta"><div>States <span>7</span></div><div>TLA+</div></div>
       </div>
-
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>ui-modal-react</h3>
-        <p>React/TypeScript refinement of the dialog. 16 passing tests, full traceability map.</p>
-        <div class="meta">
-          <div>States <span>8</span></div>
-          <div>Tests <span>16</span></div>
-        </div>
+        <p data-lang="en">React/TypeScript refinement of the dialog. 16 passing tests, full traceability map.</p>
+        <p data-lang="ru">React/TypeScript рефинемент диалога. 16 проходящих тестов, полная карта трассировки.</p>
+        <p data-lang="zh">对话框的React/TypeScript精化。16个通过的测试，完整的可追溯性映射。</p>
+        <div class="meta"><div>States <span>8</span></div><div>Tests <span>16</span></div></div>
       </div>
     </div>
   </div>
@@ -494,44 +328,71 @@
 <!-- Principles -->
 <section class="section">
   <div class="container">
-    <div class="section-label">Core Principles</div>
-    <h2>What makes this different</h2>
+    <div class="section-label">
+      <span data-lang="en">Core Principles</span>
+      <span data-lang="ru">Основные принципы</span>
+      <span data-lang="zh">核心原则</span>
+    </div>
+    <h2>
+      <span data-lang="en">What makes this different</span>
+      <span data-lang="ru">Чем это отличается</span>
+      <span data-lang="zh">与众不同之处</span>
+    </h2>
 
     <div class="principles">
       <div class="principle">
         <div class="icon">&#x25C7;</div>
-        <h3>Artifact-Centered</h3>
-        <p>Chat messages are transient. The packet is the source of truth. If it's not in a file, for the methodology it doesn't exist.</p>
+        <h3 data-lang="en">Artifact-Centered</h3>
+        <h3 data-lang="ru">Вокруг артефактов</h3>
+        <h3 data-lang="zh">以产物为中心</h3>
+        <p data-lang="en">Chat messages are transient. The packet is the source of truth. If it's not in a file, for the methodology it doesn't exist.</p>
+        <p data-lang="ru">Сообщения в чате — transient. Пакет является источником истины. Если чего-то нет в файле, для методологии этого не существует.</p>
+        <p data-lang="zh">聊天消息是临时的。数据包是真理之源。如果某样东西不在文件中，对方法论来说它就不存在。</p>
       </div>
-
       <div class="principle">
         <div class="icon">&#x2261;</div>
-        <h3>Mechanical Verification</h3>
-        <p>No "expert estimates." TLC exhaustively checks every reachable state. SANY rejects invalid specs. The tools are the gate.</p>
+        <h3 data-lang="en">Mechanical Verification</h3>
+        <h3 data-lang="ru">Механическая верификация</h3>
+        <h3 data-lang="zh">机械验证</h3>
+        <p data-lang="en">No "expert estimates." TLC exhaustively checks every reachable state. SANY rejects invalid specs. The tools are the gate.</p>
+        <p data-lang="ru">Никаких «экспертных оценок». TLC исчерпывающе проверяет каждое достижимое состояние. SANY отклоняет невалидные спецификации.</p>
+        <p data-lang="zh">没有"专家估计"。TLC详尽检查每个可达状态。SANY拒绝无效规范。工具是守门人。</p>
       </div>
-
       <div class="principle">
         <div class="icon">&#x21CC;</div>
-        <h3>Fractal Self-Application</h3>
-        <p>The methodology describes itself through its own pipeline. `methodology/self-spec/` is verified TLA+ that models the methodology.</p>
+        <h3 data-lang="en">Fractal Self-Application</h3>
+        <h3 data-lang="ru">Фрактальное самоприменение</h3>
+        <h3 data-lang="zh">分形自应用</h3>
+        <p data-lang="en">The methodology describes itself through its own pipeline. self-spec/ is verified TLA+ that models the methodology.</p>
+        <p data-lang="ru">Методология описывает сама себя через собственный пайплайн. self-spec/ — верифицированный TLA+, моделирующий методологию.</p>
+        <p data-lang="zh">方法论通过自身的流水线描述自己。self-spec/是建模方法论的已验证TLA+。</p>
       </div>
-
       <div class="principle">
         <div class="icon">&#x2192;</div>
-        <h3>Refinement as Bridge</h3>
-        <p>The jump from verified model to code is explicit. State mapping, operation mapping, invariant preservation — all documented.</p>
+        <h3 data-lang="en">Refinement as Bridge</h3>
+        <h3 data-lang="ru">Рефинемент как мост</h3>
+        <h3 data-lang="zh">精化即桥梁</h3>
+        <p data-lang="en">The jump from verified model to code is explicit. State mapping, operation mapping, invariant preservation — all documented.</p>
+        <p data-lang="ru">Прыжок от верифицированной модели к коду является явным. Отображение состояний, операций, сохранение инвариантов — всё задокументировано.</p>
+        <p data-lang="zh">从验证模型到代码的跳跃是显式的。状态映射、操作映射、不变量保持——全部记录在案。</p>
       </div>
-
       <div class="principle">
         <div class="icon">&#x2731;</div>
-        <h3>Explicit Assumptions</h3>
-        <p>Every ambiguity becomes a tagged assumption: user-confirmed, agent-inferred, or open. No silent dependencies on open assumptions.</p>
+        <h3 data-lang="en">Explicit Assumptions</h3>
+        <h3 data-lang="ru">Явные допущения</h3>
+        <h3 data-lang="zh">显式假设</h3>
+        <p data-lang="en">Every ambiguity becomes a tagged assumption: user-confirmed, agent-inferred, or open. No silent dependencies on open assumptions.</p>
+        <p data-lang="ru">Каждая неоднозначность становится теговым допущением: user-confirmed, agent-inferred или open. Нет скрытых зависимостей от открытых допущений.</p>
+        <p data-lang="zh">每个歧义都变成一个带标签的假设：用户确认、代理推断或开放。没有对开放假设的隐式依赖。</p>
       </div>
-
       <div class="principle">
         <div class="icon">&#x29C9;</div>
-        <h3>Traceability</h3>
-        <p>Every model property maps to a code artifact. Every invariant has a preservation strategy. The map is machine-readable.</p>
+        <h3 data-lang="en">Traceability</h3>
+        <h3 data-lang="ru">Трассируемость</h3>
+        <h3 data-lang="zh">可追溯性</h3>
+        <p data-lang="en">Every model property maps to a code artifact. Every invariant has a preservation strategy. The map is machine-readable.</p>
+        <p data-lang="ru">Каждое свойство модели отображается в артефакт кода. Каждый инвариант имеет стратегию сохранения. Карта доступна в машиночитаемой форме.</p>
+        <p data-lang="zh">每个模型属性映射到代码产物。每个不变量都有保持策略。映射为机器可读格式。</p>
       </div>
     </div>
   </div>
@@ -539,19 +400,28 @@
 
 <hr class="divider">
 
-<!-- Code example -->
+<!-- Code -->
 <section class="section">
   <div class="container">
-    <div class="section-label">In Practice</div>
-    <h2>From TLA+ to TypeScript</h2>
-    <p>The same state machine, formalized and implemented.</p>
+    <div class="section-label">
+      <span data-lang="en">In Practice</span>
+      <span data-lang="ru">На практике</span>
+      <span data-lang="zh">实践中</span>
+    </div>
+    <h2>
+      <span data-lang="en">From TLA+ to TypeScript</span>
+      <span data-lang="ru">От TLA+ к TypeScript</span>
+      <span data-lang="zh">从TLA+到TypeScript</span>
+    </h2>
+    <p>
+      <span data-lang="en">The same state machine, formalized and implemented.</span>
+      <span data-lang="ru">Один и тот же автомат, формализованный и реализованный.</span>
+      <span data-lang="zh">同一个状态机，经过形式化和实现。</span>
+    </p>
 
     <div class="code-section">
       <div class="code-block">
-        <div class="header">
-          <div class="dot" style="background: var(--purple)"></div>
-          Model.tla
-        </div>
+        <div class="header"><div class="dot" style="background:var(--purple)"></div>Model.tla</div>
 <pre><span class="keyword">VARIABLES</span> state, pendingResult
 
 <span class="type">Init</span> <span class="comment">==</span>
@@ -568,12 +438,8 @@
   <span class="comment">/\</span> state' = <span class="string">"confirming"</span>
   <span class="comment">/\</span> pendingResult' = <span class="string">"in-flight"</span></pre>
       </div>
-
       <div class="code-block">
-        <div class="header">
-          <div class="dot" style="background: var(--accent)"></div>
-          dialogReducer.ts
-        </div>
+        <div class="header"><div class="dot" style="background:var(--accent)"></div>dialogReducer.ts</div>
 <pre><span class="keyword">export function</span> <span class="fn">dialogReducer</span>(
   state: <span class="type">DialogStateShape</span>,
   action: <span class="type">DialogAction</span>,
@@ -596,66 +462,76 @@
 <hr class="divider">
 
 <!-- CTA -->
-<section class="section" style="text-align: center;">
+<section class="section" style="text-align:center;">
   <div class="container">
-    <h2 style="margin-bottom: 16px;">Start here</h2>
-    <p style="color: var(--text-dim); max-width: 480px; margin: 0 auto 32px;">
-      Read the methodology, explore verified examples, or build your first formal model.
+    <h2 style="margin-bottom:16px;">
+      <span data-lang="en">Start here</span>
+      <span data-lang="ru">Начните здесь</span>
+      <span data-lang="zh">从这里开始</span>
+    </h2>
+    <p style="color:var(--text-dim);max-width:480px;margin:0 auto 32px;">
+      <span data-lang="en">Read the methodology, explore verified examples, or build your first formal model.</span>
+      <span data-lang="ru">Изучите методологию, исследуйте верифицированные примеры или создайте свою первую формальную модель.</span>
+      <span data-lang="zh">阅读方法论，探索已验证的示例，或构建您的第一个形式化模型。</span>
     </p>
     <div class="hero-buttons">
-      <a href="/docs/" class="btn btn-primary">Knowledge Base</a>
+      <a href="/math-coding/docs/" class="btn btn-primary">
+        <span data-lang="en">Knowledge Base</span>
+        <span data-lang="ru">База знаний</span>
+        <span data-lang="zh">知识库</span>
+      </a>
       <a href="https://github.com/11111000000/math-coding" class="btn btn-secondary">GitHub</a>
-      <a href="/docs/00-Meta/Methodology in Russian/" class="btn btn-secondary">На русском</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>
-      MathCodingFractal &middot; CC BY 4.0 &middot;
-      <a href="https://github.com/11111000000/math-coding">source</a>
-    </p>
+    <p>MathCodingFractal &middot; CC BY 4.0 &middot; <a href="https://github.com/11111000000/math-coding">source</a></p>
   </div>
 </footer>
 
 <script>
-  // Intersection Observer for scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.animationPlayState = 'running';
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.proof-card, .principle, .pipeline-step').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(12px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = 'none';
   });
-
-  // Stagger on intersect
-  const staggerObserver = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-        }, i * 60);
-        staggerObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.proof-grid .proof-card, .principles .principle, .pipeline .pipeline-step').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(12px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    staggerObserver.observe(el);
+  document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
+    const tag = el.tagName.toLowerCase();
+    if (tag === 'span' || tag === 'a') {
+      el.style.display = 'inline';
+    } else {
+      el.style.display = '';
+    }
   });
+  document.querySelectorAll('.lang-switch a').forEach(a => {
+    a.classList.remove('active');
+    if (a.textContent.trim() === lang.toUpperCase()) a.classList.add('active');
+  });
+  localStorage.setItem('mcf-lang', lang);
+}
+
+// Restore saved language
+const saved = localStorage.getItem('mcf-lang');
+if (saved) setLang(saved);
+
+// Scroll animations
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }, i * 60);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.proof-card, .principle, .pipeline-step').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(12px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  io.observe(el);
+});
 </script>
 
 </body>
