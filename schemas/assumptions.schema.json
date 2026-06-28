@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mathcoding.local/schemas/assumptions.schema.json",
+  "title": "MathCoding Assumptions",
+  "type": "object",
+  "required": ["task_id", "assumptions"],
+  "properties": {
+    "task_id": { "type": "string" },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "statement": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["user-confirmed", "agent-inferred", "open"]
+          }
+        }
+      }
+    }
+  }
+}

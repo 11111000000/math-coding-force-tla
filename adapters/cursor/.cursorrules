@@ -1,0 +1,54 @@
+# MathCodingFractal rules for Cursor
+
+When working on this project, follow the MathCodingFractal methodology:
+
+## Core Discipline
+
+- Do NOT generate code from a prose problem alone.
+- ALWAYS convert work into a task packet under `artifacts/<task-id>/`.
+- ALWAYS produce L1 contracts (Precondition, Postcondition, Invariant) for every task.
+- For stateful work, ALWAYS produce an L2 state machine in `Model.tla`.
+- NEVER generate code without a verified model. Run `./bin/verify` first.
+
+## Artifact Order
+
+1. Create a packet with `./bin/mathpacket <task-id>`.
+2. Write `problem.md` describing the task.
+3. Write `assumptions.yaml` with explicit assumptions (status: user-confirmed, agent-inferred, or open).
+4. Write `Model.tla` with TLA+ specification.
+5. Run `./bin/verify artifacts/<task-id>` and confirm verdict == VERIFIED.
+6. Write `refinement.md` describing how the model becomes code.
+7. Generate code that matches the refinement, updating `traceability.json`.
+
+## Tool Usage
+
+- `./bin/mathpacket <id>` — create a packet
+- `./bin/refine-from-model <packet>` — regenerate refinement.md and traceability.json skeleton from Model.tla
+- `./bin/verify <packet>` — run SANY + TLC + TLAPS, write verification.json
+- `./bin/validate-packet <packet>` — structural validation including traceability gaps
+
+## When To Ask The User
+
+Ask the user (don't infer) when:
+
+- An assumption is critical and has status "open".
+- The task requires picking a target language and no preference is stated.
+- Verification fails and the model needs to be revised.
+- Trade-offs in refinement (e.g. type vs runtime checks) need clarification.
+
+## Reference
+
+Read these for methodology context:
+
+- `README.md` — project overview
+- `QUICKSTART.md` — operational quickstart
+- `MathCodingBase/Index.md` — knowledge base index
+- `MathCodingBase/02-Protocols/` — artifact protocols
+
+## Forbidden Patterns
+
+- Generating code without first running `./bin/verify` and getting VERIFIED
+- Skipping assumptions.yaml
+- Treating chat messages as the spec
+- Implementing `open` assumptions without confirming with user
+- Marking packets as "verified" without actual tool output

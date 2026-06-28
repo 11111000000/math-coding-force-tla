@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "$#" -lt 1 ]; then
+  printf 'Usage: %s <spec.tla>\n' "$0" >&2
+  exit 1
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+TLA2TOOLS_JAR="${TLA2TOOLS_JAR:-$($SCRIPT_DIR/locate-tla2tools)}"
+
+if command -v java >/dev/null 2>&1; then
+  exec java -cp "$TLA2TOOLS_JAR" tla2sany.SANY "$@"
+fi
+
+if command -v nix >/dev/null 2>&1; then
+  exec nix --extra-experimental-features 'nix-command flakes' shell nixpkgs#jdk21 --command \
+    bash -lc 'exec java -cp "$1" tla2sany.SANY "${@:2}"' _ "$TLA2TOOLS_JAR" "$@"
+fi
+
+printf 'No usable Java runtime found. Install Java or use Nix.\n' >&2
+exit 3

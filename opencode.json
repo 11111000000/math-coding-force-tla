@@ -1,0 +1,77 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    "MathCodingBase/**/*.md"
+  ],
+  "agent": {
+    "mathcoding": {
+      "mode": "primary",
+      "description": "Artifact-centered mathematical development agent. Converts tasks into formal packets with assumptions, specs, evidence, refinement and traceability.",
+      "temperature": 0.1,
+      "color": "#4f7cff",
+      "prompt": "{file:./.opencode/agents/mathcoding.md}",
+      "permission": {
+        "edit": "ask",
+        "bash": "ask",
+        "task": {
+          "*": "deny",
+          "mathcoding-verifier": "allow",
+          "mathcoding-synthesizer": "allow"
+        },
+        "skill": {
+          "*": "allow"
+        }
+      }
+    },
+    "mathcoding-verifier": {
+      "mode": "subagent",
+      "description": "Mechanical verifier wrapper for SANY and TLC. Produces structured verification evidence.",
+      "temperature": 0.0,
+      "color": "#e67e22",
+      "prompt": "{file:./.opencode/agents/mathcoding-verifier.md}",
+      "permission": {
+        "edit": "deny",
+        "bash": {
+          "*": "deny",
+          "java -cp *": "allow",
+          "which *": "allow",
+          "ls *": "allow",
+          "find *": "allow"
+        },
+        "skill": {
+          "*": "allow"
+        },
+        "task": {
+          "*": "deny"
+        }
+      }
+    },
+    "mathcoding-synthesizer": {
+      "mode": "subagent",
+      "description": "Refinement-aware synthesizer that maps verified models into implementation artifacts.",
+      "temperature": 0.1,
+      "color": "#27ae60",
+      "prompt": "{file:./.opencode/agents/mathcoding-synthesizer.md}",
+      "permission": {
+        "edit": "ask",
+        "bash": "allow",
+        "skill": {
+          "*": "allow"
+        },
+        "task": {
+          "*": "deny",
+          "mathcoding-verifier": "allow"
+        }
+      }
+    }
+  },
+  "command": {
+    "mathpacket": {
+      "description": "Create a canonical MathCoding task packet from a natural language problem",
+      "agent": "mathcoding",
+      "subtask": true,
+      "template": "$ARGUMENTS\n\nConvert this request into a MathCoding task packet. Create explicit problem and assumptions artifacts first. Use canonical TLA+ artifact names `Model.tla` and `Model.cfg`. Produce a formalization plan, not code, unless the user explicitly asks for synthesis."
+    }
+  }
+}

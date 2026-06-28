@@ -1,0 +1,25 @@
+{
+  "task_id": "methodology-self",
+  "mappings": [
+    {
+      "source": "packetState",
+      "target": "methodology artifact set",
+      "kind": "state"
+    },
+    {
+      "source": "Advance",
+      "target": "packet development step",
+      "kind": "operation"
+    },
+    {
+      "source": "Complete",
+      "target": "methodology applied to its own change",
+      "kind": "operation"
+    },
+    {
+      "source": "Invariant == packetState \\in TaskStates",
+      "target": "methodology-required files present",
+      "kind": "invariant"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "task_id": "ui-modal-dialog",
+  "mappings": [
+    {
+      "source": "VARIABLE state",
+      "target": "dialog.currentState: DialogState",
+      "kind": "state"
+    },
+    {
+      "source": "VARIABLE pendingResult",
+      "target": "dialog.pendingOperation: 'none' | 'in-flight' | 'ok' | 'failed'",
+      "kind": "state"
+    },
+    {
+      "source": "DialogStates constant",
+      "target": "TS union type DialogState",
+      "kind": "state"
+    },
+    {
+      "source": "Open",
+      "target": "dialog.open()",
+      "kind": "operation"
+    },
+    {
+      "source": "FinishOpen",
+      "target": "dialog.animationFinish('in')",
+      "kind": "operation"
+    },
+    {
+      "source": "Confirm",
+      "target": "dialog.confirm()",
+      "kind": "operation"
+    },
+    {
+      "source": "Cancel",
+      "target": "dialog.cancel()",
+      "kind": "operation"
+    },
+    {
+      "source": "Dismiss",
+      "target": "dialog.dismiss() (click-outside handler maps to cancel reducer)",
+      "kind": "operation"
+    },
+    {
+      "source": "Resolve",
+      "target": "dialog.confirmResult('ok') (then branch of async call)",
+      "kind": "operation"
+    },
+    {
+      "source": "Reject",
+      "target": "dialog.confirmResult('failed') (catch branch of async call)",
+      "kind": "operation"
+    },
+    {
+      "source": "FinishClose",
+      "target": "dialog.animationFinish('out')",
+      "kind": "operation"
+    },
+    {
+      "source": "Retry",
+      "target": "dialog.retry()",
+      "kind": "operation"
+    },
+    {
+      "source": "ErrorDismiss",
+      "target": "dialog.dismissError()",
+      "kind": "operation"
+    },
+    {
+      "source": "StateInvariant",
+      "target": "TypeScript union type narrowing",
+      "kind": "invariant"
+    },
+    {
+      "source": "NoPendingIfSettled",
+      "target": "reducer post-condition assertion in dialog reducer",
+      "kind": "invariant"
+    },
+    {
+      "source": "ConsistencyInvariant",
+      "target": "structural (single variable)",
+      "kind": "invariant"
+    },
+    {
+      "source": "SF_(ErrorDismiss)",
+      "target": "UI must render dismiss button in error state",
+      "kind": "invariant"
+    },
+    {
+      "source": "Safety []StateInvariant",
+      "target": "TypeScript compile-time check + runtime test",
+      "kind": "test"
+    },
+    {
+      "source": "Liveness open ~> closed",
+      "target": "integration test driving full lifecycle",
+      "kind": "test"
+    },
+    {
+      "source": "A5 Dismiss equals Cancel",
+      "target": "click-outside handler routes to cancel reducer",
+      "kind": "assumption"
+    }
+  ]
+}

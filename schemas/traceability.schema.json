@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mathcoding.local/schemas/traceability.schema.json",
+  "title": "MathCoding Traceability Map",
+  "type": "object",
+  "required": ["task_id", "mappings"],
+  "properties": {
+    "task_id": { "type": "string" },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "kind"],
+        "properties": {
+          "source": { "type": "string" },
+          "target": { "type": "string" },
+          "kind": {
+            "type": "string",
+            "enum": ["assumption", "contract", "state", "operation", "invariant", "test", "runtime-check"]
+          }
+        }
+      }
+    }
+  }
+}

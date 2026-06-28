@@ -1,0 +1,20 @@
+task_id: ui-modal-dialog
+assumptions:
+  - id: A1
+    statement: There is exactly one modal dialog instance being modeled.
+    status: user-confirmed
+  - id: A2
+    statement: Animation states (`opening`, `closing`) are atomic from the user's perspective.
+    status: user-confirmed
+  - id: A3
+    statement: Background operations in `confirming` and `canceling` either succeed or fail deterministically.
+    status: user-confirmed
+  - id: A4
+    statement: The user can press `Confirm` or `Cancel` only in the `open` state.
+    status: user-confirmed
+  - id: A5
+    statement: The `Dismiss` action (click outside) is treated as a cancel-equivalent transition.
+    status: agent-inferred
+  - id: A6
+    statement: The model uses bounded state set so TLC can exhaustively check it.
+    status: agent-inferred

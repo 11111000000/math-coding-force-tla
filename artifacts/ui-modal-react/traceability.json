@@ -1,0 +1,152 @@
+{
+  "task_id": "ui-modal-react",
+  "source_packet": "examples/ui-modal-dialog",
+  "mappings": [
+    {
+      "source": "Model.VARIABLES.state",
+      "target": "implementation/dialogReducer.ts:DialogState",
+      "kind": "state_mapping"
+    },
+    {
+      "source": "Model.VARIABLES.pendingResult",
+      "target": "implementation/dialogReducer.ts:PendingResult",
+      "kind": "state_mapping"
+    },
+    {
+      "source": "Model.Open",
+      "target": "implementation/dialogReducer.ts:case OPEN",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.FinishOpen",
+      "target": "implementation/dialogReducer.ts:case FINISH_OPEN",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.Confirm",
+      "target": "implementation/dialogReducer.ts:case CONFIRM",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.Cancel",
+      "target": "implementation/dialogReducer.ts:case CANCEL",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.Dismiss",
+      "target": "implementation/dialogReducer.ts:case DISMISS",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.Resolve",
+      "target": "implementation/dialogReducer.ts:case RESOLVE",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.Reject",
+      "target": "implementation/dialogReducer.ts:case REJECT",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.FinishClose",
+      "target": "implementation/dialogReducer.ts:case FINISH_CLOSE",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.Retry",
+      "target": "implementation/dialogReducer.ts:case RETRY",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.ErrorDismiss",
+      "target": "implementation/dialogReducer.ts:case ERROR_DISMISS",
+      "kind": "action_mapping"
+    },
+    {
+      "source": "Model.StateInvariant",
+      "target": "implementation/dialogReducer.ts:DialogState union type",
+      "kind": "invariant"
+    },
+    {
+      "source": "Model.StateInvariant",
+      "target": "implementation/dialogReducer.ts:assertStateInvariant runtime check",
+      "kind": "invariant"
+    },
+    {
+      "source": "Model.NoPendingIfSettled",
+      "target": "implementation/dialogReducer.ts:PendingResult discriminated union",
+      "kind": "invariant"
+    },
+    {
+      "source": "Model.NoPendingIfSettled",
+      "target": "implementation/dialogReducer.ts:assertNoPendingIfSettled runtime check",
+      "kind": "invariant"
+    },
+    {
+      "source": "Model.ConsistencyInvariant",
+      "target": "implementation/dialogReducer.ts:state is single field",
+      "kind": "invariant"
+    },
+    {
+      "source": "Model.Liveness (error ~> closed)",
+      "target": "implementation/Dialog.tsx:error-dismiss-button always rendered in error state",
+      "kind": "liveness"
+    },
+    {
+      "source": "Model.Open",
+      "target": "implementation/dialogReducer.test.ts:OPEN test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.FinishOpen",
+      "target": "implementation/dialogReducer.test.ts:FINISH_OPEN test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.Confirm",
+      "target": "implementation/dialogReducer.test.ts:CONFIRM test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.Cancel",
+      "target": "implementation/dialogReducer.test.ts:CANCEL test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.Dismiss",
+      "target": "implementation/dialogReducer.test.ts:DISMISS test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.Resolve",
+      "target": "implementation/dialogReducer.test.ts:RESOLVE test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.Reject",
+      "target": "implementation/dialogReducer.test.ts:REJECT test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.FinishClose",
+      "target": "implementation/dialogReducer.test.ts:FINISH_CLOSE test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.Retry",
+      "target": "implementation/dialogReducer.test.ts:RETRY test case",
+      "kind": "test"
+    },
+    {
+      "source": "Model.ErrorDismiss",
+      "target": "implementation/dialogReducer.test.ts:ERROR_DISMISS test case",
+      "kind": "test"
+    },
+    {
+      "source": "examples/ui-modal-dialog/Model.tla",
+      "target": "artifacts/ui-modal-react/Model.tla",
+      "kind": "model_provenance",
+      "note": "Verbatim copy. See refinement.md Provenance section. Original verdict VERIFIED, 8 distinct states."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+TLAPM_BIN="${TLAPM_BIN:-$ROOT_DIR/tools/tlaps/bin/tlapm}"
+
+if [ ! -x "$TLAPM_BIN" ] && [ ! -f "$TLAPM_BIN" ]; then
+  printf 'tlapm not found at %s\n' "$TLAPM_BIN" >&2
+  printf 'Install TLAPS into tools/tlaps or set TLAPM_BIN.\n' >&2
+  exit 2
+fi
+
+if [ -n "${TLAPS_LIB:-}" ]; then
+  export TLAPS_LIBRARY_PATH="$TLAPS_LIB"
+fi
+
+if command -v steam-run >/dev/null 2>&1; then
+  exec steam-run "$TLAPM_BIN" "$@"
+fi
+
+if "$TLAPM_BIN" "$@" 2>/dev/null; then
+  exit 0
+fi
+
+printf 'tlapm failed and steam-run is unavailable.\n' >&2
+exit 3

@@ -1,0 +1,144 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "$#" -lt 1 ]; then
+  printf 'Usage: %s <task-id> [title]\n' "$0" >&2
+  exit 1
+fi
+
+TASK_ID="$1"
+TITLE="${2:-$1}"
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PACKET_DIR="$ROOT_DIR/artifacts/$TASK_ID"
+IMPLEMENTATION_DIR="$PACKET_DIR/implementation"
+
+if [ -e "$PACKET_DIR" ]; then
+  printf 'Packet already exists: %s\n' "$PACKET_DIR" >&2
+  exit 1
+fi
+
+mkdir -p "$PACKET_DIR" "$IMPLEMENTATION_DIR"
+
+cat > "$PACKET_DIR/packet.json" <<EOF
+{
+  "task_id": "$TASK_ID",
+  "title": "$TITLE",
+  "problem": "problem.md",
+  "assumptions": "assumptions.yaml",
+  "artifacts": {
+    "problem": "problem.md",
+    "assumptions": "assumptions.yaml",
+    "spec": "Model.tla",
+    "verification": "verification.json",
+    "refinement": "refinement.md",
+    "traceability": "traceability.json",
+    "implementation": "implementation"
+  }
+}
+EOF
+
+cat > "$PACKET_DIR/problem.md" <<EOF
+# Problem
+
+Title: $TITLE
+
+## User Request
+
+Describe the problem here.
+
+## Desired Outcome
+
+Describe the expected externally visible result here.
+EOF
+
+cat > "$PACKET_DIR/assumptions.yaml" <<EOF
+task_id: $TASK_ID
+assumptions:
+  - id: A1
+    statement: Replace with an explicit assumption.
+    status: open
+EOF
+
+cat > "$PACKET_DIR/Model.tla" <<'EOF'
+---- MODULE Model ----
+EXTENDS Naturals, TLC
+
+\* Fill in formal model here.
+
+Precondition == TRUE
+Postcondition(old, new) == TRUE
+Invariant == TRUE
+
+====
+EOF
+
+cat > "$PACKET_DIR/Model.cfg" <<'EOF'
+SPECIFICATION
+  Spec
+
+INVARIANT
+  Invariant
+EOF
+
+cat > "$PACKET_DIR/verification.json" <<'EOF'
+{
+  "module": "Model",
+  "verdict": "UNVERIFIABLE",
+  "l1_gate": {
+    "precondition": "UNKNOWN",
+    "postcondition": "UNKNOWN",
+    "invariant": "UNKNOWN",
+    "result": "NOT_RUN"
+  },
+  "sany": {
+    "command": "",
+    "exit_code": -1,
+    "result": "NOT_RUN",
+    "stderr": ""
+  },
+  "tlc": {
+    "tool": "TLC",
+    "result": "NOT_RUN",
+    "details": ""
+  }
+}
+EOF
+
+cat > "$PACKET_DIR/refinement.md" <<'EOF'
+# Refinement
+
+## State Mapping
+
+TBD
+
+## Operation Mapping
+
+TBD
+
+## Invariant Preservation Strategy
+
+TBD
+
+## Test Obligations
+
+TBD
+
+## Runtime Checks
+
+TBD
+EOF
+
+cat > "$PACKET_DIR/traceability.json" <<'EOF'
+{
+  "task_id": "__TASK_ID__",
+  "mappings": []
+}
+EOF
+
+python3 - <<PY
+from pathlib import Path
+path = Path(r"$PACKET_DIR/traceability.json")
+path.write_text(path.read_text().replace("__TASK_ID__", r"$TASK_ID"))
+PY
+
+printf 'Created packet: %s\n' "$PACKET_DIR"

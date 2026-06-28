@@ -1,0 +1,40 @@
+{
+  "task_id": "minimal-toggle",
+  "mappings": [
+    {
+      "source": "VARIABLE bit",
+      "target": "implementation state field bit: 0 | 1",
+      "kind": "state"
+    },
+    {
+      "source": "Toggle",
+      "target": "toggle() method on implementation",
+      "kind": "operation"
+    },
+    {
+      "source": "bit \\in {0, 1}",
+      "target": "TypeScript union type 'Bit = 0 | 1'",
+      "kind": "invariant"
+    },
+    {
+      "source": "Precondition == bit \\in {0, 1}",
+      "target": "TypeScript type guard before toggle()",
+      "kind": "test"
+    },
+    {
+      "source": "Postcondition == new \\in {0, 1} /\\ new # old",
+      "target": "test: 'toggle alternates 0 and 1'",
+      "kind": "test"
+    },
+    {
+      "source": "THEOREM InitImpliesInvariant == Init => Invariant",
+      "target": "TLAPS Zenon backend proof",
+      "kind": "test"
+    },
+    {
+      "source": "THEOREM TogglePreservesInvariant == Invariant /\\ [Toggle]_bit => Invariant'",
+      "target": "TLAPS Zenon backend proof",
+      "kind": "test"
+    }
+  ]
+}

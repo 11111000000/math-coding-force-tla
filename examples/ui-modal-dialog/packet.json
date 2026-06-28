@@ -1,0 +1,15 @@
+{
+  "task_id": "ui-modal-dialog",
+  "title": "UI Modal Dialog State Machine",
+  "problem": "problem.md",
+  "assumptions": "assumptions.yaml",
+  "artifacts": {
+    "problem": "problem.md",
+    "assumptions": "assumptions.yaml",
+    "spec": "Model.tla",
+    "verification": "verification.json",
+    "refinement": "refinement.md",
+    "traceability": "traceability.json",
+    "implementation": "implementation"
+  }
+}

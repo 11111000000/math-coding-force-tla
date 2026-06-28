@@ -1,0 +1,37 @@
+task_id: ui-modal-react
+assumptions:
+  - id: A1
+    statement: The TLA+ model in `examples/ui-modal-dialog/Model.tla` is the
+      authoritative specification. This packet does not modify it; it extends
+      it through `EXTENDS` if needed.
+    status: user-confirmed
+  - id: A2
+    statement: React 18+ and TypeScript 5+ are available. We use the modern
+      `useReducer` hook rather than class components or external state libs.
+    status: agent-inferred
+  - id: A3
+    statement: The implementation runs in a browser. We do not target SSR or
+      Node.js specifically.
+    status: agent-inferred
+  - id: A4
+    statement: Animations are simulated by a `setTimeout` of fixed duration
+      that fires `FinishOpen` / `FinishClose`. We do not depend on any specific
+      animation library.
+    status: agent-inferred
+  - id: A5
+    statement: The async confirmation call is replaced by a stub that resolves
+      after a configurable delay. Real API integration is out of scope.
+    status: agent-inferred
+  - id: A6
+    statement: A single dialog instance per page. Multiple dialogs require a
+      different state model (per-dialog state) and are out of scope.
+    status: user-confirmed
+  - id: A7
+    statement: TypeScript strict mode is enabled, including `noUncheckedIndexedAccess`
+      and `exactOptionalPropertyTypes`. This forces runtime invariants to be
+      reflected in types.
+    status: agent-inferred
+  - id: A8
+    statement: Unit tests use Vitest. The choice is arbitrary and can be swapped
+      for Jest without changing the model, only the test runner configuration.
+    status: agent-inferred

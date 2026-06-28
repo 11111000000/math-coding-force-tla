@@ -1,0 +1,30 @@
+{
+  "module": "Model",
+  "verdict": "VERIFIED",
+  "l1_gate": {
+    "precondition": "FOUND",
+    "postcondition": "FOUND",
+    "invariant": "FOUND",
+    "result": "PASS"
+  },
+  "sany": {
+    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCodingFractal/examples/minimal-spec/Model.tla",
+    "exit_code": 0,
+    "result": "PASS",
+    "stderr": ""
+  },
+  "tlc": {
+    "tool": "TLC",
+    "result": "NO_ERRORS",
+    "details": "Model checking completed. No error has been found. | 3 states generated, 2 distinct states found, 0 states left on queue."
+  },
+  "tlaps": {
+    "tool": "TLAPS",
+    "result": "PROVED",
+    "theorems_attempted": 2,
+    "theorems_proved": 2,
+    "command": "tlapm /home/za/Desktop/MathCodingFractal/examples/minimal-spec/Model.tla",
+    "exit_code": 0,
+    "details": "(* created new \".tlacache/Model.tlaps/Model.thy\" *)\n(* fingerprints written in \".tlacache/Model.tlaps/fingerprints\" *)\n** Unexpanded symbols: ---\n\nFile \"/home/za/Desktop/MathCodingFractal/examples/minimal-spec/Model.tla\", line 1, character 1 to line 23, character 4:\n[INFO]: All 1 obligation proved.\n"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mathcoding.local/schemas/packet-manifest.schema.json",
+  "title": "MathCoding Packet Manifest",
+  "type": "object",
+  "required": ["task_id", "title", "problem", "assumptions", "artifacts"],
+  "properties": {
+    "task_id": { "type": "string" },
+    "title": { "type": "string" },
+    "problem": { "type": "string" },
+    "assumptions": { "type": "string" },
+    "artifacts": {
+      "type": "object",
+      "required": ["problem", "assumptions", "spec", "verification", "refinement", "traceability", "implementation"],
+      "properties": {
+        "problem": { "type": "string" },
+        "assumptions": { "type": "string" },
+        "spec": { "type": "string" },
+        "verification": { "type": "string" },
+        "refinement": { "type": "string" },
+        "traceability": { "type": "string" },
+        "implementation": { "type": "string" }
+      }
+    }
+  }
+}

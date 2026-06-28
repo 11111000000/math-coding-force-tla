@@ -1,0 +1,9 @@
+node_modules/
+.opencode/
+.tlacache/
+.obsidian/
+tools/
+*.class
+*.jar
+!.gitkeep
+.DS_Store

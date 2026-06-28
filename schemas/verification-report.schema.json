@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mathcoding.local/schemas/verification-report.schema.json",
+  "title": "MathCoding Verification Report",
+  "type": "object",
+  "required": [
+    "module",
+    "verdict",
+    "l1_gate",
+    "sany",
+    "tlc"
+  ],
+  "properties": {
+    "module": { "type": "string" },
+    "verdict": {
+      "type": "string",
+      "enum": ["VERIFIED", "NEEDS_REVISION", "UNVERIFIABLE"]
+    },
+    "l1_gate": {
+      "type": "object",
+      "required": ["precondition", "postcondition", "invariant", "result"],
+      "properties": {
+        "precondition": { "type": "string" },
+        "postcondition": { "type": "string" },
+        "invariant": { "type": "string" },
+        "result": { "type": "string" }
+      }
+    },
+    "sany": {
+      "type": "object",
+      "required": ["command", "exit_code", "result"],
+      "properties": {
+        "command": { "type": "string" },
+        "exit_code": { "type": "integer" },
+        "result": { "type": "string" },
+        "stderr": { "type": "string" }
+      }
+    },
+    "tlc": {
+      "type": "object",
+      "required": ["tool", "result"],
+      "properties": {
+        "tool": { "type": "string" },
+        "result": { "type": "string" },
+        "counterexample": { "type": "string" },
+        "details": { "type": "string" }
+      }
+    },
+    "tlaps": {
+      "type": "object",
+      "properties": {
+        "tool": { "type": "string" },
+        "result": { "type": "string", "enum": ["PROVED", "FAILED", "UNATTEMPTED", "UNAVAILABLE"] },
+        "theorems_attempted": { "type": "integer" },
+        "theorems_proved": { "type": "integer" },
+        "command": { "type": "string" },
+        "exit_code": { "type": "integer" },
+        "details": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mathcoding.local/schemas/task-packet.schema.json",
+  "title": "MathCoding Task Packet",
+  "type": "object",
+  "required": [
+    "task_id",
+    "title",
+    "problem",
+    "assumptions",
+    "artifacts"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "problem": {
+      "type": "string"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "statement": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["user-confirmed", "agent-inferred", "open"]
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["problem", "assumptions", "spec", "verification", "refinement", "traceability"],
+      "properties": {
+        "problem": { "type": "string" },
+        "assumptions": { "type": "string" },
+        "spec": { "type": "string" },
+        "verification": { "type": "string" },
+        "refinement": { "type": "string" },
+        "traceability": { "type": "string" }
+      }
+    }
+  }
+}

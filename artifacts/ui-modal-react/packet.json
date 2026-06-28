@@ -1,0 +1,15 @@
+{
+  "task_id": "ui-modal-react",
+  "title": "UI Modal Dialog React Implementation",
+  "problem": "problem.md",
+  "assumptions": "assumptions.yaml",
+  "artifacts": {
+    "problem": "problem.md",
+    "assumptions": "assumptions.yaml",
+    "spec": "Model.tla",
+    "verification": "verification.json",
+    "refinement": "refinement.md",
+    "traceability": "traceability.json",
+    "implementation": "implementation"
+  }
+}

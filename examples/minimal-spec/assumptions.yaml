@@ -1,0 +1,8 @@
+task_id: minimal-toggle
+assumptions:
+  - id: M1
+    statement: The system is single-state and has exactly one variable.
+    status: user-confirmed
+  - id: M2
+    statement: Toggle is total and always enabled.
+    status: user-confirmed

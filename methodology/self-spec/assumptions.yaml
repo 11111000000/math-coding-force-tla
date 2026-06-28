@@ -1,0 +1,11 @@
+task_id: methodology-self
+assumptions:
+  - id: A1
+    statement: Agents can operate over files as stable shared artifacts.
+    status: agent-inferred
+  - id: A2
+    statement: TLA+ is sufficient as the default formal substrate for stateful tasks.
+    status: agent-inferred
+  - id: A3
+    statement: The methodology should be portable across agent runtimes.
+    status: user-confirmed

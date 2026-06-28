@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ -n "${TLA2TOOLS_JAR:-}" ] && [ -f "$TLA2TOOLS_JAR" ]; then
+  printf '%s\n' "$TLA2TOOLS_JAR"
+  exit 0
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+for candidate in \
+  "$ROOT_DIR/tools/tla2tools.jar" \
+  "$HOME/.local/share/tla+/tla2tools.jar" \
+  "$HOME/tla/TLA+ Toolbox/tla2tools.jar" \
+  "/opt/homebrew/share/tla+/tla2tools.jar" \
+  "/usr/local/share/tla+/tla2tools.jar"
+do
+  if [ -f "$candidate" ]; then
+    printf '%s\n' "$candidate"
+    exit 0
+  fi
+done
+
+printf 'tla2tools.jar not found. Set TLA2TOOLS_JAR or place the jar in tools/tla2tools.jar\n' >&2
+exit 2
