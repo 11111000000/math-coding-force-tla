@@ -118,11 +118,12 @@
 
   .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-  /* i18n: hide non-active inline/span, show block elements */
+  /* i18n: hide all data-lang by default, JS will show the active one */
+  [data-lang] { display: none !important; }
+  /* Inline elements */
   span[data-lang], a[data-lang] { display: none !important; }
-  span[data-lang="en"], a[data-lang="en"] { display: inline !important; }
+  /* Block elements */
   div[data-lang], p[data-lang], li[data-lang], h2[data-lang], h3[data-lang] { display: none !important; }
-  div[data-lang="en"], p[data-lang="en"], li[data-lang="en"], h2[data-lang="en"], h3[data-lang="en"] { display: block !important; }
 </style>
 </head>
 <body>
@@ -479,16 +480,21 @@
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = 'none';
+    const tag = el.tagName.toLowerCase();
+    if (tag === 'span' || tag === 'a') {
+      el.style.setProperty('display', 'none', 'important');
+    } else {
+      el.style.setProperty('display', 'none', 'important');
+    }
   });
   document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
     const tag = el.tagName.toLowerCase();
     if (tag === 'span' || tag === 'a') {
-      el.style.display = 'inline';
+      el.style.setProperty('display', 'inline', 'important');
     } else if (tag === 'li') {
-      el.style.display = 'list-item';
+      el.style.setProperty('display', 'list-item', 'important');
     } else {
-      el.style.display = 'block';
+      el.style.setProperty('display', 'block', 'important');
     }
   });
   document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
