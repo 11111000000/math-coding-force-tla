@@ -34,10 +34,11 @@
   nav .logo span { color: var(--accent); }
   nav .right { display: flex; align-items: center; gap: 20px; }
   nav .links { display: flex; gap: 20px; }
-  nav .links a, nav .lang-switch a { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
-  nav .links a:hover, nav .lang-switch a:hover { color: var(--text-bright); }
-  nav .lang-switch { display: flex; gap: 6px; padding-left: 16px; border-left: 1px solid var(--border); }
-  nav .lang-switch a { font-size: 12px; font-weight: 600; padding: 2px 6px; border-radius: 3px; }
+  nav .links a { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  nav .links a:hover { color: var(--text-bright); }
+  nav .lang-switch { display: flex; gap: 4px; padding-left: 16px; border-left: 1px solid var(--border); }
+  nav .lang-switch a { font-size: 12px; font-weight: 600; padding: 3px 7px; border-radius: 3px; color: var(--text-dim); text-decoration: none; transition: all 0.2s; }
+  nav .lang-switch a:hover { color: var(--text-bright); }
   nav .lang-switch a.active { color: var(--accent); background: rgba(59,130,246,0.12); }
 
   /* Hero */
@@ -61,27 +62,24 @@
 
   /* Pipeline — 7 in a row */
   .pipeline { display: flex; gap: 2px; }
-  .pipeline-step { flex: 1; min-width: 0; background: var(--bg-card); padding: 20px 8px; text-align: center; transition: background 0.2s; }
+  .pipeline-step { flex: 1; min-width: 0; background: var(--bg-card); padding: 20px 10px; text-align: center; transition: background 0.2s; }
   .pipeline-step:first-child { border-radius: 8px 0 0 8px; }
   .pipeline-step:last-child { border-radius: 0 8px 8px 0; }
   .pipeline-step:hover { background: var(--bg-card-hover); }
   .pipeline-step .num { font-size: 11px; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
-  .pipeline-step .name { font-size: 12px; font-weight: 600; color: var(--text-bright); margin-bottom: 2px; }
-  .pipeline-step .file { font-size: 10px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pipeline-step .name { font-size: 13px; font-weight: 600; color: var(--text-bright); margin-bottom: 2px; }
+  .pipeline-step .file { font-size: 10px; color: var(--text-dim); }
   @media (max-width: 700px) {
     .pipeline { flex-wrap: wrap; }
     .pipeline-step { flex: 0 0 calc(50% - 1px); border-radius: 0 !important; }
-    .pipeline-step:nth-child(odd) { border-radius: 8px 0 0 8px !important; }
-    .pipeline-step:nth-child(even) { border-radius: 0 8px 8px 0 !important; }
-    .pipeline-step:nth-last-child(-n+2) { border-radius: 0 0 8px 8px !important; }
   }
 
   /* Proof */
   .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   @media (max-width: 800px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) { .proof-grid { grid-template-columns: 1fr; } }
-  .proof-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; transition: border-color 0.2s; }
-  .proof-card:hover { border-color: var(--accent-dim); }
+  .proof-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; transition: border-color 0.2s, transform 0.2s; }
+  .proof-card:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
   .proof-card .status { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); margin-bottom: 12px; }
   .proof-card .status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
   .proof-card h3 { font-size: 15px; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
@@ -93,7 +91,8 @@
   .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   @media (max-width: 800px) { .principles { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) { .principles { grid-template-columns: 1fr; } }
-  .principle { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 28px; }
+  .principle { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 28px; transition: border-color 0.2s; }
+  .principle:hover { border-color: var(--border); }
   .principle .icon { font-size: 20px; margin-bottom: 12px; }
   .principle h3 { font-size: 15px; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
   .principle p { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
@@ -119,18 +118,11 @@
 
   .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-  /* Animations */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  .animate { animation: fadeUp 0.6s ease-out forwards; opacity: 0; }
-  .delay-1 { animation-delay: 0.1s; }
-  .delay-2 { animation-delay: 0.2s; }
-  .delay-3 { animation-delay: 0.3s; }
-
-  /* i18n: hide non-active */
-  [data-lang] { display: none; }
-  [data-lang="en"] { display: block; }
-  span[data-lang], a[data-lang], div[data-lang] { display: none; }
-  span[data-lang="en"], a[data-lang="en"], div[data-lang="en"] { display: inline; }
+  /* i18n: hide non-active inline/span, show block elements */
+  span[data-lang], a[data-lang] { display: none !important; }
+  span[data-lang="en"], a[data-lang="en"] { display: inline !important; }
+  div[data-lang], p[data-lang], li[data-lang], h2[data-lang], h3[data-lang] { display: none !important; }
+  div[data-lang="en"], p[data-lang="en"], li[data-lang="en"], h2[data-lang="en"], h3[data-lang="en"] { display: block !important; }
 </style>
 </head>
 <body>
@@ -140,21 +132,13 @@
     <a href="/math-coding/" class="logo">Math<span>Coding</span>Fractal</a>
     <div class="right">
       <div class="links">
-        <a href="/math-coding/docs/">
-          <span data-lang="en">Knowledge Base</span>
-          <span data-lang="ru">База знаний</span>
-          <span data-lang="zh">知识库</span>
-        </a>
+        <a href="/math-coding/docs/">Docs</a>
         <a href="https://github.com/11111000000/math-coding">GitHub</a>
       </div>
       <div class="lang-switch">
-        <a href="#" onclick="setLang('en');return false" data-lang="en" class="active">EN</a>
-        <a href="#" onclick="setLang('en');return false" data-lang="ru">EN</a>
-        <a href="#" onclick="setLang('ru');return false" data-lang="ru" class="active">RU</a>
-        <a href="#" onclick="setLang('zh');return false" data-lang="ru">中文</a>
-        <a href="#" onclick="setLang('en');return false" data-lang="zh">EN</a>
-        <a href="#" onclick="setLang('ru');return false" data-lang="zh">RU</a>
-        <a href="#" onclick="setLang('zh');return false" data-lang="zh" class="active">中文</a>
+        <a href="#" data-lang="en" class="active" onclick="setLang('en');return false">EN</a>
+        <a href="#" data-lang="ru" onclick="setLang('ru');return false">RU</a>
+        <a href="#" data-lang="zh" onclick="setLang('zh');return false">中文</a>
       </div>
     </div>
   </div>
@@ -163,23 +147,23 @@
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge animate" data-lang="en">Artifact-Centered Development</div>
-    <div class="hero-badge animate" data-lang="ru">Разработка вокруг артефактов</div>
-    <div class="hero-badge animate" data-lang="zh">以产物为中心的开发</div>
+    <div class="hero-badge" data-lang="en">Artifact-Centered Development</div>
+    <div class="hero-badge" data-lang="ru">Разработка вокруг артефактов</div>
+    <div class="hero-badge" data-lang="zh">以产物为中心的开发</div>
 
-    <h1 class="animate delay-1">
+    <h1>
       <span data-lang="en">From <span class="dim">vibe-coding</span><br>to <span style="color:var(--accent)">math-coding</span></span>
       <span data-lang="ru">От <span class="dim">вайб-кодинга</span><br>к <span style="color:var(--accent)">мат-кодингу</span></span>
       <span data-lang="zh">从 <span class="dim">氛围编程</span><br>到 <span style="color:var(--accent)">数学编程</span></span>
     </h1>
 
-    <p class="animate delay-2">
+    <p>
       <span data-lang="en">A methodology that replaces prompt-confidence with verified formal models. Every assumption explicit. Every property checked. Every claim backed by evidence.</span>
-      <span data-lang="ru">Методология, заменяющая уверенность промпта верифицированными формальными моделями. Каждое допущение явное. Каждое свойство проверено. Каждое утверждение подтверждено evidence.</span>
-      <span data-lang="zh">一种用经过验证的形式化模型取代提示词置信度的方法论。每个假设明确。每个属性经过检查。每个声明都有证据支持。</span>
+      <span data-lang="ru">Методология, заменяющая уверенность промпта верифицированными формальными моделями. Каждое допущение явное. Каждое свойство проверено.</span>
+      <span data-lang="zh">用经过验证的形式化模型取代提示词置信度的方法论。每个假设明确。每个属性经过检查。</span>
     </p>
 
-    <div class="hero-buttons animate delay-3">
+    <div class="hero-buttons">
       <a href="/math-coding/docs/" class="btn btn-primary">
         <span data-lang="en">Read the Docs</span>
         <span data-lang="ru">Читать документацию</span>
@@ -207,7 +191,7 @@
     </h2>
     <p>
       <span data-lang="en">Every task follows the same cycle. No step is optional. No artifact is transient.</span>
-      <span data-lang="ru">Каждая задача проходит один и тот же цикл. Ни один шаг не является опциональным. Ни один артефакт не является временным.</span>
+      <span data-lang="ru">Каждая задача проходит один и тот же цикл. Ни один шаг не опционален. Ни один артефакт не временный.</span>
       <span data-lang="zh">每个任务都遵循相同的周期。没有可选步骤。没有临时产物。</span>
     </p>
 
@@ -282,8 +266,8 @@
     </h2>
     <p>
       <span data-lang="en">Each packet has passed SANY (parsing) and TLC (bounded model checking). The evidence is machine-readable.</span>
-      <span data-lang="ru">Каждый пакет прошёл SANY (парсинг) и TLC (ограниченная проверка моделей). Evidence доступен в машиночитаемой форме.</span>
-      <span data-lang="zh">每个数据包都通过了SANY（解析）和TLC（有界模型检查）。证据为机器可读格式。</span>
+      <span data-lang="ru">Каждый пакет прошёл SANY и TLC. Evidence доступен в машиночитаемой форме.</span>
+      <span data-lang="zh">每个数据包都通过了SANY和TLC。证据为机器可读格式。</span>
     </p>
 
     <div class="proof-grid">
@@ -292,31 +276,31 @@
         <h3>minimal-spec</h3>
         <p data-lang="en">Simplest state machine. Two states, two proved theorems. The atom of the methodology.</p>
         <p data-lang="ru">Простейший автомат. Два состояния, две доказанные теоремы. Атом методологии.</p>
-        <p data-lang="zh">最简单的状态机。两个状态，两个已证明的定理。方法论的原子。</p>
+        <p data-lang="zh">最简单的状态机。两个状态，两个已证明的定理。</p>
         <div class="meta"><div>States <span>2</span></div><div>TLA+</div></div>
       </div>
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>ui-modal-dialog</h3>
         <p data-lang="en">Desktop confirmation dialog. 7 visible states, fairness properties, liveness guarantees.</p>
-        <p data-lang="ru">Десктопный диалог подтверждения. 7 видимых состояний, свойства fairness, гарантии liveness.</p>
-        <p data-lang="zh">桌面确认对话框。7个可见状态，公平性属性，活性保证。</p>
+        <p data-lang="ru">Десктопный диалог. 7 состояний, свойства fairness, гарантии liveness.</p>
+        <p data-lang="zh">桌面确认对话框。7个状态，公平性属性。</p>
         <div class="meta"><div>States <span>8</span></div><div>TLA+</div></div>
       </div>
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>self-spec</h3>
         <p data-lang="en">The methodology describes itself. 7 states. The fractal property made concrete.</p>
-        <p data-lang="ru">Методология описывает сама себя. 7 состояний. Фрактальное свойство в concrete форме.</p>
-        <p data-lang="zh">方法论描述自身。7个状态。分形属性的具体化。</p>
+        <p data-lang="ru">Методология описывает сама себя. 7 состояний.</p>
+        <p data-lang="zh">方法论描述自身。7个状态。</p>
         <div class="meta"><div>States <span>7</span></div><div>TLA+</div></div>
       </div>
       <div class="proof-card">
         <div class="status">Verified</div>
         <h3>ui-modal-react</h3>
         <p data-lang="en">React/TypeScript refinement of the dialog. 16 passing tests, full traceability map.</p>
-        <p data-lang="ru">React/TypeScript рефинемент диалога. 16 проходящих тестов, полная карта трассировки.</p>
-        <p data-lang="zh">对话框的React/TypeScript精化。16个通过的测试，完整的可追溯性映射。</p>
+        <p data-lang="ru">React/TypeScript рефинемент. 16 тестов, полная карта трассировки.</p>
+        <p data-lang="zh">React/TypeScript精化。16个通过的测试。</p>
         <div class="meta"><div>States <span>8</span></div><div>Tests <span>16</span></div></div>
       </div>
     </div>
@@ -346,8 +330,8 @@
         <h3 data-lang="ru">Вокруг артефактов</h3>
         <h3 data-lang="zh">以产物为中心</h3>
         <p data-lang="en">Chat messages are transient. The packet is the source of truth. If it's not in a file, for the methodology it doesn't exist.</p>
-        <p data-lang="ru">Сообщения в чате — transient. Пакет является источником истины. Если чего-то нет в файле, для методологии этого не существует.</p>
-        <p data-lang="zh">聊天消息是临时的。数据包是真理之源。如果某样东西不在文件中，对方法论来说它就不存在。</p>
+        <p data-lang="ru">Чат — transient. Пакет — источник истины. Нет файла — нет существования.</p>
+        <p data-lang="zh">聊天消息是临时的。数据包是真理之源。</p>
       </div>
       <div class="principle">
         <div class="icon">&#x2261;</div>
@@ -355,8 +339,8 @@
         <h3 data-lang="ru">Механическая верификация</h3>
         <h3 data-lang="zh">机械验证</h3>
         <p data-lang="en">No "expert estimates." TLC exhaustively checks every reachable state. SANY rejects invalid specs. The tools are the gate.</p>
-        <p data-lang="ru">Никаких «экспертных оценок». TLC исчерпывающе проверяет каждое достижимое состояние. SANY отклоняет невалидные спецификации.</p>
-        <p data-lang="zh">没有"专家估计"。TLC详尽检查每个可达状态。SANY拒绝无效规范。工具是守门人。</p>
+        <p data-lang="ru">Никаких «экспертных оценок». TLC проверяет каждое состояние.</p>
+        <p data-lang="zh">没有"专家估计"。TLC详尽检查每个可达状态。</p>
       </div>
       <div class="principle">
         <div class="icon">&#x21CC;</div>
@@ -364,8 +348,8 @@
         <h3 data-lang="ru">Фрактальное самоприменение</h3>
         <h3 data-lang="zh">分形自应用</h3>
         <p data-lang="en">The methodology describes itself through its own pipeline. self-spec/ is verified TLA+ that models the methodology.</p>
-        <p data-lang="ru">Методология описывает сама себя через собственный пайплайн. self-spec/ — верифицированный TLA+, моделирующий методологию.</p>
-        <p data-lang="zh">方法论通过自身的流水线描述自己。self-spec/是建模方法论的已验证TLA+。</p>
+        <p data-lang="ru">Методология описывает сама себя через свой пайплайн.</p>
+        <p data-lang="zh">方法论通过自身流水线描述自己。</p>
       </div>
       <div class="principle">
         <div class="icon">&#x2192;</div>
@@ -373,8 +357,8 @@
         <h3 data-lang="ru">Рефинемент как мост</h3>
         <h3 data-lang="zh">精化即桥梁</h3>
         <p data-lang="en">The jump from verified model to code is explicit. State mapping, operation mapping, invariant preservation — all documented.</p>
-        <p data-lang="ru">Прыжок от верифицированной модели к коду является явным. Отображение состояний, операций, сохранение инвариантов — всё задокументировано.</p>
-        <p data-lang="zh">从验证模型到代码的跳跃是显式的。状态映射、操作映射、不变量保持——全部记录在案。</p>
+        <p data-lang="ru">Прыжок от модели к коду явный. Отображения задокументированы.</p>
+        <p data-lang="zh">从验证模型到代码的跳跃是显式的。</p>
       </div>
       <div class="principle">
         <div class="icon">&#x2731;</div>
@@ -382,8 +366,8 @@
         <h3 data-lang="ru">Явные допущения</h3>
         <h3 data-lang="zh">显式假设</h3>
         <p data-lang="en">Every ambiguity becomes a tagged assumption: user-confirmed, agent-inferred, or open. No silent dependencies on open assumptions.</p>
-        <p data-lang="ru">Каждая неоднозначность становится теговым допущением: user-confirmed, agent-inferred или open. Нет скрытых зависимостей от открытых допущений.</p>
-        <p data-lang="zh">每个歧义都变成一个带标签的假设：用户确认、代理推断或开放。没有对开放假设的隐式依赖。</p>
+        <p data-lang="ru">Каждая неоднозначность становится теговым допущением.</p>
+        <p data-lang="zh">每个歧义都变成带标签的假设。</p>
       </div>
       <div class="principle">
         <div class="icon">&#x29C9;</div>
@@ -391,8 +375,8 @@
         <h3 data-lang="ru">Трассируемость</h3>
         <h3 data-lang="zh">可追溯性</h3>
         <p data-lang="en">Every model property maps to a code artifact. Every invariant has a preservation strategy. The map is machine-readable.</p>
-        <p data-lang="ru">Каждое свойство модели отображается в артефакт кода. Каждый инвариант имеет стратегию сохранения. Карта доступна в машиночитаемой форме.</p>
-        <p data-lang="zh">每个模型属性映射到代码产物。每个不变量都有保持策略。映射为机器可读格式。</p>
+        <p data-lang="ru">Каждое свойство модели отображается в артефакт кода.</p>
+        <p data-lang="zh">每个模型属性映射到代码产物。</p>
       </div>
     </div>
   </div>
@@ -471,7 +455,7 @@
     </h2>
     <p style="color:var(--text-dim);max-width:480px;margin:0 auto 32px;">
       <span data-lang="en">Read the methodology, explore verified examples, or build your first formal model.</span>
-      <span data-lang="ru">Изучите методологию, исследуйте верифицированные примеры или создайте свою первую формальную модель.</span>
+      <span data-lang="ru">Изучите методологию или создайте свою первую формальную модель.</span>
       <span data-lang="zh">阅读方法论，探索已验证的示例，或构建您的第一个形式化模型。</span>
     </p>
     <div class="hero-buttons">
@@ -501,37 +485,21 @@ function setLang(lang) {
     const tag = el.tagName.toLowerCase();
     if (tag === 'span' || tag === 'a') {
       el.style.display = 'inline';
+    } else if (tag === 'li') {
+      el.style.display = 'list-item';
     } else {
-      el.style.display = '';
+      el.style.display = 'block';
     }
   });
-  document.querySelectorAll('.lang-switch a').forEach(a => {
-    a.classList.remove('active');
-    if (a.textContent.trim() === lang.toUpperCase()) a.classList.add('active');
-  });
+  document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+  const activeBtn = document.querySelector('.lang-switch a[data-lang="' + lang + '"]');
+  if (activeBtn) activeBtn.classList.add('active');
   localStorage.setItem('mcf-lang', lang);
 }
 
 // Restore saved language
 const saved = localStorage.getItem('mcf-lang');
 if (saved) setLang(saved);
-
-// Scroll animations
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }, i * 60);
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.proof-card, .principle, .pipeline-step').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(12px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  io.observe(el);
-});
 </script>
 
 </body>
