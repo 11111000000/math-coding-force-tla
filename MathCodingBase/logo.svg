@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background rounded square -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#111827" stroke="#60a5fa" stroke-width="1.5"/>
+
+  <!-- State machine nodes (simplified constellation) -->
+  <!-- Central node -->
+  <circle cx="32" cy="32" r="6" fill="#60a5fa"/>
+  <circle cx="32" cy="32" r="10" fill="#60a5fa" opacity="0.3"/>
+
+  <!-- Surrounding nodes -->
+  <circle cx="14" cy="20" r="4" fill="#34d399"/>
+  <circle cx="14" cy="20" r="7" fill="#34d399" opacity="0.25"/>
+
+  <circle cx="50" cy="20" r="4" fill="#a78bfa"/>
+  <circle cx="50" cy="20" r="7" fill="#a78bfa" opacity="0.25"/>
+
+  <circle cx="14" cy="44" r="4" fill="#fbbf24"/>
+  <circle cx="14" cy="44" r="7" fill="#fbbf24" opacity="0.25"/>
+
+  <circle cx="50" cy="44" r="4" fill="#34d399"/>
+  <circle cx="50" cy="44" r="7" fill="#34d399" opacity="0.25"/>
+
+  <!-- Connecting lines -->
+  <line x1="18" y1="22" x2="28" y2="30" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  <line x1="46" y1="22" x2="36" y2="30" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  <line x1="18" y1="42" x2="28" y2="34" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  <line x1="46" y1="42" x2="36" y2="34" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+
+  <!-- Small arrow heads -->
+  <circle cx="23" cy="26" r="1.5" fill="#60a5fa"/>
+  <circle cx="41" cy="26" r="1.5" fill="#60a5fa"/>
+  <circle cx="23" cy="38" r="1.5" fill="#60a5fa"/>
+  <circle cx="41" cy="38" r="1.5" fill="#60a5fa"/>
+</svg>

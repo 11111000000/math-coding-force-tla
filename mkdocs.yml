@@ -37,7 +37,7 @@ theme:
     - toc.follow
   icon:
     repo: fontawesome/brands/github
-  logo: logo.png
+  logo: logo.svg
 
 plugins:
   - search
