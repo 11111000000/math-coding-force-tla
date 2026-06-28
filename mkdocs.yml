@@ -1,0 +1,94 @@
+site_name: MathCodingFractal — Knowledge Base
+site_url: https://11111000000.github.io/math-coding/docs/
+repo_url: https://github.com/11111000000/math-coding
+repo_name: 11111000000/math-coding
+
+docs_dir: MathCodingBase
+site_dir: site/docs
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+  logo: logo.png
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: Index.md
+  - Meta:
+    - Manifesto: 00-Meta/Manifesto.md
+    - Dialectical Analysis: 00-Meta/Dialectical Analysis.md
+    - Fractal Principle: 00-Meta/Fractal Principle.md
+    - Methodology in Russian: 00-Meta/Methodology in Russian.md
+    - Roadmap: 00-Meta/Roadmap.md
+  - Theory:
+    - Mathematical Development Cycle: 01-Theory/Mathematical Development Cycle.md
+    - Three Layers of Rigor: 01-Theory/Three Layers of Rigor.md
+    - TLA+ Role: 01-Theory/TLA+ Role.md
+    - Refinement as Bridge: 01-Theory/Refinement as Bridge.md
+  - Protocols:
+    - Task Packet Protocol: 02-Protocols/Task Packet Protocol.md
+    - Assumption Protocol: 02-Protocols/Assumption Protocol.md
+    - Verification Evidence Protocol: 02-Protocols/Verification Evidence Protocol.md
+    - Refinement Protocol: 02-Protocols/Refinement Protocol.md
+    - Traceability Protocol: 02-Protocols/Traceability Protocol.md
+  - Architecture:
+    - Artifact-Centered Architecture: 03-Architecture/Artifact-Centered Architecture.md
+    - Agent Portability Model: 03-Architecture/Agent Portability Model.md
+    - Mechanical Verification Model: 03-Architecture/Mechanical Verification Model.md
+    - UI Application Guide: 03-Architecture/UI Application Guide.md
+  - Fractal Self:
+    - Self Problem: 04-Fractal-Self/Self Problem.md
+    - Self Assumptions: 04-Fractal-Self/Self Assumptions.md
+    - Self Refinement: 04-Fractal-Self/Self Refinement.md
+    - Self Justification: 04-Fractal-Self/Self Justification.md
+
+extra_css:
+  - extra.css

@@ -3,6 +3,7 @@ node_modules/
 .tlacache/
 .obsidian/
 tools/
+site/
 *.class
 *.jar
 !.gitkeep

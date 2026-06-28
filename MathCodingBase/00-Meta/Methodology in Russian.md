@@ -401,18 +401,18 @@ nix run .#verify -- artifacts/my-task
 
 ## Связанные документы
 
-- [[Manifesto]] — краткий манифест методологии
-- [[Dialectical Analysis]] — диалектический разбор задачи
-- [[Fractal Principle]] — почему методология сама себя описывает
-- [[Mathematical Development Cycle]] — полный цикл
-- [[Three Layers of Rigor]] — L1/L2/L3
-- [[TLA+ Role]] — где заканчивается TLA+ и начинается методология
-- [[Refinement as Bridge]] — почему refinement обязателен
-- [[Task Packet Protocol]] — каноническая структура пакетов
-- [[Assumption Protocol]] — работа с assumptions
-- [[Verification Evidence Protocol]] — что такое verification
-- [[Refinement Protocol]] — как писать refinement
-- [[Traceability Protocol]] — связь между моделью и кодом
-- [[Artifact-Centered Architecture]] — архитектура системы
-- [[Agent Portability Model]] — переносимость на другие агенты
-- [[Mechanical Verification Model]] — место верификации в системе
+- [Manifesto](./Manifesto.md) — краткий манифест методологии
+- [Dialectical Analysis](./Dialectical Analysis.md) — диалектический разбор задачи
+- [Fractal Principle](./Fractal Principle.md) — почему методология сама себя описывает
+- [Mathematical Development Cycle](../01-Theory/Mathematical Development Cycle.md) — полный цикл
+- [Three Layers of Rigor](../01-Theory/Three Layers of Rigor.md) — L1/L2/L3
+- [TLA+ Role](../01-Theory/TLA+ Role.md) — где заканчивается TLA+ и начинается методология
+- [Refinement as Bridge](../01-Theory/Refinement as Bridge.md) — почему refinement обязателен
+- [Task Packet Protocol](../02-Protocols/Task Packet Protocol.md) — каноническая структура пакетов
+- [Assumption Protocol](../02-Protocols/Assumption Protocol.md) — работа с assumptions
+- [Verification Evidence Protocol](../02-Protocols/Verification Evidence Protocol.md) — что такое verification
+- [Refinement Protocol](../02-Protocols/Refinement Protocol.md) — как писать refinement
+- [Traceability Protocol](../02-Protocols/Traceability Protocol.md) — связь между моделью и кодом
+- [Artifact-Centered Architecture](../03-Architecture/Artifact-Centered Architecture.md) — архитектура системы
+- [Agent Portability Model](../03-Architecture/Agent Portability Model.md) — переносимость на другие агенты
+- [Mechanical Verification Model](../03-Architecture/Mechanical Verification Model.md) — место верификации в системе

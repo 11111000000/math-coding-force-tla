@@ -1,0 +1,41 @@
+/* Custom overrides for MathCodingFractal docs */
+:root {
+  --md-primary-fg-color: #1e293b;
+  --md-primary-fg-color--light: #334155;
+  --md-primary-fg-color--dark: #0f172a;
+  --md-accent-fg-color: #3b82f6;
+  --md-accent-fg-color--transparent: rgba(59, 130, 246, 0.1);
+  --md-default-bg-color: #0b0f19;
+  --md-default-bg-color--light: #111827;
+  --md-default-bg-color--lighter: #1a2332;
+  --md-code-bg-color: #111827;
+  --md-code-fg-color: #e2e8f0;
+}
+
+/* Sidebar */
+.md-nav__link {
+  font-size: 13px;
+}
+
+/* Code blocks */
+.md-typeset code {
+  font-size: 12px;
+}
+
+/* Admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 6px;
+}
+
+/* Header */
+.md-header {
+  background: rgba(11, 15, 25, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+/* Hero on index */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}

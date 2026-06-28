@@ -262,8 +262,8 @@ TLC найдёт все reachable states и проверит:
 
 ## Связанные документы
 
-- [[Methodology in Russian]] — главный вводный документ
-- [[Example - UI Modal Dialog]] — реализованный пример
-- [[Three Layers of Rigor]] — L1/L2/L3
-- [[Refinement Protocol]] — как писать refinement
-- [[Mechanical Verification Model]] — как работает верификация
+- [Methodology in Russian](../00-Meta/Methodology in Russian.md) — главный вводный документ
+- [Example - UI Modal Dialog](../../examples/ui-modal-dialog/) — реализованный пример
+- [Three Layers of Rigor](../01-Theory/Three Layers of Rigor.md) — L1/L2/L3
+- [Refinement Protocol](../02-Protocols/Refinement Protocol.md) — как писать refinement
+- [Mechanical Verification Model](./Mechanical Verification Model.md) — как работает верификация
