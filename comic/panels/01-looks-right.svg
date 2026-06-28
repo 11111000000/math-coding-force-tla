@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" font-family="monospace">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0b0f19"/>
+
+  <!-- Desk surface line -->
+  <line x1="0" y1="450" x2="800" y2="450" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Window with city skyline (background) -->
+  <rect x="40" y="60" width="200" height="180" fill="#111827" stroke="#1e293b" stroke-width="2" rx="4"/>
+  <!-- City buildings silhouettes -->
+  <rect x="60" y="180" width="20" height="60" fill="#1e293b"/>
+  <rect x="85" y="160" width="25" height="80" fill="#1e293b"/>
+  <rect x="115" y="170" width="18" height="70" fill="#1e293b"/>
+  <rect x="138" y="150" width="22" height="90" fill="#1e293b"/>
+  <rect x="165" y="175" width="20" height="65" fill="#1e293b"/>
+  <rect x="190" y="165" width="25" height="75" fill="#1e293b"/>
+  <rect x="220" y="180" width="15" height="60" fill="#1e293b"/>
+  <!-- Window stars -->
+  <circle cx="80" cy="90" r="1" fill="#fbbf24"/>
+  <circle cx="150" cy="100" r="1" fill="#fbbf24"/>
+  <circle cx="210" cy="80" r="1" fill="#fbbf24"/>
+  <!-- Moon -->
+  <circle cx="190" cy="110" r="12" fill="#94a3b8" opacity="0.3"/>
+
+  <!-- Maya at desk (stylized character) -->
+  <!-- Body -->
+  <rect x="350" y="280" width="100" height="120" fill="#3b82f6" rx="20"/>
+  <!-- Head -->
+  <circle cx="400" cy="240" r="35" fill="#fbbf24"/>
+  <!-- Hair -->
+  <path d="M 365 230 Q 370 200 400 195 Q 430 200 435 230 Q 435 220 400 215 Q 365 220 365 230 Z" fill="#1e293b"/>
+  <!-- Eyes (confident, slight smile) -->
+  <circle cx="390" cy="240" r="2" fill="#0b0f19"/>
+  <circle cx="410" cy="240" r="2" fill="#0b0f19"/>
+  <path d="M 388 250 Q 400 256 412 250" stroke="#0b0f19" stroke-width="1.5" fill="none"/>
+  <!-- Arms -->
+  <rect x="320" y="300" width="20" height="60" fill="#fbbf24" rx="10"/>
+  <rect x="460" y="300" width="20" height="60" fill="#fbbf24" rx="10"/>
+
+  <!-- Laptop on desk -->
+  <rect x="320" y="380" width="160" height="80" fill="#1e293b" stroke="#3b82f6" stroke-width="2" rx="4"/>
+  <rect x="330" y="385" width="140" height="65" fill="#0b0f19"/>
+  <!-- Code on laptop screen (purple/blue) -->
+  <text x="335" y="400" font-size="8" fill="#a78bfa">const Dialog = () =&gt; {</text>
+  <text x="345" y="412" font-size="8" fill="#60a5fa">const [state, setState] =</text>
+  <text x="355" y="424" font-size="8" fill="#60a5fa">useState('closed');</text>
+  <text x="345" y="436" font-size="8" fill="#34d399">// looks good ✓</text>
+  <text x="335" y="448" font-size="8" fill="#a78bfa">};</text>
+
+  <!-- Second monitor (right) - AI chat -->
+  <rect x="540" y="100" width="220" height="220" fill="#111827" stroke="#3b82f6" stroke-width="2" rx="4"/>
+  <rect x="550" y="110" width="200" height="200" fill="#0b0f19"/>
+  <!-- AI prompt -->
+  <rect x="558" y="120" width="180" height="30" fill="#1e293b" rx="4"/>
+  <text x="565" y="138" font-size="9" fill="#60a5fa">&gt; Build me a confirm dialog</text>
+  <!-- AI response -->
+  <rect x="558" y="160" width="180" height="140" fill="#1e293b" rx="4"/>
+  <text x="565" y="178" font-size="8" fill="#34d399">// Here you go!</text>
+  <text x="565" y="190" font-size="8" fill="#60a5fa">function Dialog() {</text>
+  <text x="575" y="202" font-size="8" fill="#94a3b8">return (</text>
+  <text x="585" y="214" font-size="8" fill="#94a3b8">&lt;button</text>
+  <text x="595" y="226" font-size="8" fill="#94a3b8">onClick=</text>
+  <text x="625" y="226" font-size="8" fill="#fbbf24">{confirm}</text>
+  <text x="575" y="238" font-size="8" fill="#94a3b8">&gt;</text>
+  <text x="585" y="250" font-size="8" fill="#34d399">Confirm</text>
+  <text x="575" y="262" font-size="8" fill="#94a3b8">&lt;/button&gt;</text>
+  <text x="565" y="280" font-size="8" fill="#60a5fa">);</text>
+  <text x="565" y="292" font-size="8" fill="#60a5fa">}</text>
+
+  <!-- Coffee cup -->
+  <ellipse cx="280" cy="430" rx="15" ry="6" fill="#1e293b"/>
+  <path d="M 270 425 Q 270 410 280 410 Q 290 410 290 425 Z" fill="#fbbf24"/>
+  <ellipse cx="280" cy="410" rx="10" ry="3" fill="#1e293b"/>
+  <!-- Steam -->
+  <path d="M 275 405 Q 277 400 275 395" stroke="#94a3b8" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 285 405 Q 283 400 285 395" stroke="#94a3b8" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Clock on wall -->
+  <circle cx="700" cy="80" r="25" fill="#111827" stroke="#1e293b" stroke-width="2"/>
+  <line x1="700" y1="80" x2="700" y2="62" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="700" y1="80" x2="714" y2="80" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="700" cy="80" r="2" fill="#fbbf24"/>
+
+  <!-- Caption box -->
+  <rect x="20" y="490" width="760" height="80" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+  <text x="40" y="520" font-size="14" fill="#94a3b8">PANEL 01 — "LOOKS RIGHT"</text>
+  <text x="40" y="545" font-size="13" fill="#e2e8f0">Friday afternoon. Maya needs to ship a payment confirmation dialog.</text>
+  <text x="40" y="562" font-size="12" fill="#60a5fa" font-style="italic">Maya: "This should work. The tests pass. The code looks right."</text>
+</svg>

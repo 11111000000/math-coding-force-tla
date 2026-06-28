@@ -35,6 +35,9 @@ jobs:
           cp -r site/docs/* _site/docs/
           cp Landing/index.html _site/index.html
           cp -r Landing/* _site/ 2>/dev/null || true
+          mkdir -p _site/img _site/comic/panels
+          cp -r landing/img/* _site/img/
+          cp -r comic/panels/* _site/comic/panels/
           echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/math-coding/docs/Index/"></head><body></body></html>' > _site/docs/index.html
 
       - uses: actions/upload-pages-artifact@v3

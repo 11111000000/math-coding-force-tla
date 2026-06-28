@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- Two states connected -->
+  <circle cx="25" cy="50" r="12" fill="none" stroke="#34d399" stroke-width="2"/>
+  <circle cx="25" cy="50" r="6" fill="#34d399"/>
+  <text x="25" y="73" font-size="7" fill="#34d399" text-anchor="middle" font-family="monospace">closed</text>
+  <circle cx="75" cy="50" r="12" fill="none" stroke="#34d399" stroke-width="2"/>
+  <circle cx="75" cy="50" r="6" fill="#34d399"/>
+  <text x="75" y="73" font-size="7" fill="#34d399" text-anchor="middle" font-family="monospace">open</text>
+  <!-- Arrow -->
+  <line x1="40" y1="50" x2="60" y2="50" stroke="#60a5fa" stroke-width="2"/>
+  <polygon points="60,50 55,47 55,53" fill="#60a5fa"/>
+  <!-- Toggle label -->
+  <text x="50" y="40" font-size="8" fill="#60a5fa" text-anchor="middle" font-family="monospace">Toggle</text>
+  <!-- Verification check -->
+  <circle cx="85" cy="20" r="8" fill="#34d399"/>
+  <path d="M 81 20 L 84 23 L 89 17" stroke="#0b0f19" stroke-width="2" fill="none"/>
+</svg>

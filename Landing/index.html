@@ -42,8 +42,10 @@
   nav .lang-switch a.active { color: var(--accent); background: rgba(59,130,246,0.12); }
 
   /* Hero */
-  .hero { padding: 140px 0 80px; text-align: center; }
-  .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-dim); padding: 4px 12px; border-radius: 4px; margin-bottom: 32px; }
+  .hero { padding: 140px 0 60px; text-align: center; }
+  .hero-illustration { margin: 0 auto 40px; max-width: 600px; }
+  .hero-illustration img { width: 100%; height: auto; display: block; }
+  .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-dim); padding: 4px 12px; border-radius: 4px; margin-bottom: 24px; }
   .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; color: var(--text-bright); line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.03em; }
   .hero h1 .dim { color: var(--text-dim); font-weight: 400; }
   .hero p { font-size: 17px; color: var(--text-dim); max-width: 580px; margin: 0 auto 40px; line-height: 1.8; }
@@ -116,6 +118,23 @@
   footer a { color: var(--accent); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
+  /* Comic preview */
+  .comic-preview { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 32px; }
+  @media (max-width: 800px) { .comic-preview { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .comic-preview { grid-template-columns: 1fr; } }
+  .comic-panel-link { display: block; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.2s; }
+  .comic-panel-link:hover { border-color: var(--accent-dim); transform: scale(1.02); }
+  .comic-panel-link img { width: 100%; height: auto; display: block; }
+  .comic-cta { text-align: center; }
+
+  /* Proof icons */
+  .proof-icon { display: flex; align-items: center; justify-content: center; height: 60px; margin-bottom: 12px; }
+  .proof-icon img { max-height: 60px; width: auto; }
+
+  /* Principle icons */
+  .principle .principle-icon { display: flex; align-items: center; justify-content: center; height: 50px; margin-bottom: 12px; }
+  .principle .principle-icon img { max-height: 50px; width: auto; }
+
   .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
   /* i18n: hide all data-lang by default, JS will show the active one */
@@ -151,6 +170,11 @@
     <div class="hero-badge" data-lang="en">Artifact-Centered Development</div>
     <div class="hero-badge" data-lang="ru">Разработка вокруг артефактов</div>
     <div class="hero-badge" data-lang="zh">以产物为中心的开发</div>
+
+    <!-- Hero illustration -->
+    <div class="hero-illustration">
+      <img src="/math-coding/img/hero-state-machine.svg" alt="State machine constellation"/>
+    </div>
 
     <h1>
       <span data-lang="en">From <span class="dim">vibe-coding</span><br>to <span style="color:var(--accent)">math-coding</span></span>
@@ -252,6 +276,71 @@
 
 <hr class="divider">
 
+<!-- Comic Preview -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">
+      <span data-lang="en">The Comic</span>
+      <span data-lang="ru">Комикс</span>
+      <span data-lang="zh">漫画</span>
+    </div>
+    <h2>
+      <span data-lang="en">The Math of Trust</span>
+      <span data-lang="ru">Математика доверия</span>
+      <span data-lang="zh">信任的数学</span>
+    </h2>
+    <p>
+      <span data-lang="en">A 10-panel comic showing how a developer went from "looks right" to "is right" — and why that matters for production systems.</span>
+      <span data-lang="ru">Комикс из 10 кадров: как разработчик перешёл от «выглядит правильно» к «доказано правильно».</span>
+      <span data-lang="zh">一个10格的漫画，展示开发者如何从"看起来对"到"被证明是对的"。</span>
+    </p>
+
+    <!-- Comic preview grid -->
+    <div class="comic-preview">
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/01-looks-right.svg" alt="Panel 1: Looks Right"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/02-ship-it.svg" alt="Panel 2: Ship It"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/03-the-clicks.svg" alt="Panel 3: The Clicks"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/04-the-bug.svg" alt="Panel 4: The Bug"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/05-the-mentor.svg" alt="Panel 5: The Mentor"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/06-the-pipeline.svg" alt="Panel 6: The Pipeline"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/07-the-model.svg" alt="Panel 7: The Model"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/08-tlc-finds-it.svg" alt="Panel 8: TLC Finds It"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/09-fix-first.svg" alt="Panel 9: Fix First"/>
+      </a>
+      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
+        <img src="/math-coding/comic/panels/10-better-world.svg" alt="Panel 10: Better World"/>
+      </a>
+    </div>
+
+    <div class="comic-cta">
+      <a href="/math-coding/docs/00-Meta/Comic/" class="btn btn-primary">
+        <span data-lang="en">Read the full comic</span>
+        <span data-lang="ru">Читать комикс полностью</span>
+        <span data-lang="zh">阅读完整漫画</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
 <!-- Proof -->
 <section class="section">
   <div class="container">
@@ -273,6 +362,7 @@
 
     <div class="proof-grid">
       <div class="proof-card">
+        <div class="proof-icon"><img src="/math-coding/img/packet-minimal-spec.svg" alt="minimal-spec icon"/></div>
         <div class="status">Verified</div>
         <h3>minimal-spec</h3>
         <p data-lang="en">Simplest state machine. Two states, two proved theorems. The atom of the methodology.</p>
@@ -281,6 +371,7 @@
         <div class="meta"><div>States <span>2</span></div><div>TLA+</div></div>
       </div>
       <div class="proof-card">
+        <div class="proof-icon"><img src="/math-coding/img/packet-ui-modal.svg" alt="ui-modal-dialog icon"/></div>
         <div class="status">Verified</div>
         <h3>ui-modal-dialog</h3>
         <p data-lang="en">Desktop confirmation dialog. 7 visible states, fairness properties, liveness guarantees.</p>
@@ -289,6 +380,7 @@
         <div class="meta"><div>States <span>8</span></div><div>TLA+</div></div>
       </div>
       <div class="proof-card">
+        <div class="proof-icon"><img src="/math-coding/img/packet-self-spec.svg" alt="self-spec icon"/></div>
         <div class="status">Verified</div>
         <h3>self-spec</h3>
         <p data-lang="en">The methodology describes itself. 7 states. The fractal property made concrete.</p>
@@ -297,6 +389,7 @@
         <div class="meta"><div>States <span>7</span></div><div>TLA+</div></div>
       </div>
       <div class="proof-card">
+        <div class="proof-icon"><img src="/math-coding/img/packet-ui-react.svg" alt="ui-modal-react icon"/></div>
         <div class="status">Verified</div>
         <h3>ui-modal-react</h3>
         <p data-lang="en">React/TypeScript refinement of the dialog. 16 passing tests, full traceability map.</p>
@@ -326,7 +419,7 @@
 
     <div class="principles">
       <div class="principle">
-        <div class="icon">&#x25C7;</div>
+        <div class="principle-icon"><img src="/math-coding/img/principle-artifact.svg" alt="Artifact icon"/></div>
         <h3 data-lang="en">Artifact-Centered</h3>
         <h3 data-lang="ru">Вокруг артефактов</h3>
         <h3 data-lang="zh">以产物为中心</h3>
@@ -335,7 +428,7 @@
         <p data-lang="zh">聊天消息是临时的。数据包是真理之源。</p>
       </div>
       <div class="principle">
-        <div class="icon">&#x2261;</div>
+        <div class="principle-icon"><img src="/math-coding/img/principle-verification.svg" alt="Verification icon"/></div>
         <h3 data-lang="en">Mechanical Verification</h3>
         <h3 data-lang="ru">Механическая верификация</h3>
         <h3 data-lang="zh">机械验证</h3>
@@ -344,7 +437,7 @@
         <p data-lang="zh">没有"专家估计"。TLC详尽检查每个可达状态。</p>
       </div>
       <div class="principle">
-        <div class="icon">&#x21CC;</div>
+        <div class="principle-icon"><img src="/math-coding/img/principle-fractal.svg" alt="Fractal icon"/></div>
         <h3 data-lang="en">Fractal Self-Application</h3>
         <h3 data-lang="ru">Фрактальное самоприменение</h3>
         <h3 data-lang="zh">分形自应用</h3>
@@ -353,7 +446,7 @@
         <p data-lang="zh">方法论通过自身流水线描述自己。</p>
       </div>
       <div class="principle">
-        <div class="icon">&#x2192;</div>
+        <div class="principle-icon"><img src="/math-coding/img/principle-refinement.svg" alt="Refinement icon"/></div>
         <h3 data-lang="en">Refinement as Bridge</h3>
         <h3 data-lang="ru">Рефинемент как мост</h3>
         <h3 data-lang="zh">精化即桥梁</h3>
@@ -362,7 +455,7 @@
         <p data-lang="zh">从验证模型到代码的跳跃是显式的。</p>
       </div>
       <div class="principle">
-        <div class="icon">&#x2731;</div>
+        <div class="principle-icon"><img src="/math-coding/img/principle-assumptions.svg" alt="Assumptions icon"/></div>
         <h3 data-lang="en">Explicit Assumptions</h3>
         <h3 data-lang="ru">Явные допущения</h3>
         <h3 data-lang="zh">显式假设</h3>
@@ -371,7 +464,7 @@
         <p data-lang="zh">每个歧义都变成带标签的假设。</p>
       </div>
       <div class="principle">
-        <div class="icon">&#x29C9;</div>
+        <div class="principle-icon"><img src="/math-coding/img/principle-traceability.svg" alt="Traceability icon"/></div>
         <h3 data-lang="en">Traceability</h3>
         <h3 data-lang="ru">Трассируемость</h3>
         <h3 data-lang="zh">可追溯性</h3>

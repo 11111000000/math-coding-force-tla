@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- Tagged tags -->
+  <g>
+    <!-- Tag 1: confirmed (green) -->
+    <path d="M 15 30 L 35 30 L 45 40 L 35 50 L 15 50 Z" fill="#34d399" opacity="0.3" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="43" font-size="6" fill="#34d399" text-anchor="middle" font-family="monospace">ok</text>
+
+    <!-- Tag 2: inferred (purple) -->
+    <path d="M 55 30 L 75 30 L 85 40 L 75 50 L 55 50 Z" fill="#a78bfa" opacity="0.3" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="65" y="43" font-size="6" fill="#a78bfa" text-anchor="middle" font-family="monospace">inf</text>
+
+    <!-- Tag 3: open (yellow) -->
+    <path d="M 35 60 L 55 60 L 65 70 L 55 80 L 35 80 Z" fill="#fbbf24" opacity="0.3" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="45" y="73" font-size="6" fill="#fbbf24" text-anchor="middle" font-family="monospace">?</text>
+
+    <!-- Tag 4: closed (gray) -->
+    <path d="M 65 60 L 85 60 L 95 70 L 85 80 L 65 80 Z" fill="#94a3b8" opacity="0.3" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="75" y="73" font-size="6" fill="#94a3b8" text-anchor="middle" font-family="monospace">x</text>
+
+    <!-- Tag 5: smaller -->
+    <path d="M 15 70 L 28 70 L 35 78 L 28 85 L 15 85 Z" fill="#60a5fa" opacity="0.3" stroke="#60a5fa" stroke-width="1"/>
+    <text x="22" y="80" font-size="5" fill="#60a5fa" text-anchor="middle" font-family="monospace">!</text>
+  </g>
+</svg>

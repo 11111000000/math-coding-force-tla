@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" font-family="monospace">
+  <!-- Background - verification chamber -->
+  <rect width="800" height="600" fill="#0b0f19"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-size="14" fill="#34d399" font-weight="bold" text-anchor="middle">TLC — Bounded Model Checking</text>
+
+  <!-- Crystal Computer (TLC) - centered -->
+  <g transform="translate(400, 300)">
+    <!-- Outer glow -->
+    <circle cx="0" cy="0" r="180" fill="#34d399" opacity="0.08"/>
+    <circle cx="0" cy="0" r="140" fill="#34d399" opacity="0.12"/>
+
+    <!-- Crystal structure (faceted) -->
+    <polygon points="0,-100 -80,-50 -100,30 -50,90 50,90 100,30 80,-50" fill="#111827" stroke="#34d399" stroke-width="2"/>
+    <polygon points="0,-100 -80,-50 0,0 80,-50" fill="#34d399" opacity="0.15"/>
+    <polygon points="-80,-50 -100,30 0,0" fill="#34d399" opacity="0.1"/>
+    <polygon points="80,-50 100,30 0,0" fill="#34d399" opacity="0.1"/>
+    <polygon points="-100,30 -50,90 0,0" fill="#34d399" opacity="0.08"/>
+    <polygon points="100,30 50,90 0,0" fill="#34d399" opacity="0.08"/>
+
+    <!-- Inner core (glowing) -->
+    <circle cx="0" cy="0" r="20" fill="#34d399" opacity="0.6"/>
+    <circle cx="0" cy="0" r="10" fill="#fff" opacity="0.9"/>
+  </g>
+
+  <!-- Green beam emanating from TLC, scanning code -->
+  <!-- Code floating to the left -->
+  <g transform="translate(60, 150)">
+    <rect x="0" y="0" width="160" height="180" fill="#111827" stroke="#60a5fa" stroke-width="1" rx="3"/>
+    <text x="10" y="20" font-size="9" fill="#a78bfa">Model.tla</text>
+    <line x1="0" y1="25" x2="160" y2="25" stroke="#1e293b" stroke-width="1"/>
+    <text x="10" y="42" font-size="8" fill="#a78bfa">Confirm ==</text>
+    <text x="10" y="55" font-size="8" fill="#94a3b8">/\ state = "open"</text>
+    <text x="10" y="68" font-size="8" fill="#94a3b8">/\ state' =</text>
+    <text x="10" y="81" font-size="8" fill="#34d399">"confirming"</text>
+    <text x="10" y="100" font-size="8" fill="#a78bfa">Resolve ==</text>
+    <text x="10" y="113" font-size="8" fill="#94a3b8">/\ state \in</text>
+    <text x="10" y="126" font-size="8" fill="#94a3b8">{"confirming","</text>
+    <text x="10" y="139" font-size="8" fill="#94a3b8">canceling"}</text>
+    <text x="10" y="152" font-size="8" fill="#94a3b8">/\ state' =</text>
+    <text x="10" y="165" font-size="8" fill="#34d399">"closing"</text>
+  </g>
+
+  <!-- Green beam -->
+  <path d="M 220 240 L 320 280 L 320 320 L 220 360" stroke="#34d399" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 220 240 L 320 280 L 320 320 L 220 360" stroke="#34d399" stroke-width="1" fill="none" opacity="1"/>
+  <!-- Beam particles -->
+  <circle cx="250" cy="255" r="2" fill="#34d399"/>
+  <circle cx="280" cy="275" r="2" fill="#34d399"/>
+  <circle cx="300" cy="295" r="2" fill="#34d399"/>
+
+  <!-- Counter (top right) -->
+  <g transform="translate(620, 80)">
+    <rect x="0" y="0" width="160" height="100" fill="#111827" stroke="#34d399" stroke-width="2" rx="4"/>
+    <text x="10" y="20" font-size="9" fill="#34d399" font-weight="bold">VERIFICATION</text>
+    <text x="10" y="40" font-size="9" fill="#94a3b8">states: 13</text>
+    <text x="10" y="55" font-size="9" fill="#94a3b8">distinct: 8</text>
+    <text x="10" y="70" font-size="9" fill="#34d399">queue: 0</text>
+    <text x="10" y="90" font-size="10" fill="#f87171" font-weight="bold">VIOLATION!</text>
+  </g>
+
+  <!-- THE BUG - revealed by the beam -->
+  <g transform="translate(560, 290)">
+    <!-- Bug body (now exposed in green light) -->
+    <polygon points="0,0 -20,-28 -32,-8 -26,18 0,12 26,18 32,-8 20,-28" fill="#f87171" stroke="#7f1d1d" stroke-width="1"/>
+    <!-- Eyes (caught, panicked) -->
+    <circle cx="-10" cy="-10" r="4" fill="#fff"/>
+    <circle cx="10" cy="-10" r="4" fill="#fff"/>
+    <circle cx="-10" cy="-10" r="2" fill="#0b0f19"/>
+    <circle cx="10" cy="-10" r="2" fill="#0b0f19"/>
+    <!-- Horns -->
+    <polygon points="-20,-28 -26,-38 -14,-30" fill="#f87171"/>
+    <polygon points="20,-28 26,-38 14,-30" fill="#f87171"/>
+    <!-- Sharp teeth (scared) -->
+    <path d="M -10 6 L -8 12 L -6 6 L -4 12 L -2 6 L 0 12 L 2 6 L 4 12 L 6 6 L 8 12 L 10 6 Z" fill="#7f1d1d"/>
+  </g>
+
+  <!-- Bug callout -->
+  <line x1="560" y1="290" x2="650" y2="380" stroke="#f87171" stroke-width="1"/>
+  <text x="640" y="395" font-size="11" fill="#f87171" font-weight="bold">CAUGHT!</text>
+
+  <!-- Maya watching (left, shocked) -->
+  <g transform="translate(330, 400)">
+    <!-- Body -->
+    <rect x="-30" y="0" width="60" height="80" fill="#3b82f6" rx="15"/>
+    <!-- Head -->
+    <circle cx="0" cy="-30" r="25" fill="#fbbf24"/>
+    <!-- Hair -->
+    <path d="M -25 -30 Q -20 -55 0 -60 Q 20 -55 25 -30 Q 25 -42 15 -48 Q 0 -52 -15 -48 Q -25 -42 -25 -30 Z" fill="#1e293b"/>
+    <!-- Wide shocked eyes -->
+    <circle cx="-10" cy="-30" r="5" fill="#fff"/>
+    <circle cx="10" cy="-30" r="5" fill="#fff"/>
+    <circle cx="-10" cy="-30" r="2.5" fill="#0b0f19"/>
+    <circle cx="10" cy="-30" r="2.5" fill="#0b0f19"/>
+    <!-- Hand to mouth (shocked) -->
+    <ellipse cx="0" cy="-15" rx="6" ry="4" fill="#fbbf24"/>
+  </g>
+
+  <!-- Formalist standing calmly -->
+  <g transform="translate(170, 420)">
+    <!-- Body -->
+    <rect x="-25" y="0" width="50" height="60" fill="#a78bfa" rx="10"/>
+    <!-- Head -->
+    <circle cx="0" cy="-22" r="20" fill="#f4d4a8"/>
+    <!-- Hair (gray) -->
+    <path d="M -20 -22 Q -15 -42 0 -45 Q 15 -42 20 -22 Q 20 -32 0 -34 Q -20 -32 -20 -22 Z" fill="#94a3b8"/>
+    <!-- Glasses -->
+    <circle cx="-7" cy="-22" r="5" fill="none" stroke="#0b0f19" stroke-width="1"/>
+    <circle cx="7" cy="-22" r="5" fill="none" stroke="#0b0f19" stroke-width="1"/>
+    <line x1="-2" y1="-22" x2="2" y2="-22" stroke="#0b0f19" stroke-width="1"/>
+    <!-- Calm eyes -->
+    <circle cx="-7" cy="-22" r="1.5" fill="#0b0f19"/>
+    <circle cx="7" cy="-22" r="1.5" fill="#0b0f19"/>
+    <!-- Slight knowing smile -->
+    <path d="M -7 -10 Q 0 -7 7 -10" stroke="#0b0f19" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- TLC speech bubble (monospace) -->
+  <path d="M 420 130 L 580 130 L 600 150 L 585 165 L 570 150 L 420 150 Z" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+  <text x="430" y="145" font-size="10" fill="#34d399" font-weight="bold">StateInvariant violated:</text>
+  <text x="430" y="160" font-size="10" fill="#34d399">state can be 'confirming'</text>
+  <text x="430" y="173" font-size="10" fill="#34d399">AND 'closed' simultaneously</text>
+
+  <!-- Caption -->
+  <rect x="20" y="490" width="760" height="80" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+  <text x="40" y="520" font-size="14" fill="#34d399">PANEL 08 — "TLC FINDS IT"</text>
+  <text x="40" y="545" font-size="13" fill="#e2e8f0">TLC checks every reachable state. 13 states. 8 distinct. Then —</text>
+  <text x="40" y="562" font-size="12" fill="#34d399" font-style="italic">TLC: "StateInvariant violated: state can be 'confirming' AND 'closed' simultaneously."</text>
+</svg>

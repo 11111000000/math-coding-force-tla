@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" font-family="monospace">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0b0f19"/>
+
+  <!-- Three users split into vertical panels -->
+  <!-- User 1 (left) -->
+  <rect x="20" y="40" width="250" height="440" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+
+  <!-- User 1 character (older person) -->
+  <circle cx="145" cy="130" r="30" fill="#fbbf24"/>
+  <path d="M 115 130 Q 120 100 145 95 Q 170 100 175 130 L 175 115 Q 175 105 145 105 Q 115 105 115 115 Z" fill="#94a3b8"/>
+  <circle cx="138" cy="130" r="2" fill="#0b0f19"/>
+  <circle cx="152" cy="130" r="2" fill="#0b0f19"/>
+  <path d="M 138 140 Q 145 144 152 140" stroke="#0b0f19" stroke-width="1.5" fill="none"/>
+  <!-- Body -->
+  <rect x="115" y="160" width="60" height="60" fill="#60a5fa" rx="10"/>
+
+  <!-- Phone in hand -->
+  <rect x="90" y="240" width="40" height="70" fill="#1e293b" stroke="#34d399" stroke-width="2" rx="4"/>
+  <rect x="95" y="245" width="30" height="55" fill="#0b0f19"/>
+  <text x="100" y="265" font-size="7" fill="#60a5fa">Confirm</text>
+  <rect x="98" y="270" width="24" height="14" fill="#34d399" rx="2"/>
+  <text x="103" y="280" font-size="6" fill="#fff">Buy</text>
+
+  <!-- Hand clicking -->
+  <circle cx="110" cy="277" r="6" fill="#fbbf24"/>
+
+  <!-- Green checkmark above -->
+  <circle cx="110" cy="220" r="20" fill="#34d399" opacity="0.2"/>
+  <path d="M 100 220 L 108 228 L 122 212" stroke="#34d399" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <text x="40" y="360" font-size="14" fill="#34d399" font-weight="bold">User #1</text>
+  <text x="40" y="380" font-size="11" fill="#94a3b8">Click #847</text>
+  <text x="40" y="395" font-size="11" fill="#94a3b8">Time: 14:23</text>
+  <text x="40" y="420" font-size="10" fill="#34d399">✓ Confirmed</text>
+
+  <!-- User 2 (center) -->
+  <rect x="280" y="40" width="250" height="440" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+
+  <!-- User 2 (woman with curly hair) -->
+  <circle cx="405" cy="130" r="30" fill="#a78bfa"/>
+  <path d="M 375 130 Q 380 95 405 90 Q 430 95 435 130 Q 440 110 425 100 Q 405 95 385 100 Q 370 110 375 130 Z" fill="#1e293b"/>
+  <circle cx="398" cy="130" r="2" fill="#0b0f19"/>
+  <circle cx="412" cy="130" r="2" fill="#0b0f19"/>
+  <path d="M 398 140 Q 405 145 412 140" stroke="#0b0f19" stroke-width="1.5" fill="none"/>
+  <rect x="375" y="160" width="60" height="60" fill="#fbbf24" rx="10"/>
+
+  <!-- Phone -->
+  <rect x="350" y="240" width="40" height="70" fill="#1e293b" stroke="#34d399" stroke-width="2" rx="4"/>
+  <rect x="355" y="245" width="30" height="55" fill="#0b0f19"/>
+  <text x="360" y="265" font-size="7" fill="#60a5fa">Confirm</text>
+  <rect x="358" y="270" width="24" height="14" fill="#34d399" rx="2"/>
+  <text x="363" y="280" font-size="6" fill="#fff">Buy</text>
+
+  <circle cx="370" cy="277" r="6" fill="#fbbf24"/>
+
+  <circle cx="370" cy="220" r="20" fill="#34d399" opacity="0.2"/>
+  <path d="M 360 220 L 368 228 L 382 212" stroke="#34d399" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <text x="300" y="360" font-size="14" fill="#34d399" font-weight="bold">User #2</text>
+  <text x="300" y="380" font-size="11" fill="#94a3b8">Click #848</text>
+  <text x="300" y="395" font-size="11" fill="#94a3b8">Time: 14:23</text>
+  <text x="300" y="420" font-size="10" fill="#34d399">✓ Confirmed</text>
+
+  <!-- User 3 (right) -->
+  <rect x="540" y="40" width="240" height="440" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+
+  <!-- User 3 (man with glasses) -->
+  <circle cx="660" cy="130" r="30" fill="#60a5fa"/>
+  <path d="M 630 125 Q 635 100 660 95 Q 685 100 690 125 Q 685 110 660 110 Q 635 110 630 125 Z" fill="#1e293b"/>
+  <!-- Glasses -->
+  <circle cx="652" cy="130" r="6" fill="none" stroke="#0b0f19" stroke-width="1.5"/>
+  <circle cx="668" cy="130" r="6" fill="none" stroke="#0b0f19" stroke-width="1.5"/>
+  <line x1="658" y1="130" x2="662" y2="130" stroke="#0b0f19" stroke-width="1.5"/>
+  <circle cx="652" cy="130" r="1.5" fill="#0b0f19"/>
+  <circle cx="668" cy="130" r="1.5" fill="#0b0f19"/>
+  <path d="M 650 142 Q 660 146 670 142" stroke="#0b0f19" stroke-width="1.5" fill="none"/>
+  <rect x="630" y="160" width="60" height="60" fill="#a78bfa" rx="10"/>
+
+  <!-- Phone -->
+  <rect x="610" y="240" width="40" height="70" fill="#1e293b" stroke="#34d399" stroke-width="2" rx="4"/>
+  <rect x="615" y="245" width="30" height="55" fill="#0b0f19"/>
+  <text x="620" y="265" font-size="7" fill="#60a5fa">Confirm</text>
+  <rect x="618" y="270" width="24" height="14" fill="#34d399" rx="2"/>
+  <text x="623" y="280" font-size="6" fill="#fff">Buy</text>
+
+  <circle cx="630" cy="277" r="6" fill="#fbbf24"/>
+
+  <circle cx="630" cy="220" r="20" fill="#34d399" opacity="0.2"/>
+  <path d="M 620 220 L 628 228 L 642 212" stroke="#34d399" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <text x="560" y="360" font-size="14" fill="#34d399" font-weight="bold">User #3</text>
+  <text x="560" y="380" font-size="11" fill="#94a3b8">Click #849</text>
+  <text x="560" y="395" font-size="11" fill="#94a3b8">Time: 14:24</text>
+  <text x="560" y="420" font-size="10" fill="#34d399">✓ Confirmed</text>
+
+  <!-- Caption -->
+  <rect x="20" y="490" width="760" height="80" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+  <text x="40" y="520" font-size="14" fill="#94a3b8">PANEL 03 — "THE CLICKS"</text>
+  <text x="40" y="545" font-size="13" fill="#e2e8f0">Saturday. Sunday. Users click 'Confirm'. Everything looks fine.</text>
+  <text x="40" y="562" font-size="12" fill="#94a3b8" font-style="italic">847 clicks. 847 confirmations. 847 happy users.</text>
+</svg>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" font-family="monospace">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0b0f19"/>
+
+  <!-- Title: The Pipeline landscape -->
+  <text x="400" y="30" font-size="16" fill="#60a5fa" font-weight="bold" text-anchor="middle">THE PIPELINE — Seven Stages</text>
+
+  <!-- Stylized landscape path through 7 stages -->
+  <!-- Ground line -->
+  <path d="M 30 380 Q 200 360 400 380 Q 600 400 770 370" stroke="#1e293b" stroke-width="3" fill="none"/>
+
+  <!-- Stage 01 - Problem (scroll) -->
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#60a5fa" stroke-width="2" rx="4"/>
+    <!-- Scroll icon -->
+    <rect x="20" y="20" width="40" height="50" fill="#60a5fa" opacity="0.3" rx="2"/>
+    <line x1="25" y1="30" x2="55" y2="30" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="25" y1="38" x2="55" y2="38" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="25" y1="46" x2="45" y2="46" stroke="#60a5fa" stroke-width="1"/>
+    <text x="40" y="85" font-size="10" fill="#60a5fa" font-weight="bold" text-anchor="middle">01</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">PROBLEM</text>
+  </g>
+
+  <!-- Stage 02 - Assumptions (signpost) -->
+  <g transform="translate(160, 290)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#60a5fa" stroke-width="2" rx="4"/>
+    <!-- Signpost -->
+    <line x1="40" y1="20" x2="40" y2="70" stroke="#60a5fa" stroke-width="3"/>
+    <rect x="20" y="25" width="40" height="12" fill="#60a5fa" opacity="0.5" rx="2"/>
+    <rect x="20" y="42" width="40" height="12" fill="#60a5fa" opacity="0.5" rx="2"/>
+    <text x="40" y="85" font-size="10" fill="#60a5fa" font-weight="bold" text-anchor="middle">02</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">ASSUMPTIONS</text>
+  </g>
+
+  <!-- Stage 03 - Formalize (TLA+ crystal) -->
+  <g transform="translate(270, 285)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <!-- Crystal -->
+    <polygon points="40,20 60,35 55,65 25,65 20,35" fill="#a78bfa" opacity="0.4" stroke="#a78bfa" stroke-width="1"/>
+    <polygon points="40,20 55,35 40,50 25,35" fill="#a78bfa" opacity="0.6"/>
+    <text x="40" y="85" font-size="10" fill="#a78bfa" font-weight="bold" text-anchor="middle">03</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">FORMALIZE</text>
+  </g>
+
+  <!-- Stage 04 - Verify (TLC beam) -->
+  <g transform="translate(380, 285)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#34d399" stroke-width="2" rx="4"/>
+    <!-- Beam scanner -->
+    <rect x="20" y="30" width="40" height="20" fill="#34d399" opacity="0.3" rx="2"/>
+    <line x1="25" y1="20" x2="25" y2="65" stroke="#34d399" stroke-width="1"/>
+    <line x1="40" y1="15" x2="40" y2="70" stroke="#34d399" stroke-width="2"/>
+    <line x1="55" y1="20" x2="55" y2="65" stroke="#34d399" stroke-width="1"/>
+    <!-- Checkmark -->
+    <path d="M 30 50 L 38 58 L 55 40" stroke="#34d399" stroke-width="2" fill="none"/>
+    <text x="40" y="85" font-size="10" fill="#34d399" font-weight="bold" text-anchor="middle">04</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">VERIFY</text>
+  </g>
+
+  <!-- Stage 05 - Refine (bridge) -->
+  <g transform="translate(490, 290)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#60a5fa" stroke-width="2" rx="4"/>
+    <!-- Bridge -->
+    <path d="M 15 60 L 40 30 L 65 60" stroke="#60a5fa" stroke-width="2" fill="none"/>
+    <line x1="20" y1="50" x2="60" y2="50" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="28" y1="42" x2="52" y2="42" stroke="#60a5fa" stroke-width="1"/>
+    <text x="40" y="85" font-size="10" fill="#60a5fa" font-weight="bold" text-anchor="middle">05</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">REFINE</text>
+  </g>
+
+  <!-- Stage 06 - Implement (forge/anvil) -->
+  <g transform="translate(600, 290)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#fbbf24" stroke-width="2" rx="4"/>
+    <!-- Anvil -->
+    <rect x="20" y="40" width="40" height="8" fill="#fbbf24" opacity="0.6" rx="1"/>
+    <polygon points="20,48 30,55 50,55 60,48" fill="#fbbf24" opacity="0.6"/>
+    <!-- Sparks -->
+    <circle cx="35" cy="35" r="1" fill="#fbbf24"/>
+    <circle cx="45" cy="32" r="1" fill="#fbbf24"/>
+    <circle cx="50" cy="38" r="1" fill="#fbbf24"/>
+    <text x="40" y="85" font-size="10" fill="#fbbf24" font-weight="bold" text-anchor="middle">06</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">IMPLEMENT</text>
+  </g>
+
+  <!-- Stage 07 - Trace (golden thread) -->
+  <g transform="translate(710, 290)">
+    <rect x="0" y="0" width="80" height="100" fill="#111827" stroke="#34d399" stroke-width="2" rx="4"/>
+    <!-- Thread -->
+    <path d="M 15 30 Q 40 20 65 35 Q 40 50 15 45" stroke="#34d399" stroke-width="1.5" fill="none"/>
+    <path d="M 20 55 Q 45 50 60 60" stroke="#34d399" stroke-width="1.5" fill="none"/>
+    <text x="40" y="85" font-size="10" fill="#34d399" font-weight="bold" text-anchor="middle">07</text>
+    <text x="40" y="98" font-size="9" fill="#f8fafc" text-anchor="middle">TRACE</text>
+  </g>
+
+  <!-- Maya walking the path (small figure) -->
+  <g transform="translate(390, 410)">
+    <circle cx="0" cy="0" r="8" fill="#fbbf24"/>
+    <rect x="-8" y="8" width="16" height="20" fill="#3b82f6" rx="4"/>
+    <line x1="-10" y1="15" x2="-15" y2="20" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="10" y1="15" x2="15" y2="20" stroke="#fbbf24" stroke-width="2"/>
+  </g>
+
+  <!-- Formalist pointing (further back) -->
+  <g transform="translate(330, 420)">
+    <circle cx="0" cy="0" r="8" fill="#f4d4a8"/>
+    <rect x="-8" y="8" width="16" height="20" fill="#a78bfa" rx="4"/>
+    <line x1="10" y1="15" x2="20" y2="10" stroke="#f4d4a8" stroke-width="2"/>
+  </g>
+
+  <!-- Caption -->
+  <rect x="20" y="490" width="760" height="80" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+  <text x="40" y="520" font-size="14" fill="#94a3b8">PANEL 06 — "THE PIPELINE"</text>
+  <text x="40" y="545" font-size="13" fill="#e2e8f0">Seven stages. Each one turns assumption into evidence.</text>
+  <text x="40" y="562" font-size="12" fill="#60a5fa" font-style="italic">The Formalist: "Problem → Assumptions → Formalize → Verify → Refine → Implement → Trace. No step is optional."</text>
+</svg>

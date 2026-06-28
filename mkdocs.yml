@@ -62,6 +62,8 @@ markdown_extensions:
 
 nav:
   - Home: Index.md
+  - Comic:
+    - The Math of Trust: 00-Meta/Comic.md
   - Meta:
     - Manifesto: 00-Meta/Manifesto.md
     - Dialectical Analysis: 00-Meta/Dialectical Analysis.md

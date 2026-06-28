@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" font-family="monospace">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0b0f19"/>
+
+  <!-- Office hallway (background) -->
+  <rect x="0" y="0" width="800" height="200" fill="#111827"/>
+  <rect x="50" y="80" width="60" height="80" fill="#1e293b" rx="2"/>
+  <rect x="130" y="80" width="60" height="80" fill="#1e293b" rx="2"/>
+  <rect x="610" y="80" width="60" height="80" fill="#1e293b" rx="2"/>
+  <rect x="690" y="80" width="60" height="80" fill="#1e293b" rx="2"/>
+  <text x="200" y="50" font-size="14" fill="#94a3b8" opacity="0.5">Tuesday 4:47 PM — Office</text>
+
+  <!-- Floor line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- The Formalist (left) - older, glasses, cardigan -->
+  <g transform="translate(120, 220)">
+    <!-- Body (cardigan) -->
+    <rect x="0" y="60" width="120" height="120" fill="#a78bfa" rx="10"/>
+    <!-- Cardigan details -->
+    <line x1="60" y1="60" x2="60" y2="180" stroke="#7c3aed" stroke-width="2"/>
+    <!-- Head -->
+    <circle cx="60" cy="30" r="35" fill="#f4d4a8"/>
+    <!-- Gray hair -->
+    <path d="M 25 30 Q 30 0 60 -5 Q 90 0 95 30 Q 95 15 80 10 Q 60 5 40 10 Q 25 15 25 30 Z" fill="#94a3b8"/>
+    <!-- Bald spot suggestion -->
+    <ellipse cx="60" cy="5" rx="15" ry="5" fill="#f4d4a8"/>
+    <!-- Glasses -->
+    <circle cx="48" cy="30" r="8" fill="none" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="72" cy="30" r="8" fill="none" stroke="#1e293b" stroke-width="2"/>
+    <line x1="56" y1="30" x2="64" y2="30" stroke="#1e293b" stroke-width="2"/>
+    <!-- Eyes behind glasses -->
+    <circle cx="48" cy="30" r="2" fill="#0b0f19"/>
+    <circle cx="72" cy="30" r="2" fill="#0b0f19"/>
+    <!-- Calm smile -->
+    <path d="M 48 45 Q 60 50 72 45" stroke="#0b0f19" stroke-width="1.5" fill="none"/>
+    <!-- Beard (gray) -->
+    <path d="M 35 50 Q 60 70 85 50 Q 80 65 60 70 Q 40 65 35 50 Z" fill="#94a3b8"/>
+    <!-- Arms holding tablet -->
+    <rect x="-20" y="80" width="20" height="60" fill="#f4d4a8" rx="8"/>
+    <rect x="120" y="80" width="20" height="60" fill="#f4d4a8" rx="8"/>
+  </g>
+
+  <!-- Glowing tablet (held by Formalist) -->
+  <g transform="translate(150, 280)">
+    <rect x="0" y="0" width="140" height="100" fill="#111827" stroke="#60a5fa" stroke-width="2" rx="4"/>
+    <!-- Glow effect -->
+    <circle cx="70" cy="50" r="60" fill="#60a5fa" opacity="0.2"/>
+    <circle cx="70" cy="50" r="40" fill="#60a5fa" opacity="0.3"/>
+    <!-- TLA+ code on tablet -->
+    <text x="10" y="20" font-size="9" fill="#a78bfa">VARIABLES state,</text>
+    <text x="10" y="32" font-size="9" fill="#a78bfa">        pendingResult</text>
+    <text x="10" y="50" font-size="9" fill="#60a5fa">Open == /\ state =</text>
+    <text x="10" y="62" font-size="9" fill="#fbbf24">        "closed"</text>
+    <text x="10" y="80" font-size="9" fill="#60a5fa">Confirm == /\ ...</text>
+  </g>
+
+  <!-- Maya (right) - leaning in, curious -->
+  <g transform="translate(500, 240)">
+    <!-- Body -->
+    <rect x="0" y="60" width="100" height="120" fill="#3b82f6" rx="20"/>
+    <!-- Head -->
+    <circle cx="50" cy="30" r="32" fill="#fbbf24"/>
+    <!-- Hair -->
+    <path d="M 18 30 Q 25 5 50 0 Q 75 5 82 30 Q 82 18 70 12 Q 50 8 30 12 Q 18 18 18 30 Z" fill="#1e293b"/>
+    <!-- Curious eyes (looking left toward tablet) -->
+    <circle cx="38" cy="28" r="3" fill="#0b0f19"/>
+    <circle cx="58" cy="28" r="3" fill="#0b0f19"/>
+    <circle cx="38" cy="28" r="1" fill="#fff"/>
+    <circle cx="58" cy="28" r="1" fill="#fff"/>
+    <!-- Slight smile -->
+    <path d="M 40 42 Q 50 46 60 42" stroke="#0b0f19" stroke-width="1.5" fill="none"/>
+    <!-- Arms -->
+    <rect x="-15" y="80" width="15" height="50" fill="#fbbf24" rx="6"/>
+    <rect x="100" y="80" width="15" height="50" fill="#fbbf24" rx="6"/>
+  </g>
+
+  <!-- Blue light rays from tablet illuminating Maya -->
+  <path d="M 290 280 L 500 240" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+  <path d="M 290 320 L 510 270" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+  <path d="M 290 350 L 520 290" stroke="#60a5fa" stroke-width="1" opacity="0.2"/>
+
+  <!-- Small bug in background (lurking) -->
+  <g transform="translate(700, 350)">
+    <polygon points="0,0 -8,-12 -15,-3 -12,8 0,5 12,8 15,-3 8,-12" fill="#f87171" opacity="0.6"/>
+    <circle cx="-3" cy="-3" r="1.5" fill="#0b0f19"/>
+    <circle cx="3" cy="-3" r="1.5" fill="#0b0f19"/>
+  </g>
+
+  <!-- Speech bubble from Formalist -->
+  <path d="M 180 180 L 360 180 L 380 200 L 365 215 L 350 200 L 180 200 Z" fill="#1e293b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="195" y="195" font-size="12" fill="#60a5fa" font-weight="bold">You can prove</text>
+  <text x="195" y="212" font-size="12" fill="#60a5fa">this never happens.</text>
+
+  <!-- Speech bubble from Maya (smaller) -->
+  <path d="M 520 200 L 660 200 L 660 220 L 540 220 L 530 230 L 535 220 L 520 220 Z" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="535" y="216" font-size="11" fill="#fbbf24" font-style="italic">...prove it?</text>
+
+  <!-- Caption -->
+  <rect x="20" y="490" width="760" height="80" fill="#111827" stroke="#1e293b" stroke-width="1" rx="4"/>
+  <text x="40" y="520" font-size="14" fill="#94a3b8">PANEL 05 — "THE MENTOR"</text>
+  <text x="40" y="545" font-size="13" fill="#e2e8f0">Tuesday. A colleague shows Maya something she hasn't seen before.</text>
+  <text x="40" y="562" font-size="12" fill="#60a5fa" font-style="italic">The Formalist: "You can prove this never happens. Before you ship."</text>
+</svg>
