@@ -1,0 +1,66 @@
+task_id: landing-refactor-2026-06
+assumptions:
+  - id: A1
+    statement: |
+      The "поглавная" page surface is `Landing/index.html`. It is the single
+      source of truth and any sibling must not contradict it.
+    status: user-confirmed
+  - id: A2
+    statement: |
+      Russian words that have a precise Russian equivalent in the context
+      of methodology documentation should be used. Anglophone borrowings
+      are acceptable only when (a) they are accepted TLA+ terminology
+      (e.g. `fairness`, `liveness`, `invariant`) or (b) the term has no
+      standard Russian rendering in the community.
+    status: user-confirmed
+  - id: A3
+    statement: |
+      The hero badge frame anomaly is a CSS bug. The user calls it
+      "рамка сильно больше текста". Most likely cause is that the badge
+      has `padding` and a `border` that, combined with `display:
+      inline-block`, makes its perceived box wider than its content.
+      Fix: ensure the element shrinks to its content (`width: max-content`
+      or `fit-content`) and tighten `padding`.
+    status: agent-inferred
+  - id: A4
+    statement: |
+      The "Verified Evidence" section currently serves three implicit
+      purposes: (a) prove that the methodology has working outputs,
+      (b) link readers to the examples, (c) show packet icons as
+      visual signal. The user removes (a)/(b) by deleting the section,
+      but keeps the icons by re-using them. We re-use them by attaching
+      each packet icon to the matching principle card, and we keep a
+      compact "Verified packets" stat strip elsewhere if needed.
+    status: agent-inferred
+  - id: A5
+    statement: |
+      Pipeline illustrations (one per stage, 7 stages) must use the
+      existing mathcoding aesthetic (dark background, blue/green/purple
+      palette, monospace text in SVGs). They are not literal
+      representations of each stage; they are abstract icons that hint
+      at the stage's nature (document, tags, formal, checkmark, bridge,
+      code, arrows).
+    status: agent-inferred
+  - id: A6
+    statement: |
+      Hover detail panel for each stage opens on `:hover` and on
+      keyboard `focus`. It does not require JS — pure CSS hover/focus
+      is enough. JS is required only for the language switcher that
+      already exists.
+    status: agent-inferred
+  - id: A7
+    statement: |
+      Verification is performed via headless browser snapshot of the
+      rendered page in three languages. TLC does not apply because
+      this artifact is HTML/CSS/JS, not TLA+. The mechanical check is:
+      (a) page loads without console errors, (b) all four hero badges
+      fit on one line at viewport ≥ 700px, (c) hover state on each
+      pipeline stage reveals the detail panel text, (d) Russian locale
+      does not contain the deprecated anglicisms.
+    status: agent-inferred
+  - id: A8
+    statement: |
+      Open assumptions: none critical to correctness. All open items
+      are content-level and non-blocking. If a future translation
+      round wishes to revisit Chinese wording, A2 still applies.
+    status: open

@@ -1,0 +1,70 @@
+{
+  "task_id": "landing-refactor-2026-06",
+  "source_model": "Model.tla",
+  "packet_id": "landing-refactor-2026-06",
+  "mappings": [
+    {
+      "id": "L1.NoAnglicismInRu",
+      "predicate": "NoAnglicismInRu",
+      "kind": "invariant",
+      "target": "implementation/test-i18n.sh",
+      "notes": "Grep for banned anglicisms in data-lang=ru blocks."
+    },
+    {
+      "id": "L1.HeroBadgeFitsText",
+      "predicate": "HeroBadgeFitsText",
+      "kind": "invariant",
+      "target": "Landing/index.html#css .hero-badge",
+      "notes": "CSS rule width: max-content on .hero-badge."
+    },
+    {
+      "id": "L1.StageHasAllFields",
+      "predicate": "StageHasAllFields",
+      "kind": "invariant",
+      "target": "Landing/index.html#pipeline",
+      "notes": "Each .stage-card carries .stage-num, .stage-icon, three .stage-name, .stage-file, .stage-detail."
+    },
+    {
+      "id": "L1.PrincipleHasAllFields",
+      "predicate": "PrincipleHasAllFields",
+      "kind": "invariant",
+      "target": "Landing/index.html#principles",
+      "notes": "Each .principle has an icon and three-locale name + body."
+    },
+    {
+      "id": "L1.NoVerifiedEvidenceSection",
+      "predicate": "NoVerifiedEvidenceSection",
+      "kind": "invariant",
+      "target": "Landing/index.html (absence of .proof-grid)",
+      "notes": "Section removed; packet icons reused in principles."
+    },
+    {
+      "id": "L2.HoverRevealsDetail",
+      "predicate": "HoverRevealsDetail",
+      "kind": "temporal",
+      "target": "implementation/test-hover.mjs",
+      "notes": "Playwright: hover each stage, assert detail panel becomes visible."
+    },
+    {
+      "id": "Op.SetLocale",
+      "predicate": "SetLocale(l)",
+      "kind": "action",
+      "target": "Landing/index.html#setLang()",
+      "notes": "Existing setLang() preserved."
+    },
+    {
+      "id": "Op.HoverStage",
+      "predicate": "HoverStage(i)",
+      "kind": "action",
+      "target": "Landing/index.html#css .stage-card:hover",
+      "notes": "CSS hover on .stage-card."
+    },
+    {
+      "id": "Op.RevealDetail",
+      "predicate": "RevealDetail(i)",
+      "kind": "action",
+      "target": "Landing/index.html#css .stage-card:hover .stage-detail",
+      "notes": "CSS rule reveals detail panel."
+    }
+  ]
+}

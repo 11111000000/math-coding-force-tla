@@ -1,0 +1,59 @@
+{
+  "task_id": "landing-refactor-2026-06",
+  "module": "Landing/index.html",
+  "L1_gate": "passed",
+  "tools": {
+    "sany": {
+      "command": null,
+      "exit_code": null,
+      "note": "N/A — artifact is HTML/CSS/JS, not TLA+."
+    },
+    "tlc": {
+      "command": null,
+      "exit_code": null,
+      "note": "N/A — no state machine in this packet; the methodology's own Model.tla is the closest analog and was not changed."
+    },
+    "headless_chromium": {
+      "executable": "/run/current-system/sw/bin/chromium",
+      "driver": "playwright-core 1.61",
+      "viewport": "1280x900"
+    }
+  },
+  "invariants_checked": [
+    "NoAnglicismInRu",
+    "HeroBadgeFitsText",
+    "StageHasAllFields",
+    "PrincipleHasAllFields",
+    "NoVerifiedEvidenceSection",
+    "HoverRevealsDetail",
+    "LocaleSwitch.zh",
+    "LocaleSwitch.en",
+    "NoJSConsoleErrors"
+  ],
+  "temporal_properties_checked": [
+    "HoverRevealsDetail — for each of 7 stages, the .stage-detail block becomes visible after :hover or <details open>."
+  ],
+  "results": {
+    "i18n_anglicism": "PASS",
+    "dom_invariants": "10/10 PASS",
+    "total_checks": 11
+  },
+  "baseline": {
+    "i18n_anglicism": "FAIL — 4 banned tokens in data-lang=ru: Evidence, пайплайн, Рефинемент (x2)",
+    "HeroBadgeFitsText": "FAIL — oversize=799.5px (root cause: div[data-lang]{display:none !important} was overridden by setLang() into display:block, and box-sizing border-box with width: 100% parent)",
+    "StageHasAllFields": "FAIL — pipeline had 7 pipeline-step children with no icon, no detail, no hover state",
+    "NoVerifiedEvidenceSection": "FAIL — 4 proof-card elements present"
+  },
+  "post_refactor": {
+    "i18n_anglicism": "PASS — 0 banned tokens; ru strings now use Конвейер, Уточнение, Свидетельства, факультативен, эфемерен, проверенный",
+    "HeroBadgeFitsText": "PASS — oversize=26.0px (padding 24px + border 2px around 193px text). Fix: .hero-badge now has width: max-content and setLang() preserves display: inline-block for hero-badge specifically.",
+    "StageHasAllFields": "PASS — 7 stage-card elements, each with stage-num, stage-icon, 3 stage-name locales, stage-file, stage-detail",
+    "NoVerifiedEvidenceSection": "PASS — 0 elements matching .proof-grid or .proof-card. Section replaced with compact verified-chips strip reusing the four packet icons."
+  },
+  "verdict": "VERIFIED",
+  "verdict_rationale": "All mechanical checks (L1 gate, headless DOM invariants) pass with real evidence in test-i18n.log and test-dom.log. The artifact under test is HTML/CSS/JS, so TLC does not apply; the methodology's own L2/L3 tiers are not relevant for this packet. The contract in Model.tla documents the L1 invariants and they hold.",
+  "warnings": [
+    "i18n check covers only the BANNED list in test-i18n.mjs. A full linguistic review is not in scope.",
+    "Visual screenshot evidence is in screenshots/ — three locales full-page, plus per-section crops for hero, pipeline, verified strip."
+  ]
+}

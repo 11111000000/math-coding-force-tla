@@ -1,0 +1,12 @@
+PASS  HeroBadgeFitsText  — oversize=26.0px (inner=193, box=219)
+PASS  StageHasAllFields.count  — got 7 stage cards
+PASS  StageHasAllFields.fields  — 0 stages missing fields
+PASS  PrincipleHasAllFields.count  — got 6
+PASS  PrincipleHasAllFields.fields  — 0 principles missing fields
+PASS  NoVerifiedEvidenceSection  — found 0 elements
+PASS  HoverRevealsDetail  — 0 stages did not reveal detail on hover
+PASS  LocaleSwitch.zh
+PASS  LocaleSwitch.en
+PASS  NoJSConsoleErrors
+
+All 10 DOM checks passed.

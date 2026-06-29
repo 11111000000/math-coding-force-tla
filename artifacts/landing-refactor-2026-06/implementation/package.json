@@ -1,0 +1,15 @@
+{
+  "name": "landing-refactor-2026-06-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test-i18n.mjs && node test-dom.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  },
+  "dependencies": {
+    "playwright-core": "^1.61.1"
+  }
+}
