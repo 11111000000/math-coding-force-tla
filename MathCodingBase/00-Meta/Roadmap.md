@@ -10,16 +10,19 @@ The methodology's L4 (refinement not validated) is the canonical root
 cause. This phase addresses L4 specifically for visual narrative
 artifacts.
 
-- [ ] **0.1 comic-v3** (`artifacts/comic-v3/`) — `pending`
-  Redo the comic with the methodology fix in place. v3 introduces:
-  - `Aesthetic Invariants` section in `refinement.md` for each panel
-    (emotional beat, character focus, background role, continuity)
-  - Mandatory `human_review` block with named reviewer who has
-    competence in visual storytelling
-  - v1 panels kept as provenance (already shipped at
-    `MathCodingBase/00-Meta/Comic_v1.md`)
-  - v2 panels kept as the verified model artifact (10→11 panels,
-    bounded model checking) but NOT promoted to primary narrative
+- [x] **0.1 comic-v3** (`artifacts/comic-v3/`) — `verified`
+  Comic v3 reintroduces character expression (Maya's face, posture,
+  hand position) and meaningful background (window light, lamp,
+  monitor glow) that v2 simplified into headless icons. Model: 7
+  reader states + emotional beat dimension = 11 distinct reader
+  experiences, SANY + TLC verified (15/12). 21 traceability
+  mappings. New Aesthetic Invariants section in refinement.md
+  (emotional beat, character focus, background role, continuity)
+  serves as the primary mitigation for Known Limitations L4 in the
+  visual-comms domain. human_review block in verification.json
+  has a named reviewer and an 11-panel checklist. v1 panels kept
+  as provenance at Comic_v1.md; v2 panels kept as model artifact
+  at artifacts/comic-v2/ but not promoted to primary narrative.
 - [x] **0.0 comic-v2-regression-analysis** (`artifacts/comic-v2-regression-analysis/`) — `verified`
   Diagnose the regression. 4-state model: shipped_v1, shipped_v2,
   detected, v3_planned. Records the gap between structural green
