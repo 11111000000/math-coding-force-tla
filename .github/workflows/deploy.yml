@@ -26,6 +26,11 @@ jobs:
       - name: Install mkdocs-material
         run: pip install mkdocs-material
 
+      - name: Copy comic panels into docs
+        run: |
+          mkdir -p MathCodingBase/assets/comic-panels
+          cp -r comic/panels/* MathCodingBase/assets/comic-panels/
+
       - name: Build docs
         run: mkdocs build --strict
 
@@ -34,12 +39,8 @@ jobs:
           mkdir -p _site/docs
           cp -r site/docs/* _site/docs/
           cp Landing/index.html _site/index.html
-          mkdir -p _site/img _site/comic/panels
+          mkdir -p _site/img
           cp -r landing/img/* _site/img/
-          # Copy comic panels into docs assets so mkdocs pages can reference them
-          mkdir -p site/docs/assets/comic-panels
-          cp -r comic/panels/* site/docs/assets/comic-panels/
-          cp -r comic/panels/* _site/docs/assets/comic-panels/
           echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/math-coding/docs/Index/"></head><body></body></html>' > _site/docs/index.html
 
       - uses: actions/upload-pages-artifact@v3
