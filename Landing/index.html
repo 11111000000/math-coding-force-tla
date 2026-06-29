@@ -118,15 +118,6 @@
   footer a { color: var(--accent); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
-  /* Comic preview */
-  .comic-preview { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 32px; }
-  @media (max-width: 800px) { .comic-preview { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 500px) { .comic-preview { grid-template-columns: 1fr; } }
-  .comic-panel-link { display: block; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.2s; }
-  .comic-panel-link:hover { border-color: var(--accent-dim); transform: scale(1.02); }
-  .comic-panel-link img { width: 100%; height: auto; display: block; }
-  .comic-cta { text-align: center; }
-
   /* Proof icons */
   .proof-icon { display: flex; align-items: center; justify-content: center; height: 60px; margin-bottom: 12px; }
   .proof-icon img { max-height: 60px; width: auto; }
@@ -270,71 +261,6 @@
         <div class="name" data-lang="zh">追溯</div>
         <div class="file">traceability.json</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- Comic Preview -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">
-      <span data-lang="en">The Comic</span>
-      <span data-lang="ru">Комикс</span>
-      <span data-lang="zh">漫画</span>
-    </div>
-    <h2>
-      <span data-lang="en">The Math of Trust</span>
-      <span data-lang="ru">Математика доверия</span>
-      <span data-lang="zh">信任的数学</span>
-    </h2>
-    <p>
-      <span data-lang="en">A 10-panel comic showing how a developer went from "looks right" to "is right" — and why that matters for production systems.</span>
-      <span data-lang="ru">Комикс из 10 кадров: как разработчик перешёл от «выглядит правильно» к «доказано правильно».</span>
-      <span data-lang="zh">一个10格的漫画，展示开发者如何从"看起来对"到"被证明是对的"。</span>
-    </p>
-
-    <!-- Comic preview grid -->
-    <div class="comic-preview">
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/01-looks-right.svg" alt="Panel 1: Looks Right"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/02-ship-it.svg" alt="Panel 2: Ship It"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/03-the-clicks.svg" alt="Panel 3: The Clicks"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/04-the-bug.svg" alt="Panel 4: The Bug"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/05-the-mentor.svg" alt="Panel 5: The Mentor"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/06-the-pipeline.svg" alt="Panel 6: The Pipeline"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/07-the-model.svg" alt="Panel 7: The Model"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/08-tlc-finds-it.svg" alt="Panel 8: TLC Finds It"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/09-fix-first.svg" alt="Panel 9: Fix First"/>
-      </a>
-      <a href="/math-coding/docs/00-Meta/Comic/" class="comic-panel-link">
-        <img src="/math-coding/comic/panels/10-better-world.svg" alt="Panel 10: Better World"/>
-      </a>
-    </div>
-
-    <div class="comic-cta">
-      <a href="/math-coding/docs/00-Meta/Comic/" class="btn btn-primary">
-        <span data-lang="en">Read the full comic</span>
-        <span data-lang="ru">Читать комикс полностью</span>
-        <span data-lang="zh">阅读完整漫画</span>
-      </a>
     </div>
   </div>
 </section>
