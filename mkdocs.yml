@@ -71,6 +71,7 @@ nav:
     - Fractal Principle: 00-Meta/Fractal Principle.md
     - Methodology in Russian: 00-Meta/Methodology in Russian.md
     - Roadmap: 00-Meta/Roadmap.md
+    - Known Limitations: 00-Meta/Known Limitations.md
   - Theory:
     - Mathematical Development Cycle: 01-Theory/Mathematical Development Cycle.md
     - Three Layers of Rigor: 01-Theory/Three Layers of Rigor.md
@@ -92,6 +93,19 @@ nav:
     - Self Assumptions: 04-Fractal-Self/Self Assumptions.md
     - Self Refinement: 04-Fractal-Self/Self Refinement.md
     - Self Justification: 04-Fractal-Self/Self Justification.md
+  - По-русски:
+    - Обзор: ru/Index.ru.md
+    - Манифест: ru/00-Meta/Manifesto.ru.md
+    - Диалектический разбор: ru/00-Meta/Dialectical Analysis.ru.md
+    - Фрактальный принцип: ru/00-Meta/Fractal Principle.ru.md
+    - Дорожная карта: ru/00-Meta/Roadmap.ru.md
+    - Свидетельства: ru/02-Protocols/Verification Evidence Protocol.ru.md
+    - Архитектура: ru/03-Architecture/Artifact-Centered Architecture.ru.md
+    - Переносимость: ru/03-Architecture/Agent Portability Model.ru.md
+    - Верификация: ru/03-Architecture/Mechanical Verification Model.ru.md
+    - Собственная задача: ru/04-Fractal-Self/Self Problem.ru.md
+    - Собственные допущения: ru/04-Fractal-Self/Self Assumptions.ru.md
+    - Собственное обоснование: ru/04-Fractal-Self/Self Justification.ru.md
 
 extra_css:
   - extra.css

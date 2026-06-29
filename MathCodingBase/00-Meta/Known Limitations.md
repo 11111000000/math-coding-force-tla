@@ -4,7 +4,7 @@ Four blind spots the methodology names but does not solve. Each one is a
 boundary between what artifacts can guarantee and what humans must guarantee.
 
 The methodology earns trust by naming these limits on the record. The
-[`Mechanical Verification Model`](Mechanical%20Verification%20Model.md)
+[`Mechanical Verification Model`](../03-Architecture/Mechanical Verification Model.md)
 document already admits the first three in passing; this file makes them
 explicit, gives them stable ids, and tracks the mitigation in place plus
 the residual risk. Cross-link from
