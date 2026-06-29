@@ -95,6 +95,9 @@ nav:
     - Self Justification: 04-Fractal-Self/Self Justification.md
   - По-русски:
     - Обзор: ru/Index.ru.md
+    - README: ru/README.ru.md
+    - QUICKSTART: ru/QUICKSTART.ru.md
+    - AGENTS: ru/AGENTS.ru.md
     - Манифест: ru/00-Meta/Manifesto.ru.md
     - Диалектический разбор: ru/00-Meta/Dialectical Analysis.ru.md
     - Фрактальный принцип: ru/00-Meta/Fractal Principle.ru.md
