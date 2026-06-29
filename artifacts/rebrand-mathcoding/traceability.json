@@ -1,0 +1,71 @@
+{
+  "task_id": "rebrand-mathcoding",
+  "mappings": [
+    {
+      "source": "assumption:A1",
+      "target": "all 51 touched files",
+      "kind": "assumption-to-rename",
+      "note": "MathCoding everywhere a reader encounters the methodology"
+    },
+    {
+      "source": "assumption:A2",
+      "target": "filesystem root folder name",
+      "kind": "assumption-to-untouched-artifact",
+      "note": "Root folder preserved as MathCodingFractal/ until separate rename"
+    },
+    {
+      "source": "assumption:A3",
+      "target": "artifacts/*/packet.json",
+      "kind": "assumption-to-untouched-artifact",
+      "note": "Packet IDs are identifiers, not brand"
+    },
+    {
+      "source": "assumption:A4",
+      "target": "scripts/rename.py (inline)",
+      "kind": "assumption-to-script",
+      "note": "Lowercase and -Self forms replaced with kebab-safe equivalents"
+    },
+    {
+      "source": "assumption:A5",
+      "target": "MathCodingBase/ru/*.ru.md",
+      "kind": "assumption-to-translations",
+      "note": "Russian translations updated in lockstep"
+    },
+    {
+      "source": "Model.tla:Postcondition",
+      "target": "verification.json:grep-clean",
+      "kind": "postcondition-to-evidence",
+      "note": "Post-rename grep returns zero old-brand occurrences"
+    },
+    {
+      "source": "Model.tla:EventuallyRenamed",
+      "target": "verification.json:verification_after_rename",
+      "kind": "temporal-to-property-check",
+      "note": "Every previously-verified packet re-verifies under the new name"
+    },
+    {
+      "source": "Roadmap.md:1.6 rebrand-mathcoding",
+      "target": "verification.json",
+      "kind": "status-link",
+      "note": "Roadmap entry updated with delivery note"
+    },
+    {
+      "source": "Roadmap.ru.md:1.6 rebrand-mathcoding",
+      "target": "verification.json",
+      "kind": "status-link",
+      "note": "Russian Roadmap mirror updated in lockstep"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md (post-rename)",
+      "kind": "self-link",
+      "note": "Top-level file renamed in place; no mirror artifact"
+    },
+    {
+      "source": "MathCodingBase/ru/README.ru.md",
+      "target": "README.ru.md (post-rename)",
+      "kind": "self-link",
+      "note": "Russian top-level file renamed in place"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+task_id: rebrand-mathcoding
+assumptions:
+  - id: A1
+    statement: The methodology will be referred to as "MathCoding" inside the repository. The fractal property is a fact about the methodology, not a word in its name.
+    status: user-confirmed
+  - id: A2
+    statement: The root folder name is out of scope for this packet. It stays `MathCoding/` until the user renames it.
+    status: user-confirmed
+  - id: A3
+    statement: Packet IDs under `artifacts/` do not get renamed. They are identifiers, not part of the methodology brand.
+    status: user-confirmed
+  - id: A4
+    statement: Lowercase form `mathcoding` (used in skill/agent names) becomes `mathcoding`. The kebab-case form `MathCoding-Self` (used in section headers) becomes `MathCoding-Self`.
+    status: user-confirmed
+  - id: A5
+    statement: Russian translations are also touched. Russian readers do not need to see the English brand.
+    status: user-confirmed
+  - id: A6
+    statement: Generated artefacts (`_site/`, `site/`, `node_modules/`, `states/`, `landing/`, `tools/tlaps/`, `package-lock.json` once regenerated) are not edited by hand.
+    status: agent-inferred

@@ -1,0 +1,15 @@
+{
+  "task_id": "rebrand-mathcoding",
+  "title": "Rename MathCoding to MathCoding across documentation and code",
+  "problem": "problem.md",
+  "assumptions": "assumptions.yaml",
+  "artifacts": {
+    "problem": "problem.md",
+    "assumptions": "assumptions.yaml",
+    "spec": "Model.tla",
+    "verification": "verification.json",
+    "refinement": "refinement.md",
+    "traceability": "traceability.json",
+    "implementation": "implementation"
+  }
+}
