@@ -1,4 +1,4 @@
-/* Custom overrides for MathCodingFractal docs — dark theme */
+/* Custom overrides for MathCodingFractal docs — unified dark theme */
 :root {
   /* Primary palette */
   --md-primary-fg-color: #1e293b;
@@ -10,13 +10,13 @@
   --md-accent-fg-color--transparent: rgba(96, 165, 250, 0.15);
   --md-accent-bg-color: #0b0f19;
 
-  /* Backgrounds — dark slate */
+  /* Backgrounds — unified dark */
   --md-default-bg-color: #0b0f19;
   --md-default-bg-color--light: #111827;
   --md-default-bg-color--lighter: #1a2332;
   --md-default-bg-color--lightest: #1e293b;
 
-  /* Foreground (TEXT) — light on dark, critical for readability */
+  /* Foreground (TEXT) — light on dark */
   --md-default-fg-color: #e2e8f0;
   --md-default-fg-color--light: #f8fafc;
   --md-default-fg-color--lighter: #cbd5e1;
@@ -31,24 +31,139 @@
   --md-typeset-color: #e2e8f0;
   --md-typeset-a-color: #60a5fa;
 
-  /* Link color */
-  --md-typeset-a-color: #60a5fa;
-
-  /* Shadow */
+  /* Shadows */
   --md-shadow-z1: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
   --md-shadow-z2: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
 }
 
-/* Header */
-.md-header {
-  background: rgba(11, 15, 25, 0.9);
-  backdrop-filter: blur(12px);
-  color: #e2e8f0;
+/* Slate scheme overrides — fix the gray-on-gray issues */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0b0f19;
+  --md-default-bg-color--light: #111827;
+  --md-default-bg-color--lighter: #1a2332;
+  --md-default-bg-color--lightest: #1e293b;
+  --md-default-fg-color: #e2e8f0;
+  --md-default-fg-color--light: #f8fafc;
+  --md-default-fg-color--lighter: #cbd5e1;
+  --md-default-fg-color--lightest: #ffffff;
+  --md-typeset-color: #e2e8f0;
+  --md-typeset-a-color: #60a5fa;
+  --md-primary-fg-color: #1e293b;
+  --md-primary-bg-color: #f8fafc;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color: #60a5fa;
+  --md-accent-fg-color--transparent: rgba(96, 165, 250, 0.15);
+  --md-accent-bg-color: #0b0f19;
+  --md-code-bg-color: #111827;
+  --md-code-hl-color: rgba(96, 165, 250, 0.15);
 }
 
-/* Body text — explicit for safety */
+/* Body and HTML — force dark background everywhere */
+html, body {
+  background-color: #0b0f19 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Header */
+.md-header {
+  background-color: rgba(11, 15, 25, 0.95) !important;
+  backdrop-filter: blur(12px);
+  color: #f8fafc !important;
+}
+.md-header__title {
+  color: #f8fafc !important;
+}
+.md-header__button.md-icon {
+  color: #94a3b8 !important;
+}
+.md-header__button.md-icon:hover {
+  color: #f8fafc !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Tabs (top navigation) */
+.md-tabs {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+.md-tabs__link {
+  color: #94a3b8 !important;
+}
+.md-tabs__link:hover {
+  color: #f8fafc !important;
+}
+.md-tabs__item--active .md-tabs__link {
+  color: #60a5fa !important;
+}
+
+/* Primary sidebar */
+.md-sidebar--primary {
+  background-color: #0b0f19 !important;
+}
+.md-nav--primary .md-nav__title {
+  color: #94a3b8 !important;
+}
+.md-nav--primary .md-nav__link {
+  color: #cbd5e1 !important;
+}
+.md-nav--primary .md-nav__link:hover {
+  color: #f8fafc !important;
+}
+.md-nav--primary .md-nav__link--active,
+.md-nav--primary .md-nav__link--active code {
+  color: #60a5fa !important;
+}
+.md-nav--primary .md-nav__item--active > .md-nav__link {
+  color: #60a5fa !important;
+}
+
+/* Secondary sidebar (TOC) */
+.md-sidebar--secondary {
+  background-color: #0b0f19 !important;
+}
+.md-nav--secondary .md-nav__title {
+  color: #f8fafc !important;
+  font-weight: 700;
+}
+.md-nav--secondary .md-nav__link {
+  color: #94a3b8 !important;
+}
+.md-nav--secondary .md-nav__link:hover {
+  color: #f8fafc !important;
+}
+.md-nav--secondary .md-nav__link--active {
+  color: #60a5fa !important;
+}
+
+/* Main content area */
+.md-main {
+  background-color: #0b0f19 !important;
+}
+.md-content {
+  background-color: #0b0f19 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Breadcrumb / path */
+.md-path {
+  color: #94a3b8 !important;
+}
+.md-path__link {
+  color: #94a3b8 !important;
+}
+.md-path__link:hover {
+  color: #60a5fa !important;
+}
+.md-path__ellipsis {
+  color: #94a3b8 !important;
+}
+.md-path__current {
+  color: #e2e8f0 !important;
+}
+
+/* Body text */
 .md-typeset {
-  color: #e2e8f0;
+  color: #e2e8f0 !important;
 }
 .md-typeset p,
 .md-typeset li,
@@ -69,67 +184,14 @@
   color: #93c5fd;
 }
 
-/* Sidebar nav links */
-.md-nav__link,
-.md-nav__link--active {
-  color: #94a3b8;
-}
-.md-nav__link:hover,
-.md-nav__link:focus {
-  color: #f8fafc;
-}
-.md-nav__link--active {
-  color: #60a5fa;
-}
-
-/* Tabs (top nav) */
-.md-tabs__link {
-  color: #94a3b8;
-}
-.md-tabs__link:hover {
-  color: #f8fafc;
-}
-.md-tabs__link--active {
-  color: #60a5fa;
-}
-
-/* Sidebar */
-.md-sidebar {
-  background: #0b0f19;
-}
-.md-sidebar--primary {
-  background: #0b0f19;
-}
-.md-sidebar--secondary {
-  background: #0b0f19;
-}
-
-/* Tables */
-.md-typeset table:not([class]) {
-  color: #e2e8f0;
-}
-.md-typeset table:not([class]) th {
-  color: #f8fafc;
-  background: #1e293b;
-}
-
-/* Search results */
-.md-search-result__link {
-  color: #e2e8f0;
-}
-.md-search-result__link:hover {
-  color: #60a5fa;
-}
-
-/* Code blocks */
+/* Inline code */
 .md-typeset code {
-  font-size: 12px;
-  color: #e2e8f0;
-  background: #111827;
+  color: #f8fafc;
+  background-color: #111827;
 }
 .md-typeset pre > code {
   color: #e2e8f0;
-  background: #111827;
+  background-color: #111827;
 }
 
 /* Admonitions */
@@ -138,18 +200,82 @@
   border-radius: 6px;
 }
 
-/* Hero on index */
+/* Hero h1 */
 .md-typeset h1 {
   font-weight: 800;
   letter-spacing: -0.02em;
+  color: #f8fafc !important;
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  color: #e2e8f0;
+}
+.md-typeset table:not([class]) th {
   color: #f8fafc;
+  background-color: #1e293b;
+}
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: #111827;
+}
+
+/* Search */
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+.md-search__input {
+  color: #f8fafc !important;
+}
+.md-search__input::placeholder {
+  color: #94a3b8 !important;
+}
+.md-search__overlay {
+  background-color: rgba(11, 15, 25, 0.95) !important;
+}
+.md-search-result__link {
+  color: #e2e8f0;
+}
+.md-search-result__link:hover {
+  color: #60a5fa;
+}
+.md-search-result__title {
+  color: #f8fafc;
+}
+.md-search-result__teaser {
+  color: #cbd5e1;
 }
 
 /* Footer */
 .md-footer {
-  background: #0b0f19;
-  color: #94a3b8;
+  background-color: #050811 !important;
+  color: #94a3b8 !important;
 }
 .md-footer-meta {
-  background: #050811;
+  background-color: #050811 !important;
+}
+.md-footer a {
+  color: #60a5fa !important;
+}
+.md-footer a:hover {
+  color: #93c5fd !important;
+}
+
+/* Source repository link */
+.md-source {
+  color: #94a3b8 !important;
+}
+.md-source:hover {
+  color: #f8fafc !important;
+}
+
+/* Skip link */
+.md-skip {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+/* Logo image */
+.md-logo img,
+.md-header__button.md-logo img {
+  filter: none;
 }
