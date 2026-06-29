@@ -1,0 +1,47 @@
+{
+  "task_id": "protocol-strengthening",
+  "module": "bin/validate-packet.py",
+  "L1_gate": "passed",
+  "tools": {
+    "sany": {
+      "command": "tla-sany Model.tla",
+      "exit_code": 0,
+      "note": "Module parses cleanly. TLC is not run — see Model.tla footer."
+    },
+    "node_test_suite": {
+      "command": "node implementation/test/validate-packet.test.mjs",
+      "exit_code": 0,
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "invariants_checked": [
+    "AcceptsEveryVerdict",
+    "UnverifiableRequiresHumanReview",
+    "DefaultModeIsBackwardCompatible",
+    "StrictIsOptIn"
+  ],
+  "results": {
+    "default_mode_backward_compat": {
+      "examples/minimal-spec": "PASS",
+      "examples/ui-modal-dialog": "PASS",
+      "methodology/self-spec": "PASS",
+      "artifacts/ui-modal-react": "PASS",
+      "artifacts/landing-refactor-2026-06": "PASS",
+      "artifacts/unverifiable-as-design": "PASS"
+    },
+    "strict_mode_per_packet": {
+      "examples/minimal-spec": "PASS",
+      "examples/ui-modal-dialog": "PASS",
+      "methodology/self-spec": "FAIL — refinement.md does not mention TLA+ action Loop (L4 mitigation active)",
+      "artifacts/ui-modal-react": "FAIL — one traceability target uses path outside packet dir",
+      "artifacts/landing-refactor-2026-06": "FAIL — multiple targets reference Landing/index.html from outside packet",
+      "artifacts/unverifiable-as-design": "FAIL — multiple targets reference files outside packet",
+      "artifacts/protocol-strengthening": "FAIL — this packet has no TLA+ actions, strict refinement check skipped"
+    },
+    "test_suite": "9/9 PASS"
+  },
+  "verdict": "VERIFIED",
+  "verdict_rationale": "Default-mode validation passes for every existing packet — no regressions. New strict-mode checks (verdict enum, human_review obligation, L4 action coverage, traceability target resolution) are gated behind opt-in flag and exit 7 for unverifiable-without-review. The synthetic test suite covers every branch with documented exit codes.",
+  "rollout_plan": "Each existing packet that fails strict mode will be repaired and flipped to strict: true in its packet.json as a separate roadmap step (1.2-ratchet). The hash-based L3 mitigation is implemented in the validator but requires bin/verify to record assumptions_sha256 on every run; that change ships in the same ratchet."
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "protocol-strengthening",
+  "source_model": "Model.tla",
+  "mappings": [
+    {
+      "id": "L1.AcceptsEveryVerdict",
+      "predicate": "AcceptsEveryVerdict",
+      "kind": "invariant",
+      "target": "bin/validate-packet.py:VALID_VERDICTS",
+      "notes": "Closed enum includes bare UNVERIFIABLE plus the three subtypes."
+    },
+    {
+      "id": "L1.UnverifiableRequiresHumanReview",
+      "predicate": "UnverifiableRequiresHumanReview",
+      "kind": "invariant",
+      "target": "bin/validate-packet.py:_check_unverifiable_human_review",
+      "notes": "Returns exit 7 when human_review.by/process/trigger is empty."
+    },
+    {
+      "id": "L1.DefaultModeIsBackwardCompatible",
+      "predicate": "DefaultModeIsBackwardCompatible",
+      "kind": "invariant",
+      "target": "bin/validate-packet.py:_strict_enabled",
+      "notes": "Default returns False; env and per-packet opt-in only."
+    },
+    {
+      "id": "L1.StrictIsOptIn",
+      "predicate": "StrictIsOptIn",
+      "kind": "invariant",
+      "target": "bin/validate-packet.py:_strict_enabled",
+      "notes": "No default activation; verified by per-packet opt-in only."
+    },
+    {
+      "id": "Test.accepts_every_verdict",
+      "predicate": "AcceptsEveryVerdict",
+      "kind": "action",
+      "target": "test/validate-packet.test.mjs",
+      "notes": "Synthetic packet with UNVERIFIABLE:OUT_OF_SCOPE must validate with populated human_review."
+    },
+    {
+      "id": "Test.unverifiable_requires_human_review",
+      "predicate": "UnverifiableRequiresHumanReview",
+      "kind": "action",
+      "target": "test/validate-packet.test.mjs",
+      "notes": "Synthetic UNVERIFIABLE packet without human_review must exit 7."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+task_id: protocol-strengthening
+assumptions:
+  - id: A1
+    statement: |
+      Existing packets (examples/minimal-spec, examples/ui-modal-dialog,
+      methodology/self-spec, artifacts/ui-modal-react,
+      artifacts/landing-refactor-2026-06, artifacts/unverifiable-as-design)
+      must continue to validate with default settings after this packet.
+      Verified by re-running ./bin/validate-packet on each.
+    status: user-confirmed
+  - id: A2
+    statement: |
+      Strict mode is opt-in, not on by default. Two opt-in modes: env var
+      MATHCODING_STRICT_VALIDATION=1, or packet.json field "strict": true.
+    status: agent-inferred
+  - id: A3
+    statement: |
+      The L4 action-coverage check uses heuristic extraction (regex on
+      `Name ==`) with a skip-list of framework symbols. False positives
+      (an operator caught as an action) are tolerated if the packet
+      declares its `actions: [...]` list explicitly in packet.json —
+      that list is then authoritative.
+    status: agent-inferred
+  - id: A4
+    statement: |
+      The L3 assumption-hash check is implemented in the validator but
+      NOT enabled by default. Activation requires bin/verify to record
+      `assumptions_sha256` into verification.json on every run; that
+      change is in the roadmap ratchet, not this packet.
+    status: agent-inferred
+  - id: A5
+    statement: |
+      Traceability target resolution accepts three forms: file path
+      (must exist), `symbol:` prefix (documented symbol), or free-form
+      description (no `/` + extension combo). The free-form acceptance
+      is what lets existing packets with descriptive targets pass
+      without rewriting traceability.json.
+    status: agent-inferred
+  - id: A6
+    statement: |
+      Test suite is Node-based (artifacts/protocol-strengthening/test/
+      validate-packet.test.mjs). It builds synthetic packets in /tmp
+      and asserts exit codes match the documented contract. Total: 9
+      checks.
+    status: agent-inferred
