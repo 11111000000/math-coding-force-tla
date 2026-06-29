@@ -1,0 +1,34 @@
+task_id: form-username-validation
+assumptions:
+  - id: A1
+    statement: |
+      The async check is simulated by a configurable `Promise` with
+      delay. We do not mock a real HTTP API. Tests can override the
+      resolver to return 'taken' / 'available' on demand.
+    status: agent-inferred
+  - id: A2
+    statement: |
+      The form has exactly one field (username). The model does not
+      cover password, email, or any other input. Adding fields is a
+      separate packet.
+    status: agent-inferred
+  - id: A3
+    statement: |
+      "Reset" means returning to the `idle` state and clearing both
+      pendingResult and pendingRequestId. The model captures this as a
+      single transition; the reducer implements it as a single case.
+    status: agent-inferred
+  - id: A4
+    statement: |
+      `taken` is a final state per request — once the API says the
+      username is taken, the UI keeps that result until the user
+      edits the input (which dispatches OnChange and discards the
+      stale result through StalenessInvariant). This matches the
+      three failure modes from the UI guide.
+    status: agent-inferred
+  - id: A5
+    statement: |
+      No fairness assumptions are needed: the only "must eventually"
+      property is that the API call resolves or rejects. Weak fairness
+      on Resolve / Reject is sufficient.
+    status: agent-inferred

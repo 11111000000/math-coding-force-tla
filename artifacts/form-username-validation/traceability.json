@@ -1,0 +1,111 @@
+{
+  "task_id": "form-username-validation",
+  "source_model": "Model.tla",
+  "mappings": [
+    {
+      "id": "L1.state.idle",
+      "predicate": "Init",
+      "kind": "action",
+      "target": "implementation/formReducer.ts:initialState",
+      "notes": "Discriminated union starts at { kind: 'idle' }."
+    },
+    {
+      "id": "L1.state.validating",
+      "predicate": "OnChange",
+      "kind": "action",
+      "target": "implementation/formReducer.ts:ON_CHANGE case",
+      "notes": "Bumps requestId, drops pending result."
+    },
+    {
+      "id": "L1.state.valid",
+      "predicate": "Resolve",
+      "kind": "action",
+      "target": "implementation/formReducer.ts:RESOLVE_AVAILABLE case",
+      "notes": "requestId guard preserves StalenessInvariant."
+    },
+    {
+      "id": "L1.state.taken",
+      "predicate": "Reject",
+      "kind": "action",
+      "target": "implementation/formReducer.ts:RESOLVE_TAKEN case",
+      "notes": "Maps to 'taken' in the union."
+    },
+    {
+      "id": "L1.state.invalid",
+      "predicate": "Reject",
+      "kind": "action",
+      "target": "implementation/formReducer.ts:RESOLVE_INVALID case",
+      "notes": "Implementation adds an 'invalid' state the model folds into Reject."
+    },
+    {
+      "id": "L1.state.idle.reset",
+      "predicate": "Reset",
+      "kind": "action",
+      "target": "implementation/formReducer.ts:RESET case",
+      "notes": "Returns to initialState."
+    },
+    {
+      "id": "L1.StalenessInvariant",
+      "predicate": "StalenessInvariant",
+      "kind": "invariant",
+      "target": "implementation/formReducer.ts:RESOLVE_* guards",
+      "notes": "requestId mismatch drops the response."
+    },
+    {
+      "id": "L1.SingleFlightInvariant",
+      "predicate": "SingleFlightInvariant",
+      "kind": "invariant",
+      "target": "implementation/formReducer.ts:nextId",
+      "notes": "nextId monotonically increases; one request id per keystroke."
+    },
+    {
+      "id": "T.OnChange_round_trip",
+      "predicate": "OnChange",
+      "kind": "action",
+      "target": "implementation/formReducer.test.ts: ON_CHANGE moves to validating",
+      "notes": "Direct reducer test."
+    },
+    {
+      "id": "T.staleness_drop_available",
+      "predicate": "StalenessInvariant",
+      "kind": "action",
+      "target": "implementation/formReducer.test.ts: drops RESOLVE_AVAILABLE for a stale request id",
+      "notes": "Regression test for guide failure mode #2."
+    },
+    {
+      "id": "T.staleness_drop_taken",
+      "predicate": "StalenessInvariant",
+      "kind": "action",
+      "target": "implementation/formReducer.test.ts: drops RESOLVE_TAKEN for a stale request id",
+      "notes": "Regression test for guide failure mode #1."
+    },
+    {
+      "id": "T.single_flight",
+      "predicate": "SingleFlightInvariant",
+      "kind": "action",
+      "target": "implementation/formReducer.test.ts: two simultaneous ON_CHANGEs keep only the latest in flight",
+      "notes": "Two requests only ever differ in id; the older one is unreachable."
+    },
+    {
+      "id": "T.out_of_order",
+      "predicate": "StalenessInvariant",
+      "kind": "action",
+      "target": "implementation/formReducer.test.ts: out-of-order responses do not leak stale 'taken'",
+      "notes": "Stale response to an earlier id does not change state."
+    },
+    {
+      "id": "T.component_round_trip",
+      "predicate": "OnChange",
+      "kind": "action",
+      "target": "implementation/UsernameForm.test.tsx: moves to 'Checking…' after typing",
+      "notes": "Component-level test of the round trip."
+    },
+    {
+      "id": "T.component_taken_then_edit",
+      "predicate": "StalenessInvariant",
+      "kind": "action",
+      "target": "implementation/UsernameForm.test.tsx: editing the input after 'taken' moves back to Checking…",
+      "notes": "Failure mode #1 reproduced in the component."
+    }
+  ]
+}
