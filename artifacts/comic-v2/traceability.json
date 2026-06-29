@@ -1,0 +1,173 @@
+{
+  "task_id": "comic-v2",
+  "mappings": [
+    {
+      "source": "panelIndex = 0",
+      "target": "implementation/01-looks-right.svg",
+      "kind": "panel",
+      "note": "Maya at desk with laptop; blue palette; reader enters state 'curious'"
+    },
+    {
+      "source": "panelIndex = 1",
+      "target": "implementation/02-ship-it.svg",
+      "kind": "panel",
+      "note": "Code flowing to server; blue palette; 5:00 PM energy; small 600x400 breather"
+    },
+    {
+      "source": "panelIndex = 2",
+      "target": "implementation/03-the-clicks.svg",
+      "kind": "panel",
+      "note": "Three users confirming on phones; green palette signals normalcy; small 600x400 breather"
+    },
+    {
+      "source": "panelIndex = 3",
+      "target": "implementation/04-the-bug.svg",
+      "kind": "panel",
+      "note": "Bug-reveal climax; red palette; 1000x800 size signals emotional peak; bug-creature at click-fetch intersection"
+    },
+    {
+      "source": "panelIndex = 4",
+      "target": "implementation/05-alone.svg",
+      "kind": "panel",
+      "note": "NEW v2 panel — transitional 'alone, frustrated' state; red palette lingering; empty chair for the Formalist"
+    },
+    {
+      "source": "panelIndex = 5",
+      "target": "implementation/06-the-mentor.svg",
+      "kind": "panel",
+      "note": "Two-shot introducing the Formalist; purple palette; constellation motif foreshadows the state machine"
+    },
+    {
+      "source": "panelIndex = 6",
+      "target": "implementation/07-the-model.svg",
+      "kind": "panel",
+      "note": "Maya writing TLA+; purple palette continues; TLA+ syntax + state diagram side by side; bug invisible"
+    },
+    {
+      "source": "panelIndex = 7",
+      "target": "implementation/08-tlc-finds-it.svg",
+      "kind": "panel",
+      "note": "TLC Crystal Computer climax; green palette; 1000x800 size; green beam catches red bug-creature; StateInvariant label"
+    },
+    {
+      "source": "panelIndex = 8",
+      "target": "implementation/09-fix-first.svg",
+      "kind": "panel",
+      "note": "Maya pointing at verified state diagram; bug trapped in 'FIXED IN MODEL' box; verdict: VERIFIED stamp"
+    },
+    {
+      "source": "panelIndex = 9",
+      "target": "implementation/10-better-world.svg",
+      "kind": "panel",
+      "note": "Wide panoramic; green palette; constellation stretched across 'night sky'; diverse users, no incidents"
+    },
+    {
+      "source": "panelIndex = 10",
+      "target": "implementation/11-the-stamp.svg",
+      "kind": "panel",
+      "note": "NEW v2 panel — terminal VERIFIED stamp rotated -8 degrees; repeating constellation meta-texture; 'The math of trust.'"
+    },
+    {
+      "source": "state = \"engaged\"",
+      "target": "implementation/01-looks-right.svg,implementation/02-ship-it.svg,implementation/03-the-clicks.svg",
+      "kind": "invariant",
+      "note": "Reader states 'engaged' or 'curious' dominate panels 1-3 (the false confidence phase)"
+    },
+    {
+      "source": "state = \"alarmed\"",
+      "target": "implementation/04-the-bug.svg",
+      "kind": "invariant",
+      "note": "Panel 4 transitions reader to 'alarmed' — the moment of recognition"
+    },
+    {
+      "source": "state = \"frustrated\"",
+      "target": "implementation/05-alone.svg",
+      "kind": "invariant",
+      "note": "Panel 5 holds the 'frustrated' state — NEW in v2 to give the failure a beat before rescue"
+    },
+    {
+      "source": "state = \"hopeful\"",
+      "target": "implementation/06-the-mentor.svg,implementation/07-the-model.svg",
+      "kind": "invariant",
+      "note": "Panels 6-7 hold 'hopeful' — methodology introduced and being applied"
+    },
+    {
+      "source": "state = \"enlightened\"",
+      "target": "implementation/08-tlc-finds-it.svg,implementation/09-fix-first.svg",
+      "kind": "invariant",
+      "note": "Panels 8-9 hold 'enlightened' — verification succeeds, fix lands"
+    },
+    {
+      "source": "state = \"empowered\"",
+      "target": "implementation/10-better-world.svg,implementation/11-the-stamp.svg",
+      "kind": "invariant",
+      "note": "Panels 10-11 hold 'empowered' — terminal state, methodology internalized"
+    },
+    {
+      "source": "TypeInvariant",
+      "target": "implementation/*.svg",
+      "kind": "invariant",
+      "note": "Each SVG has explicit width/height attributes and palette hex codes; file existence on disk is the type check"
+    },
+    {
+      "source": "PaletteInvariant",
+      "target": "implementation/04-the-bug.svg",
+      "kind": "palette",
+      "note": "panelIndex=3 → state='alarmed' → palette='red' (#ef4444)"
+    },
+    {
+      "source": "PaletteInvariant",
+      "target": "implementation/06-the-mentor.svg,implementation/07-the-model.svg",
+      "kind": "palette",
+      "note": "panelIndex=5,6 → state='hopeful' → palette='purple' (#a855f7)"
+    },
+    {
+      "source": "PaletteInvariant",
+      "target": "implementation/08-tlc-finds-it.svg,implementation/09-fix-first.svg,implementation/10-better-world.svg",
+      "kind": "palette",
+      "note": "panelIndex=7,8,9 → state='enlightened' or 'empowered' → palette='green' (#22c55e)"
+    },
+    {
+      "source": "climax dimension 1000x800",
+      "target": "implementation/04-the-bug.svg",
+      "kind": "dimension",
+      "note": "Bug-reveal gets the larger viewport: the moment of recognition demands visual weight"
+    },
+    {
+      "source": "climax dimension 1000x800",
+      "target": "implementation/08-tlc-finds-it.svg",
+      "kind": "dimension",
+      "note": "TLC-finds-it gets the larger viewport: the verification climax is the comic's thesis statement"
+    },
+    {
+      "source": "breather dimension 600x400",
+      "target": "implementation/02-ship-it.svg,implementation/03-the-clicks.svg,implementation/11-the-stamp.svg",
+      "kind": "dimension",
+      "note": "Small panels give the eye a rest — pacing rhythm between heavier moments"
+    },
+    {
+      "source": "constellation motif",
+      "target": "implementation/06-the-mentor.svg",
+      "kind": "motif",
+      "note": "Faint constellation appears in background — first foreshadowing of the state machine"
+    },
+    {
+      "source": "constellation motif",
+      "target": "implementation/08-tlc-finds-it.svg",
+      "kind": "motif",
+      "note": "Constellation active with one red bug-node flashing — the model is now visible"
+    },
+    {
+      "source": "constellation motif",
+      "target": "implementation/10-better-world.svg",
+      "kind": "motif",
+      "note": "Constellation stretches across the night sky — methodology at scale"
+    },
+    {
+      "source": "Maya icon data-maya=present",
+      "target": "implementation/01-looks-right.svg,implementation/02-ship-it.svg,implementation/05-alone.svg,implementation/06-the-mentor.svg,implementation/07-the-model.svg,implementation/09-fix-first.svg,implementation/11-the-stamp.svg",
+      "kind": "character",
+      "note": "Maya present in protagonist-close panels; absent in world-view panels 3, 4, 8, 10"
+    }
+  ]
+}

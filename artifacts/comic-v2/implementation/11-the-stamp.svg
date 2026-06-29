@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <!-- Background -->
+  <rect fill="#0d1117" width="600" height="400"/>
+
+  <!-- Faint repeating constellation pattern as meta-texture -->
+  <g opacity="0.18">
+    <circle cx="60"  cy="50"  r="4" fill="#22c55e"/>
+    <circle cx="180" cy="40"  r="4" fill="#22c55e"/>
+    <circle cx="300" cy="60"  r="4" fill="#22c55e"/>
+    <circle cx="420" cy="40"  r="4" fill="#22c55e"/>
+    <circle cx="540" cy="50"  r="4" fill="#22c55e"/>
+    <line x1="60"  y1="50" x2="180" y2="40" stroke="#22c55e" stroke-width="1"/>
+    <line x1="180" y1="40" x2="300" y2="60" stroke="#22c55e" stroke-width="1"/>
+    <line x1="300" y1="60" x2="420" y2="40" stroke="#22c55e" stroke-width="1"/>
+    <line x1="420" y1="40" x2="540" y2="50" stroke="#22c55e" stroke-width="1"/>
+
+    <circle cx="40"  cy="340" r="4" fill="#22c55e"/>
+    <circle cx="160" cy="350" r="4" fill="#22c55e"/>
+    <circle cx="280" cy="340" r="4" fill="#22c55e"/>
+    <circle cx="400" cy="350" r="4" fill="#22c55e"/>
+    <circle cx="520" cy="340" r="4" fill="#22c55e"/>
+    <line x1="40"  y1="340" x2="160" y2="350" stroke="#22c55e" stroke-width="1"/>
+    <line x1="160" y1="350" x2="280" y2="340" stroke="#22c55e" stroke-width="1"/>
+    <line x1="280" y1="340" x2="400" y2="350" stroke="#22c55e" stroke-width="1"/>
+    <line x1="400" y1="350" x2="520" y2="340" stroke="#22c55e" stroke-width="1"/>
+
+    <circle cx="80"  cy="180" r="3" fill="#22c55e"/>
+    <circle cx="200" cy="200" r="3" fill="#22c55e"/>
+    <circle cx="320" cy="180" r="3" fill="#22c55e"/>
+    <circle cx="440" cy="200" r="3" fill="#22c55e"/>
+    <circle cx="540" cy="180" r="3" fill="#22c55e"/>
+    <line x1="80"  y1="180" x2="200" y2="200" stroke="#22c55e" stroke-width="1"/>
+    <line x1="200" y1="200" x2="320" y2="180" stroke="#22c55e" stroke-width="1"/>
+    <line x1="320" y1="180" x2="440" y2="200" stroke="#22c55e" stroke-width="1"/>
+    <line x1="440" y1="200" x2="540" y2="180" stroke="#22c55e" stroke-width="1"/>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="38" font-size="24" fill="#3b82f6" text-anchor="middle" font-weight="bold">The math of trust.</text>
+
+  <!-- Large VERIFIED stamp center, rotated -8 degrees -->
+  <g transform="translate(300, 200) rotate(-8)">
+    <!-- Outer border -->
+    <rect x="-160" y="-55" width="320" height="110" fill="#22c55e" stroke="#166534" stroke-width="6" rx="8"/>
+    <!-- Inner border -->
+    <rect x="-148" y="-43" width="296" height="86" fill="none" stroke="#166534" stroke-width="2" rx="4"/>
+    <!-- VERIFIED text -->
+    <text x="0" y="14" font-size="60" fill="#0d1117" text-anchor="middle" font-weight="bold" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">VERIFIED</text>
+  </g>
+
+  <!-- Maya in bottom-right corner, looking at the stamp -->
+  <g data-maya="present">
+    <rect x="510" y="290" width="40" height="80" fill="#94a3b8" rx="8"/>
+    <circle cx="530" cy="290" r="15" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Small caption (no dialogue) -->
+  <text x="300" y="378" font-size="14" fill="#22c55e" text-anchor="middle" font-style="italic">If the model is right, and the code matches the model, then the code is right.</text>
+</svg>

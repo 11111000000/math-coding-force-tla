@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <!-- Background -->
+  <rect fill="#0d1117" width="600" height="400"/>
+
+  <!-- Title -->
+  <text x="300" y="32" font-size="24" fill="#3b82f6" text-anchor="middle" font-weight="bold">Ship It</text>
+
+  <!-- Maya's laptop (left) -->
+  <rect x="40" y="180" width="140" height="90" fill="#111827" stroke="#1e293b" stroke-width="2" rx="4"/>
+  <rect x="50" y="190" width="120" height="70" fill="#0d1117"/>
+  <text x="58" y="206" font-size="9" fill="#3b82f6">&gt; git push origin main</text>
+  <text x="58" y="220" font-size="9" fill="#22c55e">[main abc123f] ship</text>
+  <text x="58" y="234" font-size="9" fill="#3b82f6">8 files changed</text>
+  <text x="58" y="248" font-size="9" fill="#3b82f6">+142, -37</text>
+  <rect x="32" y="268" width="156" height="6" fill="#1e293b" rx="2"/>
+
+  <!-- Maya at laptop -->
+  <g data-maya="present">
+    <rect x="92" y="130" width="40" height="80" fill="#94a3b8" rx="8"/>
+    <circle cx="112" cy="130" r="15" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Code stream flowing right -->
+  <g opacity="0.85">
+    <text x="200" y="200" font-size="11" fill="#3b82f6">{...}</text>
+    <text x="232" y="190" font-size="11" fill="#3b82f6">{...}</text>
+    <text x="262" y="208" font-size="11" fill="#3b82f6">{...}</text>
+    <text x="292" y="195" font-size="11" fill="#3b82f6">{...}</text>
+    <text x="322" y="205" font-size="11" fill="#3b82f6">{...}</text>
+    <text x="352" y="198" font-size="11" fill="#3b82f6">{...}</text>
+  </g>
+
+  <!-- Glowing green server (right) -->
+  <rect x="420" y="120" width="140" height="180" fill="#111827" stroke="#22c55e" stroke-width="2" rx="6"/>
+  <!-- Server status lights -->
+  <circle cx="440" cy="140" r="4" fill="#22c55e"/>
+  <circle cx="456" cy="140" r="4" fill="#22c55e"/>
+  <circle cx="472" cy="140" r="4" fill="#f59e0b"/>
+  <!-- Server rack lines -->
+  <line x1="432" y1="170" x2="548" y2="170" stroke="#1e293b" stroke-width="1"/>
+  <line x1="432" y1="200" x2="548" y2="200" stroke="#1e293b" stroke-width="1"/>
+  <line x1="432" y1="230" x2="548" y2="230" stroke="#1e293b" stroke-width="1"/>
+  <line x1="432" y1="260" x2="548" y2="260" stroke="#1e293b" stroke-width="1"/>
+  <line x1="432" y1="290" x2="548" y2="290" stroke="#1e293b" stroke-width="1"/>
+  <!-- Server glow -->
+  <rect x="420" y="120" width="140" height="180" fill="#22c55e" opacity="0.08" rx="6"/>
+
+  <!-- Confetti dots -->
+  <circle cx="80"  cy="60"  r="3" fill="#3b82f6"/>
+  <circle cx="160" cy="40"  r="3" fill="#22c55e"/>
+  <circle cx="240" cy="80"  r="3" fill="#f59e0b"/>
+  <circle cx="320" cy="50"  r="3" fill="#3b82f6"/>
+  <circle cx="400" cy="70"  r="3" fill="#22c55e"/>
+  <circle cx="500" cy="50"  r="3" fill="#f59e0b"/>
+  <circle cx="120" cy="90"  r="3" fill="#22c55e"/>
+  <circle cx="280" cy="100" r="3" fill="#3b82f6"/>
+  <circle cx="540" cy="100" r="3" fill="#3b82f6"/>
+  <rect x="200" y="60" width="4" height="4" fill="#22c55e" transform="rotate(30 202 62)"/>
+  <rect x="360" y="40" width="4" height="4" fill="#f59e0b" transform="rotate(45 362 42)"/>
+  <rect x="460" y="80" width="4" height="4" fill="#3b82f6" transform="rotate(20 462 82)"/>
+
+  <!-- Clock at 5:00 PM -->
+  <circle cx="500" cy="340" r="26" fill="#111827" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="500" y1="340" x2="500" y2="320" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="500" y1="340" x2="516" y2="340" stroke="#f59e0b" stroke-width="2"/>
+  <text x="500" y="385" font-size="11" fill="#cbd5e1" text-anchor="middle">5:00 PM</text>
+
+  <!-- Caption -->
+  <text x="300" y="375" font-size="14" fill="#cbd5e1" text-anchor="middle">Deploy complete. Maya goes home for the weekend.</text>
+  <text x="300" y="392" font-size="14" fill="#f59e0b" text-anchor="middle" font-style="italic">"Pushed to prod. See you Monday!"</text>
+</svg>

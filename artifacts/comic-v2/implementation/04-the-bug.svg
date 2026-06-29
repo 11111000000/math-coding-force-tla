@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <!-- Background -->
+  <rect fill="#0d1117" width="1000" height="800"/>
+
+  <!-- Title -->
+  <text x="500" y="40" font-size="32" fill="#ef4444" text-anchor="middle" font-weight="bold">The Bug</text>
+
+  <!-- TOP HALF: Red notification flood -->
+  <line x1="0" y1="380" x2="1000" y2="380" stroke="#ef4444" stroke-width="1" opacity="0.4"/>
+
+  <!-- Phone notifications -->
+  <g>
+    <rect x="40" y="80" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="60" cy="100" r="6" fill="#ef4444"/>
+    <text x="78" y="104" font-size="11" fill="#ef4444" font-weight="bold">PAYMENT</text>
+    <text x="50" y="124" font-size="13" fill="#cbd5e1">Charged twice for order #4471!</text>
+
+    <rect x="290" y="80" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="310" cy="100" r="6" fill="#ef4444"/>
+    <text x="328" y="104" font-size="11" fill="#ef4444" font-weight="bold">PAYMENT</text>
+    <text x="300" y="124" font-size="13" fill="#cbd5e1">Where&apos;s my refund? I&apos;m calling.</text>
+
+    <rect x="540" y="80" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="560" cy="100" r="6" fill="#ef4444"/>
+    <text x="578" y="104" font-size="11" fill="#ef4444" font-weight="bold">PAYMENT</text>
+    <text x="550" y="124" font-size="13" fill="#cbd5e1">Double charge. Pls fix ASAP.</text>
+
+    <rect x="790" y="80" width="180" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="810" cy="100" r="6" fill="#ef4444"/>
+    <text x="828" y="104" font-size="11" fill="#ef4444" font-weight="bold">SUPPORT</text>
+    <text x="800" y="124" font-size="13" fill="#cbd5e1">I was charged 2x!!</text>
+
+    <rect x="40" y="160" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="60" cy="180" r="6" fill="#ef4444"/>
+    <text x="78" y="184" font-size="11" fill="#ef4444" font-weight="bold">SUPPORT</text>
+    <text x="50" y="204" font-size="13" fill="#cbd5e1">Two charges on my card. Why?</text>
+
+    <rect x="290" y="160" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="310" cy="180" r="6" fill="#ef4444"/>
+    <text x="328" y="184" font-size="11" fill="#ef4444" font-weight="bold">PAYMENT</text>
+    <text x="300" y="204" font-size="13" fill="#cbd5e1">Need a refund. Charged twice.</text>
+
+    <rect x="540" y="160" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="560" cy="180" r="6" fill="#ef4444"/>
+    <text x="578" y="184" font-size="11" fill="#ef4444" font-weight="bold">SUPPORT</text>
+    <text x="550" y="204" font-size="13" fill="#cbd5e1">This is a SCAM. Two charges!</text>
+
+    <rect x="790" y="160" width="180" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="810" cy="180" r="6" fill="#ef4444"/>
+    <text x="828" y="184" font-size="11" fill="#ef4444" font-weight="bold">SUPPORT</text>
+    <text x="800" y="204" font-size="13" fill="#cbd5e1">Hello? Anyone?</text>
+
+    <rect x="40" y="240" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="60" cy="260" r="6" fill="#ef4444"/>
+    <text x="78" y="264" font-size="11" fill="#ef4444" font-weight="bold">PAYMENT</text>
+    <text x="50" y="284" font-size="13" fill="#cbd5e1">pls help. charged twice.</text>
+
+    <rect x="290" y="240" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="310" cy="260" r="6" fill="#ef4444"/>
+    <text x="328" y="264" font-size="11" fill="#ef4444" font-weight="bold">SUPPORT</text>
+    <text x="300" y="284" font-size="13" fill="#cbd5e1">Dispute: double charge</text>
+
+    <rect x="540" y="240" width="220" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="560" cy="260" r="6" fill="#ef4444"/>
+    <text x="578" y="264" font-size="11" fill="#ef4444" font-weight="bold">SUPPORT</text>
+    <text x="550" y="284" font-size="13" fill="#cbd5e1">refund refund refund</text>
+
+    <rect x="790" y="240" width="180" height="60" fill="#1f1717" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <circle cx="810" cy="260" r="6" fill="#ef4444"/>
+    <text x="828" y="264" font-size="11" fill="#ef4444" font-weight="bold">PAYMENT</text>
+    <text x="800" y="284" font-size="13" fill="#cbd5e1">bank dispute filed</text>
+  </g>
+
+  <!-- Stat counter -->
+  <text x="500" y="340" font-size="18" fill="#ef4444" text-anchor="middle" font-weight="bold">847 users double-charged over the weekend</text>
+
+  <!-- BOTTOM HALF: Maya's panic -->
+  <!-- Maya's icon, scaled LARGE -->
+  <g>
+    <!-- Browser tabs around Maya -->
+    <rect x="80" y="420" width="280" height="160" fill="#111827" stroke="#ef4444" stroke-width="2" rx="4" opacity="0.85" transform="rotate(-6 220 500)"/>
+    <rect x="92" y="432" width="256" height="20" fill="#1e293b" transform="rotate(-6 220 500)"/>
+    <text x="100" y="446" font-size="9" fill="#ef4444" transform="rotate(-6 220 500)">ERROR 500 — /api/charge</text>
+    <text x="100" y="470" font-size="9" fill="#cbd5e1" transform="rotate(-6 220 500)">stack trace... at confirm()</text>
+    <text x="100" y="484" font-size="9" fill="#cbd5e1" transform="rotate(-6 220 500)">at asyncHandler()</text>
+
+    <rect x="660" y="420" width="280" height="160" fill="#111827" stroke="#ef4444" stroke-width="2" rx="4" opacity="0.85" transform="rotate(7 800 500)"/>
+    <rect x="672" y="432" width="256" height="20" fill="#1e293b" transform="rotate(7 800 500)"/>
+    <text x="680" y="446" font-size="9" fill="#ef4444" transform="rotate(7 800 500)">SUPPORT QUEUE: 412</text>
+    <text x="680" y="470" font-size="9" fill="#cbd5e1" transform="rotate(7 800 500)">all-hands-on-deck</text>
+    <text x="680" y="484" font-size="9" fill="#cbd5e1" transform="rotate(7 800 500)">PRs paused</text>
+
+    <rect x="120" y="540" width="240" height="120" fill="#111827" stroke="#ef4444" stroke-width="2" rx="4" opacity="0.85" transform="rotate(-4 240 600)"/>
+    <text x="130" y="558" font-size="9" fill="#ef4444" transform="rotate(-4 240 600)">Sentry: 1.2k events/min</text>
+    <text x="130" y="572" font-size="9" fill="#cbd5e1" transform="rotate(-4 240 600)">race condition detected</text>
+
+    <rect x="640" y="540" width="240" height="120" fill="#111827" stroke="#ef4444" stroke-width="2" rx="4" opacity="0.85" transform="rotate(5 760 600)"/>
+    <text x="650" y="558" font-size="9" fill="#ef4444" transform="rotate(5 760 600)">Stripe: disputes +300%</text>
+    <text x="650" y="572" font-size="9" fill="#cbd5e1" transform="rotate(5 760 600)">escalation: P0</text>
+
+    <!-- Maya (panicked, large) at center -->
+    <g>
+      <rect x="460" y="430" width="80" height="160" fill="#94a3b8" rx="12"/>
+      <circle cx="500" cy="430" r="30" fill="#cbd5e1"/>
+      <!-- Subtle panic cue: small magenta dots around head -->
+      <circle cx="450" cy="410" r="3" fill="#ef4444"/>
+      <circle cx="550" cy="415" r="3" fill="#ef4444"/>
+      <circle cx="490" cy="380" r="3" fill="#ef4444"/>
+    </g>
+  </g>
+
+  <!-- Bug-creature at intersection of click event and async fetch -->
+  <g>
+    <!-- "click event" node -->
+    <rect x="350" y="660" width="120" height="36" fill="#1e293b" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="410" y="683" font-size="12" fill="#3b82f6" text-anchor="middle">click event</text>
+
+    <!-- "async fetch" node -->
+    <rect x="530" y="660" width="120" height="36" fill="#1e293b" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="590" y="683" font-size="12" fill="#3b82f6" text-anchor="middle">async fetch</text>
+
+    <!-- Lines from each into the bug -->
+    <line x1="410" y1="660" x2="450" y2="640" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+    <line x1="590" y1="660" x2="510" y2="640" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+
+    <!-- The bug-creature at intersection -->
+    <polygon points="450,640 510,640 480,610" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- Eyes -->
+    <circle cx="468" cy="625" r="3" fill="#0d1117"/>
+    <circle cx="492" cy="625" r="3" fill="#0d1117"/>
+    <!-- Label -->
+    <text x="480" y="600" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="bold">RACE</text>
+    <text x="480" y="724" font-size="10" fill="#94a3b8" text-anchor="middle">click event ∧ async fetch</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="500" y="780" font-size="16" fill="#cbd5e1" text-anchor="middle">Monday morning. The tests passed. The review was clean.</text>
+  <text x="500" y="798" font-size="16" fill="#f59e0b" text-anchor="middle" font-style="italic">"WHERE did this come from?"</text>
+</svg>

@@ -1,0 +1,51 @@
+task_id: comic-v2
+assumptions:
+  - id: A1
+    statement: Target audience is software developers with 1+ year professional experience, familiar with React/TypeScript, who have shipped at least one production bug they couldn't reproduce locally.
+    status: agent-inferred
+    rationale: v1 was tested informally with non-developers who could not parse the technical content. Developers are the only audience who can connect the formal model to their lived experience.
+
+  - id: A2
+    statement: Reading time budget is 2 minutes. If a panel takes more than 10 seconds to parse, it fails.
+    status: agent-inferred
+    rationale: Comic is on a documentation landing. Readers skim. If the visual hierarchy doesn't guide the eye in under 10 seconds per panel, the panel is wasted.
+
+  - id: A3
+    statement: The "state machine constellation" motif must appear in at least 3 panels to anchor the reader's understanding of the verification concept.
+    status: agent-inferred
+    rationale: McCloud's "iconographic abstraction" principle: recurring symbols create memory anchors. The constellation is the only abstract symbol that doesn't require explanation.
+
+  - id: A4
+    statement: Maya must be drawn as a simple icon (circle head, no facial features), not a realistic character.
+    status: agent-inferred
+    rationale: McCloud's research shows abstract icons create stronger reader identification than detailed characters. v1 had detailed Maya which distracted from the message.
+
+  - id: A5
+    statement: Color palette is a narrative device: blue (formal/code), amber (human), red (bug/danger), green (verification/success), purple (TLA+/formalism).
+    status: agent-inferred
+    rationale: v1 STYLE.md declared the palette but didn't use it as narrative. This is the design intent.
+
+  - id: A6
+    statement: Panel sizes must vary: 600x400 (small/context), 800x600 (medium/normal), 1000x800 (large/climax).
+    status: agent-inferred
+    rationale: Eisner's cinematography principle: panel size = pacing and emphasis. v1 used uniform sizes which flattened the rhythm.
+
+  - id: A7
+    statement: Comic must include a transitional panel between "Bug" (panel 5) and "Mentor" (panel 7) showing Maya alone, frustrated.
+    status: agent-inferred
+    rationale: McCloud's moment-to-moment principle: large temporal jumps lose readers. v1 jumped from disaster to discovery without pause.
+
+  - id: A8
+    statement: The TLAPS proof obligation (THEOREM) is optional. Model checking via TLC covers the safety invariants for this comic.
+    status: user-confirmed
+    rationale: TLAPS requires interactive proofs that don't add educational value for a comic's audience. TLC bounded model checking on a 6-state model is sufficient.
+
+  - id: A9
+    statement: SVG implementation must be self-contained — no external font files, no JavaScript dependencies, no external image references.
+    status: agent-inferred
+    rationale: SVGs are embedded in mkdocs pages. External dependencies break offline viewing and complicate the workflow.
+
+  - id: A10
+    statement: The comic is monochrome-friendly. The narrative must still read in grayscale (verified by reading test panels at 100% desaturation).
+    status: open
+    rationale: GitHub displays the comic in code views which may not respect colors. Need to verify.

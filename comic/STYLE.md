@@ -1,5 +1,13 @@
 # MathCoding Comic — Visual Style Guide
 
+> **Version 2 note.** v2 panels live in `artifacts/comic-v2/implementation/`.
+> The hex codes, character design, and palette table below are v1 records —
+> preserved for provenance. For the v2 verified style, see
+> `artifacts/comic-v2/refinement.md` (state mapping) and the
+> `Visual Style` table in `MathCodingBase/00-Meta/Comic.md`.
+> The v1 panels in `comic/panels/` are kept as the original sketch;
+> the workflow now copies from the verified packet.
+
 ## Title
 **"The Math of Trust"** (Математика доверия)
 

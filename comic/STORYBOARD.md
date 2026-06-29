@@ -1,5 +1,12 @@
 # MathCoding Comic — Storyboard & Panel Descriptions
 
+> **Version 2 note.** This storyboard is the v1 10-panel sketch. The
+> verified v2 packet at `artifacts/comic-v2/` has 11 panels — it adds
+> "Alone" (panel 05, the frustrated beat) and "The Stamp" (panel 11,
+> the terminal VERIFIED stamp). The v2 narrative now lives in
+> `MathCodingBase/00-Meta/Comic.md`. The 10 sketches below are kept
+> for provenance and as the seed from which v2 grew.
+
 ## Title: "The Math of Trust"
 **Subtitle**: How formal methods turn "looks right" into "is right"
 
@@ -161,7 +168,7 @@
 A simple text panel, no illustration:
 > "From vibe-coding to math-coding.
 > Every assumption explicit. Every property checked. Every claim backed by evidence.
-> This is MathCodingFractal."
+> This is MathCoding."
 
 ---
 

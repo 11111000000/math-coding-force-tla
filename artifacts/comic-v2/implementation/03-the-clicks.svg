@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <!-- Background -->
+  <rect fill="#0d1117" width="600" height="400"/>
+
+  <!-- Title -->
+  <text x="300" y="32" font-size="24" fill="#22c55e" text-anchor="middle" font-weight="bold">The Clicks</text>
+
+  <!-- Three vertical user strips -->
+  <!-- Strip 1 -->
+  <g>
+    <rect x="40" y="60" width="160" height="300" fill="#111827" stroke="#1e293b" stroke-width="1" rx="8"/>
+    <!-- Phone -->
+    <rect x="70" y="100" width="100" height="160" fill="#0d1117" stroke="#22c55e" stroke-width="2" rx="10"/>
+    <rect x="80" y="110" width="80" height="120" fill="#1e293b" rx="4"/>
+    <text x="120" y="145" font-size="10" fill="#cbd5e1" text-anchor="middle">Confirm?</text>
+    <rect x="86" y="160" width="68" height="22" fill="#22c55e" rx="3"/>
+    <text x="120" y="175" font-size="10" fill="#0d1117" text-anchor="middle" font-weight="bold">Confirm</text>
+    <rect x="86" y="186" width="68" height="22" fill="#374151" rx="3"/>
+    <text x="120" y="201" font-size="10" fill="#cbd5e1" text-anchor="middle">Cancel</text>
+    <circle cx="120" cy="225" r="6" fill="#22c55e"/>
+    <!-- User label -->
+    <text x="120" y="290" font-size="11" fill="#cbd5e1" text-anchor="middle">user #217</text>
+    <text x="120" y="305" font-size="10" fill="#22c55e" text-anchor="middle">+ confirmed</text>
+    <!-- Big checkmark -->
+    <g transform="translate(120,340)">
+      <path d="M -10 0 L -3 7 L 12 -8" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Strip 2 -->
+  <g>
+    <rect x="220" y="60" width="160" height="300" fill="#111827" stroke="#1e293b" stroke-width="1" rx="8"/>
+    <rect x="250" y="100" width="100" height="160" fill="#0d1117" stroke="#22c55e" stroke-width="2" rx="10"/>
+    <rect x="260" y="110" width="80" height="120" fill="#1e293b" rx="4"/>
+    <text x="300" y="145" font-size="10" fill="#cbd5e1" text-anchor="middle">Confirm?</text>
+    <rect x="266" y="160" width="68" height="22" fill="#22c55e" rx="3"/>
+    <text x="300" y="175" font-size="10" fill="#0d1117" text-anchor="middle" font-weight="bold">Confirm</text>
+    <rect x="266" y="186" width="68" height="22" fill="#374151" rx="3"/>
+    <text x="300" y="201" font-size="10" fill="#cbd5e1" text-anchor="middle">Cancel</text>
+    <circle cx="300" cy="225" r="6" fill="#22c55e"/>
+    <text x="300" y="290" font-size="11" fill="#cbd5e1" text-anchor="middle">user #218</text>
+    <text x="300" y="305" font-size="10" fill="#22c55e" text-anchor="middle">+ confirmed</text>
+    <g transform="translate(300,340)">
+      <path d="M -10 0 L -3 7 L 12 -8" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Strip 3 -->
+  <g>
+    <rect x="400" y="60" width="160" height="300" fill="#111827" stroke="#1e293b" stroke-width="1" rx="8"/>
+    <rect x="430" y="100" width="100" height="160" fill="#0d1117" stroke="#22c55e" stroke-width="2" rx="10"/>
+    <rect x="440" y="110" width="80" height="120" fill="#1e293b" rx="4"/>
+    <text x="480" y="145" font-size="10" fill="#cbd5e1" text-anchor="middle">Confirm?</text>
+    <rect x="446" y="160" width="68" height="22" fill="#22c55e" rx="3"/>
+    <text x="480" y="175" font-size="10" fill="#0d1117" text-anchor="middle" font-weight="bold">Confirm</text>
+    <rect x="446" y="186" width="68" height="22" fill="#374151" rx="3"/>
+    <text x="480" y="201" font-size="10" fill="#cbd5e1" text-anchor="middle">Cancel</text>
+    <circle cx="480" cy="225" r="6" fill="#22c55e"/>
+    <text x="480" y="290" font-size="11" fill="#cbd5e1" text-anchor="middle">user #219</text>
+    <text x="480" y="305" font-size="10" fill="#22c55e" text-anchor="middle">+ confirmed</text>
+    <g transform="translate(480,340)">
+      <path d="M -10 0 L -3 7 L 12 -8" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <text x="300" y="385" font-size="14" fill="#cbd5e1" text-anchor="middle">847 clicks. 847 confirmations. 847 happy users.</text>
+</svg>
