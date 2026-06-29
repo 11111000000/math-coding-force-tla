@@ -9,3 +9,5 @@ _site/
 *.jar
 !.gitkeep
 .DS_Store
+/states/
+**/states/
