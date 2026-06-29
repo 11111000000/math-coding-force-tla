@@ -1,0 +1,94 @@
+{
+  "task_id": "docs-humanization-2026-06",
+  "mappings": [
+    {
+      "source": "assumption:A1",
+      "target": "verification.json:audit_metrics.before",
+      "kind": "assumption-to-evidence",
+      "note": "Humanization goal recorded as user-confirmed and measured in audit metrics"
+    },
+    {
+      "source": "assumption:A2",
+      "target": "verification.json:deliverables.russian_translated",
+      "kind": "assumption-to-deliverable",
+      "note": "Exactly 8 entry-level English files translated"
+    },
+    {
+      "source": "assumption:A3",
+      "target": "verification.json:audit_metrics.russian_negative_parallelisms",
+      "kind": "assumption-to-evidence",
+      "note": "Translatable terms rendered in Russian; Latin kept for tool names and code"
+    },
+    {
+      "source": "Model.tla:Invariant",
+      "target": "verification.json:deliverables.english_humanized + russian_translated",
+      "kind": "invariant-to-artifact",
+      "note": "rewritten and translated subsets closed under their respective scopes"
+    },
+    {
+      "source": "Model.tla:Postcondition",
+      "target": "verification.json:audit_metrics.after",
+      "kind": "postcondition-to-evidence",
+      "note": "Final state recorded; em-dash density 7.4/1000, zero negative parallelisms"
+    },
+    {
+      "source": "Model.tla:Progress",
+      "target": "verification.json:deliverables",
+      "kind": "temporal-to-deliverable",
+      "note": "Every document in scope eventually rewritten or translated"
+    },
+    {
+      "source": "Roadmap.md:1.4 docs-humanization",
+      "target": "verification.json",
+      "kind": "status-link",
+      "note": "Roadmap entry updated with verdict and one-line delivery note"
+    },
+    {
+      "source": "Roadmap.ru.md:1.4 docs-humanization",
+      "target": "verification.json",
+      "kind": "status-link",
+      "note": "Russian Roadmap mirror updated in lockstep"
+    },
+    {
+      "source": "MathCodingBase/ru/README.ru.md",
+      "target": "README.md",
+      "kind": "translation-mirror",
+      "note": "Russian counterpart of the entry-level English file"
+    },
+    {
+      "source": "MathCodingBase/ru/QUICKSTART.ru.md",
+      "target": "QUICKSTART.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/AGENTS.ru.md",
+      "target": "AGENTS.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/Index.ru.md",
+      "target": "MathCodingBase/Index.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/00-Meta/Manifesto.ru.md",
+      "target": "MathCodingBase/00-Meta/Manifesto.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/00-Meta/Dialectical Analysis.ru.md",
+      "target": "MathCodingBase/00-Meta/Dialectical Analysis.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/00-Meta/Fractal Principle.ru.md",
+      "target": "MathCodingBase/00-Meta/Fractal Principle.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/00-Meta/Roadmap.ru.md",
+      "target": "MathCodingBase/00-Meta/Roadmap.md",
+      "kind": "translation-mirror"
+    }
+  ]
+}

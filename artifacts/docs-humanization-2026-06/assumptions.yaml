@@ -1,0 +1,29 @@
+task_id: docs-humanization-2026-06
+assumptions:
+  - id: A1
+    statement: The user wants the methodology documents rewritten to read as human-authored, not merely polished.
+    status: user-confirmed
+  - id: A2
+    statement: Russian translations cover exactly eight entry-level English files (README, QUICKSTART, AGENTS, Index, Manifesto, Dialectical Analysis, Fractal Principle, Roadmap). Other files stay English-only.
+    status: user-confirmed
+  - id: A3
+    statement: All translatable technical terms get rendered in Russian (e.g. fairness → справедливость, refinement → уточнение, invariant → инвариант, packet → пакет, verdict → вердикт, scaffold → скаффолд or шаблон). Tools (TLA+, SANY, TLC, TLAPS, Java, Nix), file paths, code, and TLA+ keywords stay in Latin script.
+    status: user-confirmed
+  - id: A4
+    statement: Length preservation: English rewrites stay within ±10% of source word count. Russian translations can be 10-30% longer because Russian tends to be wordier than English for technical prose.
+    status: agent-inferred
+  - id: A5
+    statement: Humanization uses the nine levers from humanize-writer / humanize-editor skills. Where a paragraph already reads cleanly, it is left as is. No global rewrite when surgical edits suffice.
+    status: agent-inferred
+  - id: A6
+    statement: Voice profile for English rewrites: practical, concrete, dry-witted. First-person "I" or "we" allowed where the genre permits (Roadmap status notes, authorial asides). Third-person passive kept only for API-style technical reference.
+    status: agent-inferred
+  - id: A7
+    statement: Voice profile for Russian translations: литературный русский без AI-паттернов. Первый род (я/мы) в авторских комментариях, безличное в инструкциях. Em-dash density ≤1 на 300 слов. Negative parallelism density <1 на 1000 слов. Деепричастия — ≤1 на абзац.
+    status: agent-inferred
+  - id: A8
+    statement: Cross-links between Russian and English documents use the same anchor name with a .ru.md suffix so readers can switch languages by changing the filename.
+    status: agent-inferred
+  - id: A9
+    statement: The methodology "fractal property" applies: this change is a structural change to the knowledge base, so it goes through a task packet. Future prose-only fixes do not.
+    status: user-confirmed

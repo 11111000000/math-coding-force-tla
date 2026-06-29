@@ -1,0 +1,15 @@
+{
+  "task_id": "docs-humanization-2026-06",
+  "title": "Humanization pass + Russian translations of key methodology docs",
+  "problem": "problem.md",
+  "assumptions": "assumptions.yaml",
+  "artifacts": {
+    "problem": "problem.md",
+    "assumptions": "assumptions.yaml",
+    "spec": "Model.tla",
+    "verification": "verification.json",
+    "refinement": "refinement.md",
+    "traceability": "traceability.json",
+    "implementation": "implementation"
+  }
+}
