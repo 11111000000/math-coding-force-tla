@@ -1,0 +1,16 @@
+{
+  "task_id": "research-2026-06",
+  "title": "Research findings: empirical study of methodology applied to itself",
+  "decision": "needed",
+  "problem": "problem.md",
+  "assumptions": "assumptions.yaml",
+  "artifacts": {
+    "problem": "problem.md",
+    "assumptions": "assumptions.yaml",
+    "spec": "Model.tla",
+    "verification": "verification.json",
+    "refinement": "refinement.md",
+    "traceability": "traceability.json",
+    "implementation": "implementation"
+  }
+}

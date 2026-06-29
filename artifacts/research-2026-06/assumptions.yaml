@@ -1,0 +1,43 @@
+task_id: research-2026-06
+decision: needed
+assumptions:
+  - id: A1
+    statement: The user is the methodology's author and primary practitioner.
+    status: user-confirmed
+    epistemology: [fact]
+  - id: A2
+    statement: The repository's eleven packets constitute the empirical corpus of this research.
+    status: user-confirmed
+    epistemology: [fact]
+  - id: A3
+    statement: Direct measurement of file sizes is the primary observation method.
+    status: agent-inferred
+    epistemology: [judgment]
+  - id: A4
+    statement: Dialectical dialog with the user is the primary interpretation method.
+    status: agent-inferred
+    epistemology: [judgment]
+  - id: A5
+    statement: Findings are organized by epistemic status to prevent the conflation observed in dialog.
+    status: agent-inferred
+    epistemology: [judgment]
+  - id: A6
+    statement: No controlled comparison of methodology-on vs methodology-off has been performed.
+    status: user-confirmed
+    epistemology: [fact]
+  - id: A7
+    statement: The successor methodology design is out of scope for this packet.
+    status: user-confirmed
+    epistemology: [fact]
+  - id: A8
+    statement: Alternative formal substrates (Alloy, Spin, Coq, property-based testing) are not yet integrated into this packet; they are mentioned as findings for the successor.
+    status: agent-inferred
+    epistemology: [judgment]
+  - id: A9
+    statement: The classification of packets into "about methodology" vs "external" was performed by the user during dialog, not by automated analysis.
+    status: agent-inferred
+    epistemology: [fact]
+  - id: A10
+    statement: The session was conducted entirely in dialog; no external benchmark or external review was performed.
+    status: user-confirmed
+    epistemology: [fact]

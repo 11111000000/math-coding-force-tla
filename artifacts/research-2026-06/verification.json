@@ -1,0 +1,30 @@
+{
+  "module": "Model",
+  "verdict": "VERIFIED",
+  "l1_gate": {
+    "precondition": "FOUND",
+    "postcondition": "FOUND",
+    "invariant": "FOUND",
+    "result": "PASS"
+  },
+  "sany": {
+    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCodingFractal/artifacts/research-2026-06/Model.tla",
+    "exit_code": 0,
+    "result": "PASS",
+    "stderr": ""
+  },
+  "tlc": {
+    "tool": "TLC",
+    "result": "NO_ERRORS",
+    "details": "Model checking completed. No error has been found. | 496 states generated, 40 distinct states found, 0 states left on queue."
+  },
+  "tlaps": {
+    "tool": "TLAPS",
+    "result": "UNATTEMPTED",
+    "theorems_attempted": 0,
+    "theorems_proved": 0,
+    "command": "tlapm /home/za/Desktop/MathCodingFractal/artifacts/research-2026-06/Model.tla",
+    "exit_code": 0,
+    "details": ""
+  }
+}

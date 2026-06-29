@@ -1,0 +1,77 @@
+{
+  "task_id": "research-2026-06",
+  "mappings": [
+    {
+      "source": "F1.problem.md",
+      "target": "MathCodingBase/02-Protocols/* (eight-artifact consistency)",
+      "kind": "finding-to-protocol",
+      "note": "Methodology is structurally consistent: every packet has the same eight artifacts"
+    },
+    {
+      "source": "F2.problem.md",
+      "target": "MathCodingBase/03-Architecture/Artifact-Centered Architecture.md",
+      "kind": "finding-to-architecture",
+      "note": "90% of packet bytes are connective tissue; this is the friction point"
+    },
+    {
+      "source": "F3.problem.md",
+      "target": "bin/mathpacket",
+      "kind": "finding-to-tool",
+      "note": "Decision gate (needed vs. not-needed) is missing from packet creation"
+    },
+    {
+      "source": "F4.problem.md",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "finding-to-protocol",
+      "note": "UNVERIFIABLE union with subtypes is the right direction; documented in unverifiable-as-design packet"
+    },
+    {
+      "source": "F5.problem.md",
+      "target": "schemas/assumptions.schema.json",
+      "kind": "finding-to-schema",
+      "note": "Epistemic markers (fact/hypothesis/judgment/unknown) are absent from current schema; required for successor"
+    },
+    {
+      "source": "F6.problem.md",
+      "target": "MathCodingBase/01-Theory/TLA+ Role.md",
+      "kind": "finding-to-theory",
+      "note": "TLA+ is the only substrate; successor should support property-based testing, Alloy, Spin as additional options"
+    },
+    {
+      "source": "F7.problem.md",
+      "target": "artifacts/* (count of self-application packets)",
+      "kind": "finding-to-empirical-evidence",
+      "note": "45% of packets address the methodology itself; unsustainable as long-term ratio"
+    },
+    {
+      "source": "Model.tla:CorpusCountInvariant",
+      "target": "ls artifacts/ examples/ methodology/self-spec",
+      "kind": "invariant-to-check",
+      "note": "11 = 5 + 4 + 2"
+    },
+    {
+      "source": "Model.tla:RefinementDominatesInvariant",
+      "target": "wc -c Model.tla refinement.md (per packet)",
+      "kind": "invariant-to-check",
+      "note": "Every observed packet has refinement.md > Model.tla"
+    },
+    {
+      "source": "Model.tla:EpistemicMarkersRequired",
+      "target": "assumptions.yaml (this packet)",
+      "kind": "invariant-to-self",
+      "note": "This packet carries the markers it recommends"
+    },
+    {
+      "source": "Roadmap.md",
+      "target": "verification.json (this packet)",
+      "kind": "status-link",
+      "note": "Roadmap entry to be added by the session that closes research-2026-06"
+    },
+    {
+      "source": "research-2026-06 (this packet)",
+      "target": "~/Desktop/math-coding/ (future repository)",
+      "kind": "self-to-successor",
+      "note": "Successor methodology inherits findings; this packet is the source of data"
+    }
+  ]
+}
