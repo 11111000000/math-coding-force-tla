@@ -28,8 +28,10 @@ jobs:
 
       - name: Copy comic panels into docs
         run: |
-          mkdir -p MathCodingBase/assets/comic-panels
-          cp -r artifacts/comic-v2/implementation/*.svg MathCodingBase/assets/comic-panels/
+          mkdir -p MathCodingBase/assets/comic-panels/v1
+          mkdir -p MathCodingBase/assets/comic-panels/v2
+          cp -r comic/panels/*.svg MathCodingBase/assets/comic-panels/v1/
+          cp -r artifacts/comic-v2/implementation/*.svg MathCodingBase/assets/comic-panels/v2/
 
       - name: Build docs
         run: mkdocs build --strict

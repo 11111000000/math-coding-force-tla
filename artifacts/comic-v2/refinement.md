@@ -35,8 +35,8 @@ with explicit attributes.
 
 The TLA+ action `ReadPanel` increments `panelIndex` by 1 and updates
 `state` to `NextStateForPanel[panelIndex]`. The visual implementation
-**is** the file naming: `comic/panels/01-looks-right.svg` corresponds to
-panelIndex=0, `02-ship-it.svg` to panelIndex=1, etc.
+**is** the file naming: `artifacts/comic-v2/implementation/01-looks-right.svg`
+corresponds to panelIndex=0, `02-ship-it.svg` to panelIndex=1, etc.
 
 | Panel file | panelIndex | state (after) | palette | dimensions |
 |---|---|---|---|---|

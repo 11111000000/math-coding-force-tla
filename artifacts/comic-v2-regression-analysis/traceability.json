@@ -1,0 +1,65 @@
+{
+  "task_id": "comic-v2-regression-analysis",
+  "mappings": [
+    {
+      "source": "A1 — visual quality is not mechanically checkable",
+      "target": "MathCodingBase/03-Architecture/Mechanical Verification Model.md",
+      "kind": "assumption-to-protocol",
+      "note": "Mechanical Verification Model.md lists prose/UX/strategy/ethics as UNVERIFIABLE:OUT_OF_SCOPE; visual design belongs in this category."
+    },
+    {
+      "source": "A2 — named human reviewer required for UNVERIFIABLE",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "assumption-to-protocol",
+      "note": "Compensation contract: human_review block with by, process, trigger."
+    },
+    {
+      "source": "A3 — v1 panels must remain available",
+      "target": "comic/panels/*.svg + MathCodingBase/00-Meta/Comic_v1.md",
+      "kind": "preservation",
+      "note": "v1 10-panel narrative + v1 panel SVGs are git-tracked; both Comic.md and Comic_v1.md are in mkdocs nav."
+    },
+    {
+      "source": "A4 — structural validator checks form, not expression",
+      "target": "artifacts/comic-v2/implementation/validate-panels.sh",
+      "kind": "validator-scope",
+      "note": "Validator asserts dimensions, palette hex, Maya data-attribute. It does not check emotional transmission. The verifier confirms a green build of something that may not communicate its purpose."
+    },
+    {
+      "source": "A5 — refinement must describe intentions, not primitives",
+      "target": "artifacts/comic-v2-regression-analysis/refinement.md#aesthetic-invariants",
+      "kind": "methodology-improvement",
+      "note": "v3 refinement must include an Aesthetic Invariants section: emotional beat, character focus, background role, continuity. These describe what each panel must communicate, not just what it must contain."
+    },
+    {
+      "source": "A6 — Known Limitations L4 is the canonical reference",
+      "target": "MathCodingBase/00-Meta/Known Limitations.md",
+      "kind": "cross-reference",
+      "note": "L4 names refinement as minimal-by-design and not validated. This packet is a worked example of how L4 manifests."
+    },
+    {
+      "source": "A7 — v3 packet with Aesthetic Invariants",
+      "target": "MathCodingBase/00-Meta/Roadmap.md (v3 entry, planned)",
+      "kind": "forward-work",
+      "note": "v3 will introduce Aesthetic Invariants as a refinement section and require named-reviewer sign-off for any visual artifact."
+    },
+    {
+      "source": "phase = detected",
+      "target": "artifacts/comic-v2-regression-analysis/problem.md",
+      "kind": "state-to-artifact",
+      "note": "The current meta-state of the methodology is 'detected': the regression has been named, but v3 is not yet implemented."
+    },
+    {
+      "source": "phase = v3_planned",
+      "target": "MathCodingBase/00-Meta/Roadmap.md (planned item)",
+      "kind": "state-to-artifact",
+      "note": "When v3 lands, the meta-state advances to v3_planned and Aesthetic Invariants become the required refinement section for visual packets."
+    },
+    {
+      "source": "V1PreservationInvariant",
+      "target": "comic/panels/*.svg (git-tracked)",
+      "kind": "invariant-preservation",
+      "note": "v1 panels cannot be silently deleted; deletion requires a visible git diff."
+    }
+  ]
+}

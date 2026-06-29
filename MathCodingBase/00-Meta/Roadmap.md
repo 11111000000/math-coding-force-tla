@@ -2,6 +2,30 @@
 
 This document is the work plan for MathCoding, maintained by the agent that drives the methodology. It lists the task packets that extend the methodology, in priority order, with their current status. Statuses change as packets move through `bin/verify` and `bin/validate-packet`.
 
+## Phase 0 — Visual quality regression (highest priority, NEW)
+
+A quality regression was observed in the Comic v2 panels: structurally
+correct (dimensions, palette, Maya presence) but visually inferior to v1.
+The methodology's L4 (refinement not validated) is the canonical root
+cause. This phase addresses L4 specifically for visual narrative
+artifacts.
+
+- [ ] **0.1 comic-v3** (`artifacts/comic-v3/`) — `pending`
+  Redo the comic with the methodology fix in place. v3 introduces:
+  - `Aesthetic Invariants` section in `refinement.md` for each panel
+    (emotional beat, character focus, background role, continuity)
+  - Mandatory `human_review` block with named reviewer who has
+    competence in visual storytelling
+  - v1 panels kept as provenance (already shipped at
+    `MathCodingBase/00-Meta/Comic_v1.md`)
+  - v2 panels kept as the verified model artifact (10→11 panels,
+    bounded model checking) but NOT promoted to primary narrative
+- [x] **0.0 comic-v2-regression-analysis** (`artifacts/comic-v2-regression-analysis/`) — `verified`
+  Diagnose the regression. 4-state model: shipped_v1, shipped_v2,
+  detected, v3_planned. Records the gap between structural green
+  build and visual quality. Documents why refinement.md tracked
+  primitives instead of intentions.
+
 ## Status legend
 
 - `pending` — work has not started

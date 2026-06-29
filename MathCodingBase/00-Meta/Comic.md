@@ -4,6 +4,8 @@
 
 Version 2 — verified packet at `artifacts/comic-v2/`. Adds panel 05 ("Alone", the frustrated beat) and panel 11 ("The Stamp", the terminus). Replaces the v1 "Pipeline" panel with a dedicated methodology-moment in 06. Panel sizes vary: 600×400 breathers, 800×600 narrative, 1000×800 climaxes.
 
+> **Looking for Version 1?** [`Comic_v1.md`](Comic_v1.md) preserves the original 10-panel narrative with detailed character work. v2 simplifies characters to icons — that was a methodology regression that the v3 plan addresses.
+
 ---
 
 ## Visual Style
@@ -35,7 +37,7 @@ The palette shifts with the reader's state (tracked in `artifacts/comic-v2/Model
 
 *[Maya at her desk facing a laptop with TypeScript code. Friday sun through a window. Confident posture.]*
 
-![Panel 01 — Looks Right](../assets/comic-panels/01-looks-right.svg)
+![Panel 01 — Looks Right](../assets/comic-panels/v2/01-looks-right.svg)
 
 > Friday afternoon. Maya needs to ship a payment confirmation dialog.
 >
@@ -45,7 +47,7 @@ The palette shifts with the reader's state (tracked in `artifacts/comic-v2/Model
 
 *[Code flowing from Maya's laptop into a glowing green server. Small confetti. Clock at 5:00 PM. Smaller 600×400 breather.]*
 
-![Panel 02 — Ship It](../assets/comic-panels/02-ship-it.svg)
+![Panel 02 — Ship It](../assets/comic-panels/v2/02-ship-it.svg)
 
 > 5:00 PM. Deploy complete. Maya goes home for the weekend.
 >
@@ -55,7 +57,7 @@ The palette shifts with the reader's state (tracked in `artifacts/comic-v2/Model
 
 *[Three vertical strips showing three different users on phones clicking Confirm. Green checkmarks everywhere. Maya absent. Smaller 600×400 breather.]*
 
-![Panel 03 — The Clicks](../assets/comic-panels/03-the-clicks.svg)
+![Panel 03 — The Clicks](../assets/comic-panels/v2/03-the-clicks.svg)
 
 > Saturday. Sunday. Users click 'Confirm'. Everything looks fine.
 >
@@ -65,7 +67,7 @@ The palette shifts with the reader's state (tracked in `artifacts/comic-v2/Model
 
 *[The climax. 1000×800 viewport. Top half: red phone notifications flooding. Bottom half: Maya's icon scaled LARGE, panicked, multiple browser tabs around her. The bug-creature sits visibly at the intersection of "click event" and "async fetch" with explicit labels — the race condition.]*
 
-![Panel 04 — The Bug](../assets/comic-panels/04-the-bug.svg)
+![Panel 04 — The Bug](../assets/comic-panels/v2/04-the-bug.svg)
 
 > Monday morning. 847 users were double-charged over the weekend.
 >
@@ -79,7 +81,7 @@ The palette shifts with the reader's state (tracked in `artifacts/comic-v2/Model
 
 *[**NEW in v2**. Transitional panel. Maya at her desk, lights off except one small lamp. The screen emits a red glow. Empty chair beside her — where the Formalist will eventually sit. The bug-creature is small, in the screen's corner, watching. Minimal text. Lonely composition.]*
 
-![Panel 05 — Alone](../assets/comic-panels/05-alone.svg)
+![Panel 05 — Alone](../assets/comic-panels/v2/05-alone.svg)
 
 > Tuesday morning. Maya has been staring at the code for three hours.
 >
@@ -93,7 +95,7 @@ The frustrated state gets a beat. v1 jumped from "the bug" straight to "the ment
 
 *[Two-shot. The Formalist (taller icon, glasses) on the LEFT holding a glowing tablet. Maya on the RIGHT, leaning forward, the purple light catching her. Background shows faint constellation lines — first foreshadowing of the state machine. The Formalist has a speech bubble.]*
 
-![Panel 06 — The Mentor](../assets/comic-panels/06-the-mentor.svg)
+![Panel 06 — The Mentor](../assets/comic-panels/v2/06-the-mentor.svg)
 
 > Wednesday. The Formalist drops by her desk.
 >
@@ -103,7 +105,7 @@ The frustrated state gets a beat. v1 jumped from "the bug" straight to "the ment
 
 *[Maya's desk, two monitors. LEFT: TLA+ code with purple syntax highlighting. RIGHT: a state diagram with circular green nodes connected by lines. Maya's icon lit by both purples. The bug is invisible — hiding in the model.]*
 
-![Panel 07 — The Model](../assets/comic-panels/07-the-model.svg)
+![Panel 07 — The Model](../assets/comic-panels/v2/07-the-model.svg)
 
 > Thursday. Maya writes 47 lines of TLA+. The model is small. The states are clear.
 >
@@ -117,7 +119,7 @@ The frustrated state gets a beat. v1 jumped from "the bug" straight to "the ment
 
 *[The climax. 1000×800 viewport. TLC Crystal Computer at CENTER — large faceted green octagon. Green beam scanning from TLC toward Maya's code. WHERE THE BEAM HITS THE BUG — the red creature is REVEALED in green spotlight, illuminated, caught. Maya watches from a small control panel in the lower-left, hand raised. The Formalist stands calmly beside her. The constellation ACTIVE in the background — one bug-flashing red node. Title at top. Big green label: "StateInvariant violated".]*
 
-![Panel 08 — TLC Finds It](../assets/comic-panels/08-tlc-finds-it.svg)
+![Panel 08 — TLC Finds It](../assets/comic-panels/v2/08-tlc-finds-it.svg)
 
 > Friday. TLC checks every reachable state. 14 generated, 12 distinct. Then —
 >
@@ -129,7 +131,7 @@ This is the comic's thesis statement. The bug was always there. The model makes 
 
 *[Maya triumphant, pointing at a now-clean state diagram. All paths green. The bug-creature trapped in a small box labeled "FIXED IN MODEL" in red. TypeScript code on the LEFT matches the verified model exactly. Small green checkmark with "verdict: VERIFIED".]*
 
-![Panel 09 — Fix First, Then Code](../assets/comic-panels/09-fix-first.svg)
+![Panel 09 — Fix First, Then Code](../assets/comic-panels/v2/09-fix-first.svg)
 
 > The fix happens in the model first. Then the code follows the model. Then tests verify the code matches the model.
 >
@@ -143,7 +145,7 @@ This is the comic's thesis statement. The bug was always there. The model makes 
 
 *[Wide panoramic. TOP: diverse users as small icons, smiling, clicking confirm, green checkmarks everywhere. MIDDLE: state machine as constellation stretched across the "night sky" of the panel — many nodes, all green, all connected. BOTTOM: Maya at her desk looking up at the sky with satisfaction. The Formalist beside her, tablet dim now. Small team visible in background.]*
 
-![Panel 10 — Better World](../assets/comic-panels/10-better-world.svg)
+![Panel 10 — Better World](../assets/comic-panels/v2/10-better-world.svg)
 
 > Three months later. Zero incidents. Twelve features shipped. Forty-seven verified packets.
 >
@@ -153,7 +155,7 @@ This is the comic's thesis statement. The bug was always there. The model makes 
 
 *[**NEW in v2**. Terminal panel. 600×400, deliberately small. Center: large rectangular "VERIFIED" stamp, rotated -8 degrees, fill green, thick stroke border, monospace text "VERIFIED" inside in 60px. Background: faint repeating pattern of the state machine constellation as small icons — a meta-texture where the methodology is now everywhere. Maya's small icon in the bottom-right corner, looking at the stamp. No dialogue.]*
 
-![Panel 11 — The Stamp](../assets/comic-panels/11-the-stamp.svg)
+![Panel 11 — The Stamp](../assets/comic-panels/v2/11-the-stamp.svg)
 
 > Title at top: "The math of trust."
 
@@ -195,4 +197,7 @@ The verified packet lives at `artifacts/comic-v2/`:
 - `traceability.json` — 28 mappings across panel / invariant / palette / motif / dimension / character
 - `implementation/` — 11 SVG panels + `validate-panels.sh`
 
-The workflow copies `artifacts/comic-v2/implementation/*.svg` into `MathCodingBase/assets/comic-panels/` before the mkdocs build. The Comic.md images resolve from there.
+The workflow copies `artifacts/comic-v2/implementation/*.svg` into
+`MathCodingBase/assets/comic-panels/v2/` before the mkdocs build.
+The Comic.md images resolve from there. v1 panels live separately
+under `assets/comic-panels/v1/` and resolve in `Comic_v1.md`.

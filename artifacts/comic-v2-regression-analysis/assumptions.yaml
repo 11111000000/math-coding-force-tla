@@ -1,0 +1,40 @@
+task_id: comic-v2-regression-analysis
+assumptions:
+  - id: A1
+    statement: Visual quality of comic panels is not mechanically checkable.
+    status: user-confirmed
+    note: The methodology explicitly lists "prose quality, UX aesthetics,
+      design taste" as UNVERIFIABLE:OUT_OF_SCOPE in Mechanical Verification
+      Model.md and Verification Evidence Protocol.md.
+  - id: A2
+    statement: A named human reviewer with relevant competence must
+      inspect panels before declaring v2 shippable as a primary narrative.
+    status: agent-inferred
+    note: Required by UNVERIFIABLE:OUT_OF_SCOPE compensation contract.
+  - id: A3
+    statement: v1 panels are not destroyed or hidden by v2's introduction.
+    status: user-confirmed
+    note: Both versions coexist in the knowledge base per user feedback.
+  - id: A4
+    statement: The structural validator (validate-panels.sh) is sufficient
+      for catching palette/dimension/Maya-presence defects only.
+    status: agent-inferred
+    note: Validator passes v2 — but does not speak to visual quality.
+  - id: A5
+    statement: Refinement.md must describe what each panel must communicate,
+      not just what each panel must contain.
+    status: agent-inferred
+    note: v2 refinement describes primitives; v3 refinement must describe
+      intentions and emotional beats.
+  - id: A6
+    statement: The methodology's Known Limitations document L4
+      (refinement is not validated) is the canonical reference for
+      this gap.
+    status: agent-inferred
+    note: Cross-link to MathCodingBase/00-Meta/Known Limitations.md.
+  - id: A7
+    statement: A v3 packet will introduce "Aesthetic Invariants" as a
+      refinement section and require a human-review block with named
+      competence.
+    status: agent-inferred
+    note: Concrete proposal for the methodology's L4 mitigation.

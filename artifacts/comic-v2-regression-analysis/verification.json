@@ -1,0 +1,35 @@
+{
+  "module": "Model",
+  "verdict": "VERIFIED",
+  "l1_gate": {
+    "precondition": "FOUND",
+    "postcondition": "FOUND",
+    "invariant": "FOUND",
+    "result": "PASS"
+  },
+  "sany": {
+    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCodingFractal/artifacts/comic-v2-regression-analysis/Model.tla",
+    "exit_code": 0,
+    "result": "PASS",
+    "stderr": ""
+  },
+  "tlc": {
+    "tool": "TLC",
+    "result": "NO_ERRORS",
+    "details": "Model checking completed. No error has been found. | 6 states generated, 4 distinct states found, 0 states left on queue."
+  },
+  "tlaps": {
+    "tool": "TLAPS",
+    "result": "UNATTEMPTED",
+    "theorems_attempted": 0,
+    "theorems_proved": 0
+  },
+  "human_review": {
+    "scope": "Visual quality of comic panels (UNVERIFIABLE:OUT_OF_SCOPE)",
+    "by": "Maya (illustrator) and the named comic-reviewer of the methodology's own social-process boundary",
+    "process": "Before any visual packet is declared shippable as the primary narrative, a reviewer with competence in visual storytelling must (a) read all panels, (b) name the emotional beat of each panel, (c) verify continuity across panels (pose, lighting, focus), and (d) compare against the predecessor version to confirm no unintended quality regression. The reviewer signs the verification.json with a dated note.",
+    "trigger": "before-merge for any packet that introduces or replaces visual artifacts (comic panels, illustrations, diagrams). Also before-release when the packet is the primary narrative.",
+    "re_verification": "If v3 introduces Aesthetic Invariants as a refinement section, mechanical verification resumes at the level of 'is the Aesthetic Invariants section populated' (structural check) and 'was the human-review block signed' (signature check). Full visual-quality verification remains OUT_OF_SCOPE.",
+    "finding": "v2 panels regressed in expressive quality relative to v1. See problem.md, refinement.md (Aesthetic Invariants), and traceability.json for details."
+  }
+}
