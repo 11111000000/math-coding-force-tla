@@ -1,0 +1,59 @@
+{
+  "module": "Model",
+  "verdict": "VERIFIED",
+  "l1_gate": {
+    "precondition": "FOUND",
+    "postcondition": "FOUND",
+    "invariant": "FOUND",
+    "result": "PASS"
+  },
+  "sany": {
+    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCodingFractal/artifacts/comic-v3/Model.tla",
+    "exit_code": 0,
+    "result": "PASS",
+    "stderr": ""
+  },
+  "tlc": {
+    "tool": "TLC",
+    "result": "NO_ERRORS",
+    "details": "Model checking completed. No error has been found. | 15 states generated, 12 distinct states found, 0 states left on queue."
+  },
+  "tlaps": {
+    "tool": "TLAPS",
+    "result": "UNATTEMPTED",
+    "theorems_attempted": 0,
+    "theorems_proved": 0
+  },
+  "validator": {
+    "panel_check": "PASS",
+    "panels_validated": 11,
+    "command": "./implementation/validate-panels.sh",
+    "output": "All 11 panels pass dimensions, palette discipline, Maya presence, and SVG tag balance."
+  },
+  "human_review": {
+    "scope": "Visual quality of comic panels (UNVERIFIABLE:OUT_OF_SCOPE - mechanical verification cannot speak to expressive quality)",
+    "required": true,
+    "by": "za (project owner) — to be reviewed by Maya's eye against v1 quality bar",
+    "process": "For each of the 11 panels, the reviewer: (a) opens the SVG and the matching Aesthetic Invariants in refinement.md, (b) confirms the declared emotional_beat is visible in Maya's face/posture, (c) confirms the declared background carries the meaning, (d) confirms continuity with the previous panel (lighting, pose, focus). The reviewer signs below or notes which panels need rework.",
+    "trigger": "before-merge to main; before-release of any v3-as-primary-narrative update",
+    "re_verification": "If a panel is reworked, run bin/verify (model unchanged) and validate-panels.sh (structural), then this human_review trigger fires again for the affected panel only.",
+    "checklist": [
+      "panel 01: Maya confident, sun-light blue, hand on keyboard — establishes baseline",
+      "panel 02: Maya triumphant, deploy party, hand with coffee raised",
+      "panel 03: three users smiling, all green, Maya absent",
+      "panel 04: Maya panicked face — eyes wide, mouth open, hands to temples",
+      "panel 05: Maya alone, slumped, lamp circle, red glow from screen, empty chair",
+      "panel 06: Maya leans toward mentor, tablet glow, purple ambient",
+      "panel 07: Maya in profile, two monitors, focused",
+      "panel 08: TLC climax — Maya hand-to-mouth reaction, green beam, bug spotlight",
+      "panel 09: Maya points at verified diagram, bug in box, satisfaction",
+      "panel 10: panoramic — diverse users, constellation, Maya small but present",
+      "panel 11: VERIFIED stamp rotated, Maya looking at stamp"
+    ],
+    "signature": {
+      "reviewer": "",
+      "date": "",
+      "notes": ""
+    }
+  }
+}

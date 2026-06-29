@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <rect fill="#0d1117" width="600" height="400"/>
+
+  <g>
+    <rect x="30" y="40" width="160" height="320" fill="#111827" stroke="#1e293b" stroke-width="1" rx="6"/>
+    <text x="110" y="30" font-size="11" fill="#94a3b8" text-anchor="middle">Sat 2:14 PM</text>
+    <rect x="60" y="80" width="100" height="160" fill="#0d1117" stroke="#1e293b" stroke-width="1" rx="6"/>
+    <circle cx="110" cy="280" r="22" fill="#c8a882"/>
+    <path d="M 88 268 Q 88 252 100 250 Q 110 245 120 250 Q 132 252 132 268 L 130 280 L 90 280 Z" fill="#1e1b1b"/>
+    <ellipse cx="103" cy="278" rx="2" ry="2.5" fill="#1e1b1b"/>
+    <ellipse cx="117" cy="278" rx="2" ry="2.5" fill="#1e1b1b"/>
+    <path d="M 102 290 Q 110 295 118 290" stroke="#1e1b1b" stroke-width="1.5" fill="none"/>
+    <path d="M 70 305 Q 80 310 90 305 L 90 360 L 70 360 Z" fill="#fbbf24"/>
+    <text x="110" y="120" font-size="9" fill="#3b82f6" text-anchor="middle">Buy now</text>
+    <rect x="85" y="135" width="50" height="22" fill="#22c55e" rx="3"/>
+    <text x="110" y="150" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">CONFIRM</text>
+    <g transform="translate(155 145)">
+      <circle r="14" fill="none" stroke="#22c55e" stroke-width="3"/>
+      <path d="M -5 0 L -1 4 L 6 -4" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+
+  <g>
+    <rect x="220" y="40" width="160" height="320" fill="#111827" stroke="#1e293b" stroke-width="1" rx="6"/>
+    <text x="300" y="30" font-size="11" fill="#94a3b8" text-anchor="middle">Sun 11:32 AM</text>
+    <rect x="250" y="80" width="100" height="160" fill="#0d1117" stroke="#1e293b" stroke-width="1" rx="6"/>
+    <circle cx="300" cy="280" r="22" fill="#e8c0a0"/>
+    <path d="M 278 270 Q 278 254 295 250 Q 305 252 305 248 Q 320 252 322 268 L 320 282 L 280 282 Z" fill="#a87149"/>
+    <path d="M 290 268 Q 295 254 308 252 Q 318 256 318 268" fill="#a87149" opacity="0.5"/>
+    <ellipse cx="293" cy="280" rx="2" ry="2.5" fill="#1e1b1b"/>
+    <ellipse cx="307" cy="280" rx="2" ry="2.5" fill="#1e1b1b"/>
+    <path d="M 292 290 Q 300 295 308 290" stroke="#1e1b1b" stroke-width="1.5" fill="none"/>
+    <path d="M 260 305 Q 270 310 280 305 L 280 360 L 260 360 Z" fill="#dc2626"/>
+    <text x="300" y="120" font-size="9" fill="#3b82f6" text-anchor="middle">Buy now</text>
+    <rect x="275" y="135" width="50" height="22" fill="#22c55e" rx="3"/>
+    <text x="300" y="150" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">CONFIRM</text>
+    <g transform="translate(345 145)">
+      <circle r="14" fill="none" stroke="#22c55e" stroke-width="3"/>
+      <path d="M -5 0 L -1 4 L 6 -4" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+
+  <g>
+    <rect x="410" y="40" width="160" height="320" fill="#111827" stroke="#1e293b" stroke-width="1" rx="6"/>
+    <text x="490" y="30" font-size="11" fill="#94a3b8" text-anchor="middle">Sun 8:45 PM</text>
+    <rect x="440" y="80" width="100" height="160" fill="#0d1117" stroke="#1e293b" stroke-width="1" rx="6"/>
+    <circle cx="490" cy="280" r="22" fill="#a37862"/>
+    <path d="M 468 265 Q 468 248 485 247 Q 502 248 512 265 L 510 280 L 470 280 Z" fill="#0d0d0d"/>
+    <ellipse cx="483" cy="280" rx="2" ry="2.5" fill="#1e1b1b"/>
+    <ellipse cx="497" cy="280" rx="2" ry="2.5" fill="#1e1b1b"/>
+    <path d="M 482 290 Q 490 295 498 290" stroke="#1e1b1b" stroke-width="1.5" fill="none"/>
+    <path d="M 450 305 Q 460 310 470 305 L 470 360 L 450 360 Z" fill="#059669"/>
+    <text x="490" y="120" font-size="9" fill="#3b82f6" text-anchor="middle">Buy now</text>
+    <rect x="465" y="135" width="50" height="22" fill="#22c55e" rx="3"/>
+    <text x="490" y="150" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">CONFIRM</text>
+    <g transform="translate(535 145)">
+      <circle r="14" fill="none" stroke="#22c55e" stroke-width="3"/>
+      <path d="M -5 0 L -1 4 L 6 -4" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+
+  <text x="300" y="385" font-size="11" fill="#22c55e" text-anchor="middle">847 clicks. 847 confirmations. 847 happy users.</text>
+</svg>

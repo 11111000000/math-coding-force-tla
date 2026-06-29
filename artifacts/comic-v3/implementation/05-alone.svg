@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="screenRedGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="800" height="600"/>
+
+  <ellipse cx="180" cy="380" rx="280" ry="200" fill="url(#lampGlow)"/>
+
+  <rect x="100" y="280" width="80" height="120" fill="#3f2a0d" stroke="#f59e0b" stroke-width="2" rx="2"/>
+  <path d="M 130 280 Q 130 250 140 240 Q 150 230 160 240 Q 170 250 170 280" fill="#1a1107" stroke="#f59e0b" stroke-width="1"/>
+  <ellipse cx="140" cy="220" rx="40" ry="30" fill="#fde68a" opacity="0.7"/>
+  <circle cx="140" cy="220" r="8" fill="#fde68a"/>
+
+  <ellipse cx="600" cy="380" rx="200" ry="160" fill="url(#screenRedGlow)"/>
+
+  <rect x="450" y="180" width="280" height="200" fill="#111827" stroke="#1e293b" stroke-width="2" rx="4"/>
+  <rect x="462" y="192" width="256" height="176" fill="#0d1117"/>
+  <text x="472" y="212" font-size="10" fill="#3b82f6">const onConfirm = () =&gt; {</text>
+  <text x="472" y="226" font-size="10" fill="#3b82f6">  setState('confirming');</text>
+  <text x="472" y="240" font-size="10" fill="#ef4444">  api.confirm()  // RACE</text>
+  <text x="472" y="254" font-size="10" fill="#3b82f6">};</text>
+  <text x="472" y="278" font-size="10" fill="#ef4444">// 13 states. 8 distinct.</text>
+  <text x="472" y="294" font-size="10" fill="#ef4444">// error: not found.</text>
+  <rect x="442" y="378" width="296" height="8" fill="#1e293b" rx="2"/>
+
+  <g transform="translate(680 350)">
+    <path d="M -10 6 L 0 -10 L 10 6 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="1" opacity="0.7"/>
+    <circle cx="-4" cy="-2" r="1.5" fill="#0d1117"/>
+    <circle cx="4" cy="-2" r="1.5" fill="#0d1117"/>
+  </g>
+
+  <g transform="translate(270 460)" data-maya="present">
+    <ellipse cx="0" cy="60" rx="60" ry="20" fill="#0d1117" opacity="0.6"/>
+    <path d="M -8 -50 Q -25 -75 0 -90 Q 25 -90 30 -70 Q 35 -50 30 -25 Q 32 -10 25 0 L -25 0 Q -32 -10 -30 -25 Q -32 -45 -8 -50 Z" fill="#475569"/>
+    <path d="M -5 -30 L -5 5" stroke="#475569" stroke-width="3"/>
+    <path d="M 5 -30 L 5 5" stroke="#475569" stroke-width="3"/>
+    <path d="M -30 -70 Q -45 -50 -45 -25 Q -50 -5 -40 5" stroke="#475569" stroke-width="4" fill="none"/>
+    <path d="M 30 -70 Q 45 -50 45 -25 Q 50 -5 40 5" stroke="#475569" stroke-width="4" fill="none"/>
+
+    <circle cx="0" cy="-80" r="20" fill="#1e1b1b"/>
+    <circle cx="0" cy="-85" r="18" fill="#c8a882"/>
+    <ellipse cx="-7" cy="-85" rx="2.5" ry="3" fill="#0d0807"/>
+    <ellipse cx="7" cy="-85" rx="2.5" ry="3" fill="#0d0807"/>
+    <path d="M -8 -78 L -4 -75" stroke="#1e1b1b" stroke-width="1"/>
+    <path d="M 4 -75 L 8 -78" stroke="#1e1b1b" stroke-width="1"/>
+    <line x1="-2" y1="-71" x2="2" y2="-71" stroke="#1e1b1b" stroke-width="2"/>
+
+    <path d="M -35 -50 Q -50 -55 -60 -50" stroke="#1e1b1b" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-62" cy="-50" rx="6" ry="8" fill="#c8a882"/>
+    <path d="M -60 -56 Q -55 -65 -50 -68" stroke="#1e1b1b" stroke-width="2" fill="none"/>
+  </g>
+
+  <g transform="translate(550 460)">
+    <ellipse cx="0" cy="60" rx="50" ry="14" fill="#0d1117" opacity="0.5"/>
+    <line x1="-30" y1="-30" x2="30" y2="-30" stroke="#475569" stroke-width="2"/>
+    <line x1="-25" y1="-30" x2="-25" y2="20" stroke="#475569" stroke-width="2"/>
+    <line x1="25" y1="-30" x2="25" y2="20" stroke="#475569" stroke-width="2"/>
+    <rect x="-30" y="-15" width="60" height="6" fill="#475569" stroke="#1e293b" stroke-width="1"/>
+    <text x="0" y="-22" font-size="9" fill="#475569" text-anchor="middle" font-style="italic">empty</text>
+  </g>
+
+  <text x="400" y="50" font-size="26" fill="#ef4444" text-anchor="middle" font-weight="bold">How?</text>
+  <text x="400" y="570" font-size="13" fill="#cbd5e1" text-anchor="middle">Tuesday morning. Three hours of staring at the code.</text>
+  <text x="400" y="588" font-size="13" fill="#f59e0b" text-anchor="middle" font-style="italic">"Something is wrong. I just can't see it."</text>
+</svg>

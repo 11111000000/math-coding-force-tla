@@ -1,0 +1,137 @@
+{
+  "task_id": "comic-v3",
+  "mappings": [
+    {
+      "source": "panelIndex = 0",
+      "target": "implementation/01-looks-right.svg",
+      "kind": "panel",
+      "note": "Confident Maya, Friday sun, code on laptop. Establishes baseline lighting."
+    },
+    {
+      "source": "panelIndex = 1",
+      "target": "implementation/02-ship-it.svg",
+      "kind": "panel",
+      "note": "Deploy party. Maya's triumph, hands raised with coffee mug. 5:00 PM clock."
+    },
+    {
+      "source": "panelIndex = 2",
+      "target": "implementation/03-the-clicks.svg",
+      "kind": "panel",
+      "note": "Three diverse users confirming. Normalcy. Maya absent."
+    },
+    {
+      "source": "panelIndex = 3",
+      "target": "implementation/04-the-bug.svg",
+      "kind": "panel",
+      "note": "Climax. Maya panicked face LARGE, red phone notifications, bug creature at click/fetch intersection."
+    },
+    {
+      "source": "panelIndex = 4",
+      "target": "implementation/05-alone.svg",
+      "kind": "panel",
+      "note": "Maya alone, lamp circle (amber), red screen glow, empty chair for the Formalist."
+    },
+    {
+      "source": "panelIndex = 5",
+      "target": "implementation/06-the-mentor.svg",
+      "kind": "panel",
+      "note": "Two-shot. Maya leaning forward, Formalist with tablet, purple glow, faint constellation foreshadow."
+    },
+    {
+      "source": "panelIndex = 6",
+      "target": "implementation/07-the-model.svg",
+      "kind": "panel",
+      "note": "Maya in profile, two monitors (TLA+ code + state diagram), purple wash, focused posture."
+    },
+    {
+      "source": "panelIndex = 7",
+      "target": "implementation/08-tlc-finds-it.svg",
+      "kind": "panel",
+      "note": "Climax. TLC Crystal Computer, green beam, bug in spotlight, Maya hand-to-mouth reaction, active constellation."
+    },
+    {
+      "source": "panelIndex = 8",
+      "target": "implementation/09-fix-first.svg",
+      "kind": "panel",
+      "note": "Maya points at verified diagram, bug trapped in box, TypeScript matches verified model."
+    },
+    {
+      "source": "panelIndex = 9",
+      "target": "implementation/10-better-world.svg",
+      "kind": "panel",
+      "note": "Wide panoramic, diverse users, constellation stretched across sky, Maya small but looking up."
+    },
+    {
+      "source": "panelIndex = 10",
+      "target": "implementation/11-the-stamp.svg",
+      "kind": "panel",
+      "note": "Terminal VERIFIED stamp rotated -8 degrees, meta-constellation pattern, Maya looking at stamp."
+    },
+    {
+      "source": "TypeInvariant",
+      "target": "implementation/*.svg",
+      "kind": "invariant",
+      "note": "Each SVG has explicit dimensions and palette elements. File existence + parseability = type check."
+    },
+    {
+      "source": "PaletteInvariant",
+      "target": "implementation/*.svg",
+      "kind": "palette",
+      "note": "Background #0d1117 + accent per state. Validator asserts palette discipline."
+    },
+    {
+      "source": "EmotionalBeatInvariant",
+      "target": "implementation/*.svg",
+      "kind": "aesthetic-invariant",
+      "note": "BeatForPanel(panelIndex) determines facial expression, posture, lighting. Mechanically tracked via panelIndex; visually verified by named reviewer via human_review."
+    },
+    {
+      "source": "Aesthetic Invariants section",
+      "target": "refinement.md#aesthetic-invariants",
+      "kind": "methodology-mitigation",
+      "note": "Primary mitigation for Known Limitations L4 in the visual-comms domain. Each panel has emotional_beat, character focus, background role, continuity declarations."
+    },
+    {
+      "source": "v1 panels preserved as provenance",
+      "target": "comic/panels/*.svg + MathCodingBase/00-Meta/Comic_v1.md",
+      "kind": "preservation",
+      "note": "Both versions coexist. v1 is the original creative work; v3 is the verified packet with Aesthetic Invariants."
+    },
+    {
+      "source": "v2 panels kept as verified model artifact",
+      "target": "artifacts/comic-v2/implementation/*.svg + MathCodingBase/00-Meta/Comic.md",
+      "kind": "preservation",
+      "note": "v2 was verified as a state-machine model. The structural artifact is preserved; only the narrative labeling de-prioritizes v2 as primary."
+    },
+    {
+      "source": "human_review obligation",
+      "target": "verification.json#human_review",
+      "kind": "compensation-contract",
+      "note": "OUT_OF_SCOPE for visual quality. Reviewer with named competence must sign before packet is shippable as primary narrative."
+    },
+    {
+      "source": "Known Limitations L4",
+      "target": "MathCodingBase/00-Meta/Known Limitations.md",
+      "kind": "cross-reference",
+      "note": "Aesthetic Invariants in v3 are the proposed mitigation for L4 in the visual-comms domain."
+    },
+    {
+      "source": "continuity (pose between panel 1 and panel 2)",
+      "target": "implementation/01-looks-right.svg + implementation/02-ship-it.svg",
+      "kind": "continuity",
+      "note": "Maya's hand-still-on-keyboard posture in panel 1 becomes the celebrate-hands-raised posture in panel 2. Same head dimensions, same hoodie color."
+    },
+    {
+      "source": "continuity (lighting panel 4 -> 5 -> 6)",
+      "target": "implementation/04-the-bug.svg + implementation/05-alone.svg + implementation/06-the-mentor.svg",
+      "kind": "continuity",
+      "note": "Red alarm glow -> red lingering lamp circle -> purple tablet glow replacing red. The Methodology replaces the alarm."
+    },
+    {
+      "source": "continuity (constellation panel 6 -> 8 -> 10)",
+      "target": "implementation/06-the-mentor.svg + implementation/08-tlc-finds-it.svg + implementation/10-better-world.svg",
+      "kind": "continuity",
+      "note": "Faint constellation in panel 6 (foreshadow) -> active constellation with red bug-node in panel 8 (climax) -> constellation stretched across sky in panel 10 (world-scale)."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="tabletGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="faceGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="800" height="600"/>
+
+  <ellipse cx="380" cy="350" rx="280" ry="200" fill="url(#tabletGlow)"/>
+
+  <g stroke="#22c55e" stroke-width="1" opacity="0.25" fill="none">
+    <circle cx="120" cy="120" r="6" fill="#22c55e" opacity="0.4"/>
+    <circle cx="220" cy="80" r="6" fill="#22c55e" opacity="0.4"/>
+    <circle cx="700" cy="100" r="6" fill="#22c55e" opacity="0.4"/>
+    <circle cx="600" cy="180" r="6" fill="#22c55e" opacity="0.4"/>
+    <circle cx="160" cy="220" r="6" fill="#22c55e" opacity="0.4"/>
+    <line x1="120" y1="120" x2="220" y2="80"/>
+    <line x1="220" y1="80" x2="380" y2="150"/>
+    <line x1="380" y1="150" x2="600" y2="180"/>
+    <line x1="600" y1="180" x2="700" y2="100"/>
+    <line x1="380" y1="150" x2="160" y2="220"/>
+  </g>
+
+  <g transform="translate(150 130)" opacity="0.5">
+    <path d="M -8 5 L 0 -8 L 8 5 Z" fill="#ef4444" opacity="0.7"/>
+    <circle cx="-3" cy="-1" r="1" fill="#0d1117"/>
+    <circle cx="3" cy="-1" r="1" fill="#0d1117"/>
+  </g>
+
+  <g data-maya="present">
+    <ellipse cx="600" cy="450" rx="120" ry="30" fill="#0d1117" opacity="0.5"/>
+
+    <path d="M 555 270 Q 540 245 560 230 Q 580 220 600 220 Q 625 220 640 240 Q 645 260 630 280 L 545 280 Q 545 270 555 270 Z" fill="#1e1b1b"/>
+    <path d="M 545 280 L 555 380 L 645 380 L 655 280 Z" fill="#475569"/>
+    <path d="M 555 380 L 555 460 L 605 460 L 605 460 L 605 380 Z" fill="#475569"/>
+    <path d="M 645 380 L 645 460 L 605 460 L 605 380 Z" fill="#334155"/>
+    <path d="M 545 280 Q 530 295 535 320" stroke="#475569" stroke-width="6" fill="none"/>
+    <path d="M 655 280 Q 670 295 665 320" stroke="#475569" stroke-width="6" fill="none"/>
+
+    <ellipse cx="600" cy="270" rx="50" ry="40" fill="url(#faceGlow)"/>
+    <circle cx="600" cy="270" r="26" fill="#c8a882"/>
+    <path d="M 575 250 Q 580 235 600 232 Q 620 235 625 250 L 625 260 L 575 260 Z" fill="#1e1b1b"/>
+    <path d="M 575 250 Q 570 270 580 290 Q 590 295 600 295 Q 610 295 620 290 Q 630 270 625 250" fill="#1e1b1b" opacity="0"/>
+    <ellipse cx="592" cy="270" rx="2.5" ry="3" fill="#0d0807"/>
+    <ellipse cx="608" cy="270" rx="2.5" ry="3" fill="#0d0807"/>
+    <ellipse cx="594" cy="268" rx="4" ry="2" fill="#c4b5fd" opacity="0.7"/>
+    <ellipse cx="606" cy="268" rx="4" ry="2" fill="#c4b5fd" opacity="0.7"/>
+    <path d="M 588 256 L 594 254" stroke="#1e1b1b" stroke-width="2"/>
+    <path d="M 606 254 L 612 256" stroke="#1e1b1b" stroke-width="2"/>
+    <path d="M 590 282 Q 600 290 610 282" stroke="#1e1b1b" stroke-width="1.5" fill="none"/>
+
+    <path d="M 535 310 Q 510 340 505 380" stroke="#c8a882" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <ellipse cx="503" cy="385" rx="8" ry="10" fill="#c8a882"/>
+    <path d="M 545 300 Q 525 310 510 320" stroke="#c8a882" stroke-width="2" fill="none"/>
+  </g>
+
+  <g data-formalist="present">
+    <ellipse cx="270" cy="480" rx="110" ry="25" fill="#0d1117" opacity="0.5"/>
+
+    <path d="M 220 260 Q 200 240 215 225 Q 235 215 270 215 Q 305 215 325 225 Q 340 240 320 260 L 220 260 Z" fill="#e2e8f0"/>
+    <path d="M 220 260 L 230 410 L 320 410 L 320 260 Z" fill="#64748b"/>
+    <path d="M 220 260 Q 195 285 200 320 Q 205 345 220 360" stroke="#64748b" stroke-width="6" fill="none"/>
+    <path d="M 320 260 Q 345 285 340 320 Q 335 345 320 360" stroke="#64748b" stroke-width="6" fill="none"/>
+    <path d="M 240 295 L 240 320" stroke="#1e293b" stroke-width="2"/>
+    <path d="M 260 295 L 260 320" stroke="#1e293b" stroke-width="2"/>
+
+    <ellipse cx="270" cy="270" rx="48" ry="40" fill="url(#faceGlow)"/>
+    <circle cx="270" cy="270" r="30" fill="#d4b896"/>
+    <path d="M 240 250 Q 245 230 270 228 Q 295 230 300 250 L 300 280 L 240 280 Z" fill="#e5e5e5"/>
+    <path d="M 245 275 L 245 295 Q 250 305 270 308 Q 290 305 295 295 L 295 275" fill="#e5e5e5"/>
+    <circle cx="261" cy="268" r="5" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="279" cy="268" r="5" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="266" y1="268" x2="256" y2="268" stroke="#1e293b" stroke-width="1"/>
+    <line x1="284" y1="268" x2="274" y2="268" stroke="#1e293b" stroke-width="1"/>
+    <ellipse cx="270" cy="285" rx="3" ry="2" fill="#1e293b" opacity="0.5"/>
+    <path d="M 263 295 Q 270 300 277 295" stroke="#1e293b" stroke-width="1.5" fill="none"/>
+
+    <path d="M 195 320 Q 170 350 165 380" stroke="#d4b896" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <ellipse cx="163" cy="385" rx="8" ry="10" fill="#d4b896"/>
+
+    <rect x="190" y="370" width="160" height="100" fill="#111827" stroke="#a855f7" stroke-width="2" rx="4"/>
+    <rect x="200" y="380" width="140" height="80" fill="#0d1117"/>
+    <text x="208" y="395" font-size="8" fill="#a855f7">---- MODULE Dialog ----</text>
+    <text x="208" y="406" font-size="8" fill="#a855f7">VARIABLES state,</text>
+    <text x="208" y="417" font-size="8" fill="#a855f7">  pendingResult</text>
+    <text x="208" y="432" font-size="8" fill="#22c55e">Spec == Init /\</text>
+    <text x="208" y="443" font-size="8" fill="#22c55e">  [][Next]_vars</text>
+  </g>
+
+  <g transform="translate(485 195)">
+    <path d="M 0 0 L 90 -30 L 110 10 L 100 60 L 20 80 Z" fill="#0d1117" stroke="#f59e0b" stroke-width="2"/>
+    <text x="55" y="32" font-size="11" fill="#f59e0b" text-anchor="middle">"You can prove</text>
+    <text x="55" y="48" font-size="11" fill="#f59e0b" text-anchor="middle">this never</text>
+    <text x="55" y="64" font-size="11" fill="#f59e0b" text-anchor="middle">happens."</text>
+  </g>
+
+  <text x="400" y="50" font-size="24" fill="#a855f7" text-anchor="middle" font-weight="bold">The Mentor</text>
+  <text x="400" y="560" font-size="13" fill="#cbd5e1" text-anchor="middle">Wednesday. The Formalist drops by her desk.</text>
+  <text x="400" y="582" font-size="13" fill="#f59e0b" text-anchor="middle" font-style="italic">"You can prove this never happens. Before you ship."</text>
+</svg>

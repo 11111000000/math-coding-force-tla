@@ -1,0 +1,55 @@
+task_id: comic-v3
+assumptions:
+  - id: A1
+    statement: Visual quality of comic panels is UNVERIFIABLE:OUT_OF_SCOPE
+      per Mechanical Verification Model.md and Verification Evidence
+      Protocol.md.
+    status: user-confirmed
+    note: Mechanically-checkable properties (state transitions, palette
+      discipline, dimensions) cannot speak to expressive quality.
+  - id: A2
+    statement: A named human reviewer with competence in visual
+      storytelling must inspect and sign every v3 panel.
+    status: user-confirmed
+    note: The user explicitly requested this. Reviewer competence:
+      illustration, narrative comics, or visual storytelling.
+  - id: A3
+    statement: Maya's face carries the comic's emotional weight.
+      v2 reduced Maya to headless icon; v3 restores face.
+    status: agent-inferred
+    note: McCloud's principle applied at the right level, not maximum.
+  - id: A4
+    statement: Background elements (window, lamp, monitor) are not
+      decoration — they carry meaning tied to the reader state.
+    status: agent-inferred
+    note: 'Friday sun in panel 1' = hopeful; 'lamp circle in panel 5'
+      = alone; 'tablet glow in panel 6' = rescued.
+  - id: A5
+    statement: Reader-state model from v2 (7 states, 11 transitions)
+      remains the verified mechanical core.
+    status: agent-inferred
+    note: v3 adds Aesthetic Invariants on top, does not replace the
+      state machine.
+  - id: A6
+    statement: Aesthetic Invariants in refinement.md are the primary
+      mitigation for Known Limitations L4 in the visual-comms domain.
+    status: agent-inferred
+    note: Cross-link to MathCodingBase/00-Meta/Known Limitations.md.
+  - id: A7
+    statement: Continuity across panels — pose, lighting, focus —
+      is as important as the panel-internal composition.
+    status: agent-inferred
+    note: Continuity is what turns separate panels into a sequence.
+  - id: A8
+    statement: Panel 05 ("Alone") and panel 11 ("The Stamp") from v2
+      are kept in v3.
+    status: user-confirmed
+    note: The two new narrative beats are good; only the icon style
+      regressed.
+  - id: A9
+    statement: Each panel must declare an `emotional_beat` field in
+      Aesthetic Invariants, and the sequence must monotonically move
+      reader through confident → panicked → frustrated → curious →
+      focused → enlightened → empowered.
+    status: agent-inferred
+    note: Tied to the 7-state model.

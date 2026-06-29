@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="dawnGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="800" height="600"/>
+  <rect fill="url(#dawnGlow)" width="800" height="600"/>
+
+  <g stroke="#22c55e" stroke-width="1" opacity="0.6" fill="none">
+    <circle cx="80" cy="60" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="80" y="55" font-size="6" fill="#86efac" text-anchor="middle">closed</text>
+
+    <circle cx="180" cy="80" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="180" y="75" font-size="6" fill="#86efac" text-anchor="middle">opening</text>
+
+    <circle cx="280" cy="50" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="280" y="45" font-size="6" fill="#86efac" text-anchor="middle">open</text>
+
+    <circle cx="400" cy="70" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="400" y="65" font-size="6" fill="#86efac" text-anchor="middle">conf</text>
+
+    <circle cx="500" cy="100" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="500" y="95" font-size="6" fill="#86efac" text-anchor="middle">settle</text>
+
+    <circle cx="600" cy="60" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="600" y="55" font-size="6" fill="#86efac" text-anchor="middle">close</text>
+
+    <circle cx="720" cy="90" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="720" y="85" font-size="6" fill="#86efac" text-anchor="middle">verified</text>
+
+    <circle cx="350" cy="180" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="350" y="175" font-size="6" fill="#86efac" text-anchor="middle">confirming</text>
+
+    <circle cx="450" cy="220" r="4" fill="#22c55e" opacity="0.9"/>
+    <text x="450" y="215" font-size="6" fill="#86efac" text-anchor="middle">cancel</text>
+
+    <circle cx="120" cy="160" r="4" fill="#22c55e" opacity="0.9"/>
+
+    <circle cx="640" cy="200" r="4" fill="#22c55e" opacity="0.9"/>
+
+    <line x1="80" y1="60" x2="180" y2="80"/>
+    <line x1="180" y1="80" x2="280" y2="50"/>
+    <line x1="280" y1="50" x2="400" y2="70"/>
+    <line x1="400" y1="70" x2="500" y2="100"/>
+    <line x1="500" y1="100" x2="600" y2="60"/>
+    <line x1="600" y1="60" x2="720" y2="90"/>
+    <line x1="280" y1="50" x2="350" y2="180"/>
+    <line x1="350" y1="180" x2="450" y2="220"/>
+    <line x1="450" y1="220" x2="500" y2="100"/>
+    <line x1="120" y1="160" x2="280" y2="50"/>
+    <line x1="640" y1="200" x2="600" y2="60"/>
+    <line x1="350" y1="180" x2="640" y2="200"/>
+  </g>
+
+  <g>
+    <g transform="translate(80 290)">
+      <circle r="22" fill="#e8c0a0"/>
+      <path d="M -22 -10 Q -22 -28 0 -32 Q 22 -28 22 -10 L 22 0 L -22 0 Z" fill="#1e1b1b"/>
+      <ellipse cx="-7" cy="-2" rx="2" ry="2.5" fill="#0d0807"/>
+      <ellipse cx="7" cy="-2" rx="2" ry="2.5" fill="#0d0807"/>
+      <path d="M -7 8 Q 0 14 7 8" stroke="#0d0807" stroke-width="1.5" fill="none"/>
+      <rect x="-30" y="22" width="60" height="50" fill="#fbbf24" rx="4"/>
+      <text y="42" font-size="9" fill="#0d1117" text-anchor="middle">USER_1</text>
+      <g transform="translate(0 60)">
+        <circle r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M -3 0 L 0 3 L 4 -3" stroke="#22c55e" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+
+    <g transform="translate(220 310)">
+      <circle r="22" fill="#c8a882"/>
+      <path d="M -22 -8 Q -22 -26 0 -30 Q 22 -26 22 -8 L 22 2 L -22 2 Z" fill="#a87149"/>
+      <ellipse cx="-7" cy="0" rx="2" ry="2.5" fill="#0d0807"/>
+      <ellipse cx="7" cy="0" rx="2" ry="2.5" fill="#0d0807"/>
+      <path d="M -8 12 Q 0 18 8 12" stroke="#0d0807" stroke-width="1.5" fill="none"/>
+      <rect x="-30" y="22" width="60" height="50" fill="#059669" rx="4"/>
+      <text y="42" font-size="9" fill="#0d1117" text-anchor="middle">USER_2</text>
+      <g transform="translate(0 60)">
+        <circle r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M -3 0 L 0 3 L 4 -3" stroke="#22c55e" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+
+    <g transform="translate(380 290)">
+      <circle r="22" fill="#a37862"/>
+      <path d="M -22 -12 Q -22 -30 0 -34 Q 22 -30 22 -12 L 22 -2 L -22 -2 Z" fill="#0d0d0d"/>
+      <ellipse cx="-7" cy="-4" rx="2" ry="2.5" fill="#0d0807"/>
+      <ellipse cx="7" cy="-4" rx="2" ry="2.5" fill="#0d0807"/>
+      <path d="M -8 8 Q 0 14 8 8" stroke="#0d0807" stroke-width="1.5" fill="none"/>
+      <rect x="-30" y="22" width="60" height="50" fill="#dc2626" rx="4"/>
+      <text y="42" font-size="9" fill="#0d1117" text-anchor="middle">USER_3</text>
+      <g transform="translate(0 60)">
+        <circle r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M -3 0 L 0 3 L 4 -3" stroke="#22c55e" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+
+    <g transform="translate(540 310)">
+      <circle r="22" fill="#d4b896"/>
+      <path d="M -22 -10 Q -22 -28 0 -32 Q 22 -28 22 -10 L 22 0 L -22 0 Z" fill="#bf6f3d"/>
+      <ellipse cx="-7" cy="-2" rx="2" ry="2.5" fill="#0d0807"/>
+      <ellipse cx="7" cy="-2" rx="2" ry="2.5" fill="#0d0807"/>
+      <path d="M -8 8 Q 0 14 8 8" stroke="#0d0807" stroke-width="1.5" fill="none"/>
+      <rect x="-30" y="22" width="60" height="50" fill="#7c3aed" rx="4"/>
+      <text y="42" font-size="9" fill="#0d1117" text-anchor="middle">USER_4</text>
+      <g transform="translate(0 60)">
+        <circle r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M -3 0 L 0 3 L 4 -3" stroke="#22c55e" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+
+    <g transform="translate(700 290)">
+      <circle r="22" fill="#e8c0a0"/>
+      <path d="M -22 -8 Q -22 -28 0 -30 Q 22 -28 22 -8 L 22 2 L -22 2 Z" fill="#3b2a1f"/>
+      <ellipse cx="-7" cy="0" rx="2" ry="2.5" fill="#0d0807"/>
+      <ellipse cx="7" cy="0" rx="2" ry="2.5" fill="#0d0807"/>
+      <path d="M -7 10 Q 0 16 7 10" stroke="#0d0807" stroke-width="1.5" fill="none"/>
+      <rect x="-30" y="22" width="60" height="50" fill="#0ea5e9" rx="4"/>
+      <text y="42" font-size="9" fill="#0d1117" text-anchor="middle">USER_5</text>
+      <g transform="translate(0 60)">
+        <circle r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+        <path d="M -3 0 L 0 3 L 4 -3" stroke="#22c55e" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+  </g>
+
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#1e293b" stroke-width="1"/>
+
+  <g transform="translate(180 540)" data-maya="present">
+    <ellipse cx="0" cy="40" rx="50" ry="10" fill="#0d1117" opacity="0.6"/>
+    <path d="M -22 0 L -22 35 L 22 35 L 22 0 Z" fill="#475569"/>
+    <path d="M -22 0 Q -25 -10 -15 -14 L 15 -14 Q 25 -10 22 0 Z" fill="#1e293b"/>
+    <circle cx="0" cy="-22" r="14" fill="#c8a882"/>
+    <path d="M -14 -28 Q -14 -42 0 -44 Q 14 -42 14 -28 L 14 -22 L -14 -22 Z" fill="#1e1b1b"/>
+    <ellipse cx="-5" cy="-22" rx="1.5" ry="2" fill="#0d0807"/>
+    <ellipse cx="5" cy="-22" rx="1.5" ry="2" fill="#0d0807"/>
+    <path d="M -5 -15 Q 0 -12 5 -15" stroke="#0d0807" stroke-width="1" fill="none"/>
+  </g>
+
+  <g transform="translate(280 555)" data-formalist="present">
+    <ellipse cx="0" cy="30" rx="40" ry="8" fill="#0d1117" opacity="0.5"/>
+    <path d="M -16 0 L -16 25 L 16 25 L 16 0 Z" fill="#64748b"/>
+    <circle cx="0" cy="-15" r="11" fill="#d4b896"/>
+    <path d="M -11 -22 Q -11 -32 0 -34 Q 11 -32 11 -22 L 11 -15 L -11 -15 Z" fill="#e5e5e5"/>
+    <circle cx="-4" cy="-15" r="2.5" fill="none" stroke="#1e293b" stroke-width="0.8"/>
+    <circle cx="4" cy="-15" r="2.5" fill="none" stroke="#1e293b" stroke-width="0.8"/>
+  </g>
+
+  <text x="600" y="555" font-size="13" fill="#22c55e" text-anchor="middle" font-weight="bold">3 months. Zero incidents.</text>
+  <text x="600" y="573" font-size="11" fill="#cbd5e1" text-anchor="middle">12 features. 47 packets. Calm.</text>
+
+  <text x="400" y="40" font-size="24" fill="#22c55e" text-anchor="middle" font-weight="bold">The World, Improved</text>
+</svg>
