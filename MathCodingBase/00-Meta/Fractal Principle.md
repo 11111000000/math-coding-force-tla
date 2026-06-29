@@ -4,11 +4,11 @@ The methodology must itself be an example of the methodology.
 
 ## Meaning
 
-If MathCodingFractal claims that all serious development should proceed through:
+If MathCoding claims that all serious development should proceed through:
 
 `problem -> assumptions -> spec -> verification -> refinement -> implementation`
 
-then MathCodingFractal itself must be describable through that same chain.
+then MathCoding itself must be describable through that same chain.
 
 ## Consequences
 
@@ -20,15 +20,10 @@ then MathCodingFractal itself must be describable through that same chain.
 
 This self-application is not vanity. It is a consistency test.
 
-## Scope of Self-Application
+## Scope of self-application
 
-The fractal property applies to **structural** changes to the methodology
-itself: changes to schemas, protocols, the packet layout, verification
-rules, or the `bin/` tooling.
+The fractal property applies to **structural** changes to the methodology itself: changes to schemas, protocols, the packet layout, verification rules, or the `bin/` tooling.
 
-Cosmetic changes to existing prose — typo fixes, clearer phrasing,
-clarifying examples — do not require a new packet. They are part of the
-ordinary maintenance of the knowledge base.
+Cosmetic changes to existing prose — typo fixes, clearer phrasing, clarifying examples — do not require a new packet. They are part of the ordinary maintenance of the knowledge base.
 
-The boundary between structural and cosmetic is a judgment call. When in
-doubt, open a packet.
+The boundary between structural and cosmetic is a judgment call. When in doubt, open a packet.

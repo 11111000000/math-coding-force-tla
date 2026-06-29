@@ -8,7 +8,7 @@
     "result": "PASS"
   },
   "sany": {
-    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCodingFractal/artifacts/ui-modal-react/Model.tla",
+    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCoding/artifacts/ui-modal-react/Model.tla",
     "exit_code": 0,
     "result": "PASS",
     "stderr": ""
@@ -23,7 +23,7 @@
     "result": "UNATTEMPTED",
     "theorems_attempted": 0,
     "theorems_proved": 0,
-    "command": "tlapm /home/za/Desktop/MathCodingFractal/artifacts/ui-modal-react/Model.tla",
+    "command": "tlapm /home/za/Desktop/MathCoding/artifacts/ui-modal-react/Model.tla",
     "exit_code": 0,
     "details": ""
   }

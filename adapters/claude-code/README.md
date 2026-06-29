@@ -1,12 +1,12 @@
-# Claude Code Adapter for MathCodingFractal
+# Claude Code Adapter for MathCoding
 
-This adapter integrates MathCodingFractal with Claude Code's project-scoped rules and slash commands.
+This adapter integrates MathCoding with Claude Code's project-scoped rules and slash commands.
 
 ## What It Provides
 
 - A `CLAUDE.md` rules file (Claude Code's equivalent of `AGENTS.md`).
 - A set of slash commands for direct invocation.
-- Reference to MathCodingFractal's portable schemas and protocols.
+- Reference to MathCoding's portable schemas and protocols.
 
 ## Installation
 
@@ -23,7 +23,7 @@ This adapter integrates MathCodingFractal with Claude Code's project-scoped rule
    cp adapters/claude-code/commands/*.md /your/project/.claude/commands/
    ```
 
-3. (Optional) Install MathCodingFractal skills as Claude-compatible skills:
+3. (Optional) Install MathCoding skills as Claude-compatible skills:
 
    ```bash
    mkdir -p /your/project/.claude/skills

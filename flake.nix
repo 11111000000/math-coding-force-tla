@@ -1,5 +1,5 @@
 {
-  description = "MathCodingFractal reproducible environment for TLA+ based mathematical development";
+  description = "MathCoding reproducible environment for TLA+ based mathematical development";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -50,14 +50,14 @@
           pkgs = import nixpkgs { inherit system; };
         in {
           default = pkgs.mkShell {
-            name = "mathcoding-fractal";
+            name = "mathcoding";
             packages = with pkgs; [
               jdk21
               python3
             ];
             shellHook = ''
               export PATH="$PWD/bin:$PATH"
-              echo "MathCodingFractal shell active"
+              echo "MathCoding shell active"
               echo "Wrappers: mathpacket, tla-sany, tla-tlc, tla-tlaps, verify, validate-packet, refine-from-model"
               echo "Set TLA2TOOLS_JAR or place tla2tools.jar under tools/"
               echo "Place tlapm under tools/tlaps/bin/tlapm or set TLAPM_BIN"

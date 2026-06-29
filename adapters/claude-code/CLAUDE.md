@@ -1,6 +1,6 @@
-# MathCodingFractal rules for Claude Code
+# MathCoding rules for Claude Code
 
-This project follows the MathCodingFractal methodology: artifact-centered, evidence-bearing, formally verified software development.
+This project follows the MathCoding methodology: artifact-centered, evidence-bearing, formally verified software development.
 
 ## Core Rules
 

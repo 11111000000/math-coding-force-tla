@@ -1,6 +1,6 @@
-# Generic Adapter Spec for MathCodingFractal
+# Generic Adapter Spec for MathCoding
 
-This document specifies a minimal contract for integrating MathCodingFractal into any agent runtime. Any runtime that satisfies this contract can use the methodology.
+This document specifies a minimal contract for integrating MathCoding into any agent runtime. Any runtime that satisfies this contract can use the methodology.
 
 ## Required Surface
 

@@ -1,6 +1,6 @@
-# MathCodingFractal Workflow with Cursor
+# MathCoding Workflow with Cursor
 
-This is a suggested conversational workflow when using MathCodingFractal with Cursor.
+This is a suggested conversational workflow when using MathCoding with Cursor.
 
 ## Step 1: Receive Task
 
@@ -77,5 +77,5 @@ The packet is ready. Commit problem.md, assumptions.yaml, Model.tla, Model.cfg, 
 
 In all cases, Cursor should:
 
-1. Explain what MathCodingFractal requires.
+1. Explain what MathCoding requires.
 2. Offer to proceed correctly.

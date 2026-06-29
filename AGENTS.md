@@ -1,60 +1,55 @@
-# MathCodingFractal Rules
+# MathCoding Rules
 
-This repository is not centered on prompts. It is centered on artifacts.
+This repository treats artifacts as the source of rigor, not chat messages. Prompts pass through. Files remain.
 
-## Core Rule
+## The rule that overrides everything else
 
-Do not treat the chat message as the spec.
+Do not treat the chat message as the spec. Every task becomes a packet under `artifacts/<task-id>/`. The packet is the contract; the chat is the scratchpad.
 
-Always convert work into a task packet under `artifacts/<task-id>/`.
+## Mandatory flow
 
-## Mandatory Development Flow
+Eight steps. None are optional for a non-trivial task.
 
 1. Capture the problem in `problem.md`.
 2. Capture explicit assumptions in `assumptions.yaml`.
-3. Produce L1 contracts for every task.
-4. Produce `Model.tla` and `Model.cfg` when formalization is required.
-5. Run mechanical verification before implementation.
-6. Save evidence to `verification.json`.
-7. Write `refinement.md` before generating code.
-8. Generate `traceability.json` together with code.
+3. Write L1 contracts (`Precondition`, `Postcondition`, `Invariant`).
+4. Write `Model.tla` and `Model.cfg` when formalization is required.
+5. Run mechanical verification before any code exists.
+6. Record the tool output in `verification.json`.
+7. Write `refinement.md` before generating code, never after.
+8. Generate `traceability.json` together with the code.
 
-## Verification Discipline
+## Verification discipline
 
-- `VERIFIED` requires actual SANY/TLC execution.
-- If tools are unavailable, the verdict is `UNVERIFIABLE`, never `VERIFIED`.
-- The verifier formats tool output; it does not replace the tools.
+- `VERIFIED` requires a real SANY/TLC exit, with a real exit code, recorded in `verification.json`.
+- When the tools are missing, the verdict is `UNVERIFIABLE`, never `VERIFIED`. A wrapper that can't run is not a green light.
+- The verifier formats tool output. It does not invent it.
 
-## Assumption Discipline
+## Assumption discipline
 
-- Any ambiguity in the problem statement must become an explicit assumption.
-- Assumptions must be tagged as one of:
-  - `user-confirmed`
-  - `agent-inferred`
-  - `open`
-- Code generation may not silently rely on `open` assumptions.
+Every ambiguity in the problem statement becomes an explicit assumption, tagged as one of:
 
-## Refinement Discipline
+- `user-confirmed` — the user actually said it
+- `agent-inferred` — the agent decided, on the record
+- `open` — needs an answer before code lands on it
 
-Do not jump directly from TLA+ to code.
+Code generation must not silently depend on an `open` assumption. Either ask the user, or branch the model and record both branches.
 
-Every non-trivial synthesis must first state:
+## Refinement discipline
 
-- state mapping
-- operation mapping
-- invariant preservation strategy
-- evidence obligations
+Do not jump from TLA+ to code. Every non-trivial synthesis starts with a `refinement.md` that states:
 
-in `refinement.md`.
+- which model variables map to program state
+- which actions map to program operations
+- which invariants the type system preserves, and which need runtime checks
+- which postconditions need tests
 
-## Fractal Rule
+## The fractal rule
 
-When modifying this methodology itself, apply the same methodology to the change.
+When you change the methodology itself — schemas, protocols, packet layout, verification rules, anything in `bin/` — apply the methodology to the change. Update:
 
-That means methodological changes should update:
-
-- the self-spec in `methodology/self-spec/`
+- `methodology/self-spec/`
 - the protocol docs in `MathCodingBase/02-Protocols/`
 - the architectural explanation in `MathCodingBase/03-Architecture/`
 
-The methodology must remain an example of itself.
+The methodology has to stay an example of itself. Cosmetic prose fixes don't need a packet; structural changes do.

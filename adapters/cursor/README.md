@@ -1,12 +1,12 @@
-# Cursor Adapter for MathCodingFractal
+# Cursor Adapter for MathCoding
 
-This adapter integrates MathCodingFractal methodology with Cursor IDE.
+This adapter integrates MathCoding methodology with Cursor IDE.
 
 ## What It Provides
 
-- A `.cursorrules` file that instructs Cursor's AI to follow the MathCodingFractal methodology.
-- A reference guide for setting up Cursor to discover MathCodingFractal artifacts.
-- Optional: a set of saved prompts matching MathCodingFractal's commands.
+- A `.cursorrules` file that instructs Cursor's AI to follow the MathCoding methodology.
+- A reference guide for setting up Cursor to discover MathCoding artifacts.
+- Optional: a set of saved prompts matching MathCoding's commands.
 
 ## Installation
 
@@ -16,7 +16,7 @@ This adapter integrates MathCodingFractal methodology with Cursor IDE.
    cp adapters/cursor/.cursorrules /your/project/.cursorrules
    ```
 
-2. Add the MathCodingFractal paths to Cursor's context include list (Cursor Settings → Features → Docs).
+2. Add the MathCoding paths to Cursor's context include list (Cursor Settings → Features → Docs).
 
 3. Ensure `bin/`, `schemas/`, and `MathCodingBase/` are accessible.
 
@@ -44,4 +44,4 @@ Cursor will follow the rules in `.cursorrules` and use the artifacts in `MathCod
 ## Files
 
 - `.cursorrules` — the rule file
-- `workflow.md` — suggested conversational flow for using MathCodingFractal with Cursor
+- `workflow.md` — suggested conversational flow for using MathCoding with Cursor

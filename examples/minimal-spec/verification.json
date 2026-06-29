@@ -25,6 +25,6 @@
     "theorems_proved": 2,
     "command": "tlapm /home/za/Desktop/MathCodingFractal/examples/minimal-spec/Model.tla",
     "exit_code": 0,
-    "details": "(* created new \".tlacache/Model.tlaps/Model.thy\" *)\n(* fingerprints written in \".tlacache/Model.tlaps/fingerprints\" *)\n** Unexpanded symbols: ---\n\nFile \"/home/za/Desktop/MathCodingFractal/examples/minimal-spec/Model.tla\", line 1, character 1 to line 23, character 4:\n[INFO]: All 1 obligation proved.\n"
+    "details": "(* loading fingerprints in \".tlacache/Model.tlaps/fingerprints\" *)\n(* created new \".tlacache/Model.tlaps/Model.thy\" *)\n(* fingerprints written in \".tlacache/Model.tlaps/fingerprints\" *)\nFile \"/home/za/Desktop/MathCodingFractal/examples/minimal-spec/Model.tla\", line 1, character 1 to line 23, character 4:\n[INFO]: All 1 obligation proved.\n"
   }
 }

@@ -45,7 +45,9 @@
   .hero { padding: 140px 0 60px; text-align: center; }
   .hero-illustration { margin: 0 auto 40px; max-width: 600px; }
   .hero-illustration img { width: 100%; height: auto; display: block; }
-  .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-dim); padding: 4px 12px; border-radius: 4px; margin-bottom: 24px; }
+  /* hero-badge: width max-content prevents stretch under div[data-lang]
+     display:none !important overrides — see setLang() below. */
+  .hero-badge { display: inline-block; width: max-content; max-width: 100%; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-dim); padding: 4px 12px; border-radius: 4px; margin: 0 auto 24px; }
   .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; color: var(--text-bright); line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.03em; }
   .hero h1 .dim { color: var(--text-dim); font-weight: 400; }
   .hero p { font-size: 17px; color: var(--text-dim); max-width: 580px; margin: 0 auto 40px; line-height: 1.8; }
@@ -62,19 +64,24 @@
   .section h2 { font-size: 28px; font-weight: 700; color: var(--text-bright); margin-bottom: 16px; letter-spacing: -0.02em; }
   .section > .container > p { color: var(--text-dim); max-width: 600px; margin-bottom: 48px; }
 
-  /* Pipeline — 7 in a row */
-  .pipeline { display: flex; gap: 2px; }
-  .pipeline-step { flex: 1; min-width: 0; background: var(--bg-card); padding: 20px 10px; text-align: center; transition: background 0.2s; }
-  .pipeline-step:first-child { border-radius: 8px 0 0 8px; }
-  .pipeline-step:last-child { border-radius: 0 8px 8px 0; }
-  .pipeline-step:hover { background: var(--bg-card-hover); }
-  .pipeline-step .num { font-size: 11px; color: var(--accent); margin-bottom: 6px; font-weight: 700; }
-  .pipeline-step .name { font-size: 13px; font-weight: 600; color: var(--text-bright); margin-bottom: 2px; }
-  .pipeline-step .file { font-size: 10px; color: var(--text-dim); }
-  @media (max-width: 700px) {
-    .pipeline { flex-wrap: wrap; }
-    .pipeline-step { flex: 0 0 calc(50% - 1px); border-radius: 0 !important; }
-  }
+  /* Pipeline — 7 expandable cards */
+  .pipeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .stage-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; transition: border-color 0.2s, background 0.2s; }
+  .stage-card[open] { border-color: var(--accent-dim); background: var(--bg-card-hover); }
+  .stage-card:hover { border-color: var(--text-dim); }
+  .stage-card > summary { display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer; list-style: none; user-select: none; }
+  .stage-card > summary::-webkit-details-marker { display: none; }
+  .stage-card > summary::after { content: '+'; margin-left: auto; color: var(--text-dim); font-size: 18px; font-weight: 300; transition: transform 0.2s; }
+  .stage-card[open] > summary::after { content: '−'; }
+  .stage-icon { flex: 0 0 36px; height: 36px; display: flex; align-items: center; justify-content: center; }
+  .stage-icon img { max-height: 36px; max-width: 36px; width: auto; height: auto; }
+  .stage-num { font-size: 11px; color: var(--accent); font-weight: 700; }
+  .stage-body { flex: 1; min-width: 0; }
+  .stage-name { font-size: 13px; font-weight: 600; color: var(--text-bright); }
+  .stage-file { font-size: 10px; color: var(--text-dim); margin-top: 2px; font-family: inherit; }
+  .stage-detail { padding: 0 16px 16px 64px; font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+  /* Hide disclosure triangle on Firefox too */
+  .stage-card > summary { list-style-image: none; }
 
   /* Proof */
   .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -127,6 +134,14 @@
   .principle .principle-icon img { max-height: 50px; width: auto; }
 
   .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+  /* Verified strip — horizontal chip list reusing packet icons */
+  .verified-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .verified-chip { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-size: 12px; transition: border-color 0.2s, transform 0.2s; }
+  .verified-chip:hover { border-color: var(--green); transform: translateY(-1px); }
+  .verified-chip img { height: 28px; width: auto; }
+  .verified-chip span { font-weight: 600; color: var(--text-bright); }
+  .verified-chip small { color: var(--text-dim); font-size: 11px; }
 
   /* i18n: hide all data-lang by default, JS will show the active one */
   [data-lang] { display: none !important; }
@@ -197,132 +212,233 @@
   <div class="container">
     <div class="section-label">
       <span data-lang="en">The Pipeline</span>
-      <span data-lang="ru">Пайплайн</span>
+      <span data-lang="ru">Конвейер</span>
       <span data-lang="zh">流水线</span>
     </div>
     <h2>
       <span data-lang="en">Seven stages from problem to verified code</span>
-      <span data-lang="ru">Семь стадий от задачи до верифицированного кода</span>
+      <span data-lang="ru">Семь стадий от задачи до проверенного кода</span>
       <span data-lang="zh">从问题到验证代码的七个阶段</span>
     </h2>
     <p>
       <span data-lang="en">Every task follows the same cycle. No step is optional. No artifact is transient.</span>
-      <span data-lang="ru">Каждая задача проходит один и тот же цикл. Ни один шаг не опционален. Ни один артефакт не временный.</span>
+      <span data-lang="ru">Каждая задача проходит один и тот же цикл. Ни один шаг не факультативен. Ни один артефакт не эфемерен.</span>
       <span data-lang="zh">每个任务都遵循相同的周期。没有可选步骤。没有临时产物。</span>
     </p>
 
     <div class="pipeline">
-      <div class="pipeline-step">
-        <div class="num">01</div>
-        <div class="name" data-lang="en">Problem</div>
-        <div class="name" data-lang="ru">Задача</div>
-        <div class="name" data-lang="zh">问题</div>
-        <div class="file">problem.md</div>
-      </div>
-      <div class="pipeline-step">
-        <div class="num">02</div>
-        <div class="name" data-lang="en">Assumptions</div>
-        <div class="name" data-lang="ru">Допущения</div>
-        <div class="name" data-lang="zh">假设</div>
-        <div class="file">assumptions.yaml</div>
-      </div>
-      <div class="pipeline-step">
-        <div class="num">03</div>
-        <div class="name" data-lang="en">Formalize</div>
-        <div class="name" data-lang="ru">Формализация</div>
-        <div class="name" data-lang="zh">形式化</div>
-        <div class="file">Model.tla</div>
-      </div>
-      <div class="pipeline-step">
-        <div class="num">04</div>
-        <div class="name" data-lang="en">Verify</div>
-        <div class="name" data-lang="ru">Верификация</div>
-        <div class="name" data-lang="zh">验证</div>
-        <div class="file">verification.json</div>
-      </div>
-      <div class="pipeline-step">
-        <div class="num">05</div>
-        <div class="name" data-lang="en">Refine</div>
-        <div class="name" data-lang="ru">Рефинемент</div>
-        <div class="name" data-lang="zh">精化</div>
-        <div class="file">refinement.md</div>
-      </div>
-      <div class="pipeline-step">
-        <div class="num">06</div>
-        <div class="name" data-lang="en">Implement</div>
-        <div class="name" data-lang="ru">Реализация</div>
-        <div class="name" data-lang="zh">实现</div>
-        <div class="file">implementation/</div>
-      </div>
-      <div class="pipeline-step">
-        <div class="num">07</div>
-        <div class="name" data-lang="en">Trace</div>
-        <div class="name" data-lang="ru">Трассировка</div>
-        <div class="name" data-lang="zh">追溯</div>
-        <div class="file">traceability.json</div>
-      </div>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-problem.svg" alt=""/></div>
+          <div class="stage-num">01</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Problem</div>
+            <div class="stage-name" data-lang="ru">Задача</div>
+            <div class="stage-name" data-lang="zh">问题</div>
+            <div class="stage-file">problem.md</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          Capture the task in plain prose. State desired outcome, non-goals, and
+          what counts as success. Without this, the rest of the cycle has no anchor.
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          Опишите задачу в свободной форме. Укажите желаемый результат, что
+          вне scope, и как понять, что задача решена. Без этого якоря остальной
+          конвейер теряет опору.
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          用自然语言描述任务。明确期望结果、非目标与成功标准。否则后续阶段失去锚点。
+        </div>
+      </details>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-assumptions.svg" alt=""/></div>
+          <div class="stage-num">02</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Assumptions</div>
+            <div class="stage-name" data-lang="ru">Допущения</div>
+            <div class="stage-name" data-lang="zh">假设</div>
+            <div class="stage-file">assumptions.yaml</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          Every ambiguity becomes a tagged assumption: user-confirmed,
+          agent-inferred, or open. Code never silently depends on an open one.
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          Каждая неоднозначность становится теговым допущением: подтверждённое
+          пользователем, выведенное агентом или открытое. Код не должен молча
+          опираться на открытое.
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          每个歧义转为带标签的假设:用户已确认、智能体推断或待定。代码不得隐式依赖待定假设。
+        </div>
+      </details>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-formalize.svg" alt=""/></div>
+          <div class="stage-num">03</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Formalize</div>
+            <div class="stage-name" data-lang="ru">Формализация</div>
+            <div class="stage-name" data-lang="zh">形式化</div>
+            <div class="stage-file">Model.tla</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          Write the state machine in TLA+. State variables, transition relation,
+          safety invariants, and liveness conditions are all explicit.
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          Опишите автомат на TLA+. Переменные состояния, отношения переходов,
+          инварианты безопасности и условия liveness — всё становится явным.
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          用 TLA+ 写出状态机。状态变量、转移关系、安全不变量与活性条件皆为显式。
+        </div>
+      </details>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-verify.svg" alt=""/></div>
+          <div class="stage-num">04</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Verify</div>
+            <div class="stage-name" data-lang="ru">Верификация</div>
+            <div class="stage-name" data-lang="zh">验证</div>
+            <div class="stage-file">verification.json</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          SANY parses the spec. TLC exhaustively walks every reachable state
+          and either accepts it or hands you a counterexample. No "expert gut".
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          SANY разбирает спецификацию. TLC проходит каждое достижимое состояние
+          и либо принимает модель, либо показывает контрпример. Никакой
+          «экспертной интуиции».
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          SANY 解析规约,TLC 穷举检查每个可达状态或给出反例。没有"专家直觉"。
+        </div>
+      </details>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-refine.svg" alt=""/></div>
+          <div class="stage-num">05</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Refine</div>
+            <div class="stage-name" data-lang="ru">Уточнение</div>
+            <div class="stage-name" data-lang="zh">精化</div>
+            <div class="stage-file">refinement.md</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          State variables map to program state. Actions map to procedures.
+          Which invariants survive types, and which need runtime checks — all stated.
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          Переменные состояния отображаются в программу. Действия — в процедуры.
+          Какие инварианты сохраняются типами, а какие требуют проверок в рантайме,
+          всё прописано.
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          状态变量映射到程序状态。动作映射到过程。哪些不变量由类型保留、哪些需要运行期检查,一一说明。
+        </div>
+      </details>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-implement.svg" alt=""/></div>
+          <div class="stage-num">06</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Implement</div>
+            <div class="stage-name" data-lang="ru">Реализация</div>
+            <div class="stage-name" data-lang="zh">实现</div>
+            <div class="stage-file">implementation/</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          Code follows the refinement. Every action becomes a procedure; every
+          invariant becomes a test or a runtime check.
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          Код следует плану уточнения. Каждое действие становится процедурой,
+          каждый инвариант — тестом или проверкой в рантайме.
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          代码遵循精化方案。每个动作成为过程,每个不变量成为测试或运行期检查。
+        </div>
+      </details>
+      <details class="stage-card">
+        <summary>
+          <div class="stage-icon"><img src="/math-coding/img/stage-trace.svg" alt=""/></div>
+          <div class="stage-num">07</div>
+          <div class="stage-body">
+            <div class="stage-name" data-lang="en">Trace</div>
+            <div class="stage-name" data-lang="ru">Трассировка</div>
+            <div class="stage-name" data-lang="zh">追溯</div>
+            <div class="stage-file">traceability.json</div>
+          </div>
+        </summary>
+        <div class="stage-detail" data-lang="en">
+          A machine-readable map from model element to code location. "Where
+          in the code is Invariant N preserved?" gets a one-lookup answer.
+        </div>
+        <div class="stage-detail" data-lang="ru">
+          Машиночитаемая карта: элемент модели — место в коде. Вопрос «где в
+          коде сохраняется инвариант N?» имеет одно-точечный ответ.
+        </div>
+        <div class="stage-detail" data-lang="zh">
+          模型元素到代码位置的机器可读映射。"代码中哪里保留了不变量 N?" 一查即得。
+        </div>
+      </details>
     </div>
+    <p style="margin-top:14px;font-size:12px;color:var(--text-dim);">
+      <span data-lang="en">Click any stage to read what it does and what artifact it leaves behind.</span>
+      <span data-lang="ru">Нажмите на стадию, чтобы увидеть, что она делает и какой артефакт оставляет.</span>
+      <span data-lang="zh">点击任一阶段查看其作用与产物。</span>
+    </p>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- Proof -->
+<!-- Verified strip — replaced the old "Verified Evidence" grid.
+     Packet icons reused as a horizontal inline chip strip. -->
 <section class="section">
   <div class="container">
     <div class="section-label">
-      <span data-lang="en">Verified Evidence</span>
-      <span data-lang="ru">Верифицированные доказательства</span>
-      <span data-lang="zh">已验证的证据</span>
+      <span data-lang="en">Verified</span>
+      <span data-lang="ru">Проверено</span>
+      <span data-lang="zh">已验证</span>
     </div>
-    <h2>
-      <span data-lang="en">Four packets, mechanically proven</span>
-      <span data-lang="ru">Четыре пакета, механически доказанных</span>
-      <span data-lang="zh">四个数据包，经过机械验证</span>
-    </h2>
     <p>
-      <span data-lang="en">Each packet has passed SANY (parsing) and TLC (bounded model checking). The evidence is machine-readable.</span>
-      <span data-lang="ru">Каждый пакет прошёл SANY и TLC. Evidence доступен в машиночитаемой форме.</span>
-      <span data-lang="zh">每个数据包都通过了SANY和TLC。证据为机器可读格式。</span>
+      <span data-lang="en">Four packets pass SANY and TLC. Machine-readable evidence in each <code>verification.json</code>.</span>
+      <span data-lang="ru">Четыре пакета прошли SANY и TLC. Свидетельства в машиночитаемой форме лежат в каждом <code>verification.json</code>.</span>
+      <span data-lang="zh">四个数据包均通过SANY与TLC。每个 <code>verification.json</code> 包含机器可读的证据。</span>
     </p>
 
-    <div class="proof-grid">
-      <div class="proof-card">
-        <div class="proof-icon"><img src="/math-coding/img/packet-minimal-spec.svg" alt="minimal-spec icon"/></div>
-        <div class="status">Verified</div>
-        <h3>minimal-spec</h3>
-        <p data-lang="en">Simplest state machine. Two states, two proved theorems. The atom of the methodology.</p>
-        <p data-lang="ru">Простейший автомат. Два состояния, две доказанные теоремы. Атом методологии.</p>
-        <p data-lang="zh">最简单的状态机。两个状态，两个已证明的定理。</p>
-        <div class="meta"><div>States <span>2</span></div><div>TLA+</div></div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-icon"><img src="/math-coding/img/packet-ui-modal.svg" alt="ui-modal-dialog icon"/></div>
-        <div class="status">Verified</div>
-        <h3>ui-modal-dialog</h3>
-        <p data-lang="en">Desktop confirmation dialog. 7 visible states, fairness properties, liveness guarantees.</p>
-        <p data-lang="ru">Десктопный диалог. 7 состояний, свойства fairness, гарантии liveness.</p>
-        <p data-lang="zh">桌面确认对话框。7个状态，公平性属性。</p>
-        <div class="meta"><div>States <span>8</span></div><div>TLA+</div></div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-icon"><img src="/math-coding/img/packet-self-spec.svg" alt="self-spec icon"/></div>
-        <div class="status">Verified</div>
-        <h3>self-spec</h3>
-        <p data-lang="en">The methodology describes itself. 7 states. The fractal property made concrete.</p>
-        <p data-lang="ru">Методология описывает сама себя. 7 состояний.</p>
-        <p data-lang="zh">方法论描述自身。7个状态。</p>
-        <div class="meta"><div>States <span>7</span></div><div>TLA+</div></div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-icon"><img src="/math-coding/img/packet-ui-react.svg" alt="ui-modal-react icon"/></div>
-        <div class="status">Verified</div>
-        <h3>ui-modal-react</h3>
-        <p data-lang="en">React/TypeScript refinement of the dialog. 16 passing tests, full traceability map.</p>
-        <p data-lang="ru">React/TypeScript рефинемент. 16 тестов, полная карта трассировки.</p>
-        <p data-lang="zh">React/TypeScript精化。16个通过的测试。</p>
-        <div class="meta"><div>States <span>8</span></div><div>Tests <span>16</span></div></div>
-      </div>
+    <div class="verified-chips">
+      <a class="verified-chip" href="https://github.com/11111000000/math-coding/tree/main/examples/minimal-spec">
+        <img src="/math-coding/img/packet-minimal-spec.svg" alt=""/>
+        <span>minimal-spec</span>
+        <small><span data-lang="en">2 states</span><span data-lang="ru">2 состояния</span><span data-lang="zh">2 状态</span></small>
+      </a>
+      <a class="verified-chip" href="https://github.com/11111000000/math-coding/tree/main/examples/ui-modal-dialog">
+        <img src="/math-coding/img/packet-ui-modal.svg" alt=""/>
+        <span>ui-modal-dialog</span>
+        <small><span data-lang="en">8 states</span><span data-lang="ru">8 состояний</span><span data-lang="zh">8 状态</span></small>
+      </a>
+      <a class="verified-chip" href="https://github.com/11111000000/math-coding/tree/main/methodology/self-spec">
+        <img src="/math-coding/img/packet-self-spec.svg" alt=""/>
+        <span>self-spec</span>
+        <small><span data-lang="en">7 states</span><span data-lang="ru">7 состояний</span><span data-lang="zh">7 状态</span></small>
+      </a>
+      <a class="verified-chip" href="https://github.com/11111000000/math-coding/tree/main/artifacts/ui-modal-react">
+        <img src="/math-coding/img/packet-ui-react.svg" alt=""/>
+        <span>ui-modal-react</span>
+        <small><span data-lang="en">8 states · 16 tests</span><span data-lang="ru">8 состояний · 16 тестов</span><span data-lang="zh">8 状态 · 16 测试</span></small>
+      </a>
     </div>
   </div>
 </section>
@@ -350,7 +466,7 @@
         <h3 data-lang="ru">Вокруг артефактов</h3>
         <h3 data-lang="zh">以产物为中心</h3>
         <p data-lang="en">Chat messages are transient. The packet is the source of truth. If it's not in a file, for the methodology it doesn't exist.</p>
-        <p data-lang="ru">Чат — transient. Пакет — источник истины. Нет файла — нет существования.</p>
+        <p data-lang="ru">Чат эфемерен. Пакет — источник истины. Нет файла — нет существования.</p>
         <p data-lang="zh">聊天消息是临时的。数据包是真理之源。</p>
       </div>
       <div class="principle">
@@ -368,13 +484,13 @@
         <h3 data-lang="ru">Фрактальное самоприменение</h3>
         <h3 data-lang="zh">分形自应用</h3>
         <p data-lang="en">The methodology describes itself through its own pipeline. self-spec/ is verified TLA+ that models the methodology.</p>
-        <p data-lang="ru">Методология описывает сама себя через свой пайплайн.</p>
+        <p data-lang="ru">Методология описывает сама себя через собственный конвейер.</p>
         <p data-lang="zh">方法论通过自身流水线描述自己。</p>
       </div>
       <div class="principle">
         <div class="principle-icon"><img src="/math-coding/img/principle-refinement.svg" alt="Refinement icon"/></div>
         <h3 data-lang="en">Refinement as Bridge</h3>
-        <h3 data-lang="ru">Рефинемент как мост</h3>
+        <h3 data-lang="ru">Уточнение как мост</h3>
         <h3 data-lang="zh">精化即桥梁</h3>
         <p data-lang="en">The jump from verified model to code is explicit. State mapping, operation mapping, invariant preservation — all documented.</p>
         <p data-lang="ru">Прыжок от модели к коду явный. Отображения задокументированы.</p>
@@ -508,7 +624,10 @@ function setLang(lang) {
   });
   document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
     const tag = el.tagName.toLowerCase();
-    if (tag === 'span' || tag === 'a') {
+    if (el.classList.contains('hero-badge')) {
+      // hero-badge must stay inline-block so width: max-content holds
+      el.style.setProperty('display', 'inline-block', 'important');
+    } else if (tag === 'span' || tag === 'a') {
       el.style.setProperty('display', 'inline', 'important');
     } else if (tag === 'li') {
       el.style.setProperty('display', 'list-item', 'important');

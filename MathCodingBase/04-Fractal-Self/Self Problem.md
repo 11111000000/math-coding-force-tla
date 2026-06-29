@@ -12,5 +12,6 @@ A methodology that any sufficiently capable coding agent can adopt by following:
 - explicit protocols
 - a formal-model-first workflow
 - evidence-bearing verification
+- honest unverifiability, where mechanical verification is inapplicable, with named reviewers and processes
 
 The methodology must itself obey these rules.
