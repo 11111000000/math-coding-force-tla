@@ -1,0 +1,124 @@
+{
+  "task_id": "unverifiable-as-design",
+  "mappings": [
+    {
+      "source": "assumption:A1",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "assumption-to-protocol",
+      "note": "Mechanical verification is inapplicable for prose/UX/strategy/ethics: encoded as UNVERIFIABLE:OUT_OF_SCOPE"
+    },
+    {
+      "source": "assumption:A2",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "assumption-to-protocol",
+      "note": "Tool-coverage gaps inside scope: encoded as UNVERIFIABLE:TOOL_MISSING"
+    },
+    {
+      "source": "assumption:A3",
+      "target": "MathCodingBase/03-Architecture/Mechanical Verification Model.md",
+      "kind": "assumption-to-architecture",
+      "note": "Discriminated union of unverifiable subtypes"
+    },
+    {
+      "source": "assumption:A4",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "assumption-to-protocol",
+      "note": "Compensation obligation: by, process, trigger"
+    },
+    {
+      "source": "assumption:A5",
+      "target": "bin/verify.py (writer restriction relaxed)",
+      "kind": "assumption-to-tool",
+      "note": "Agent may write verification.json for UNVERIFIABLE packets"
+    },
+    {
+      "source": "assumption:A6",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "assumption-to-protocol",
+      "note": "REJECTED is forbidden; agent must reformulate the task"
+    },
+    {
+      "source": "assumption:A7",
+      "target": "methodology/self-spec + MathCodingBase/04-Fractal-Self/*.md",
+      "kind": "assumption-to-self-spec",
+      "note": "Fractal property: structural change goes through a packet and updates self-spec"
+    },
+    {
+      "source": "Model.tla:Precondition",
+      "target": "schemas/verification-report.schema.json",
+      "kind": "invariant-to-schema",
+      "note": "Closed enum for verdict and subtype"
+    },
+    {
+      "source": "Model.tla:NoRejectedInvariant",
+      "target": "bin/validate-packet.py",
+      "kind": "invariant-to-validator",
+      "note": "Reject subtype REJECTED"
+    },
+    {
+      "source": "Model.tla:CompensationFieldsInvariant",
+      "target": "bin/validate-packet.py",
+      "kind": "invariant-to-validator",
+      "note": "Require by, process, trigger non-empty for UNVERIFIABLE"
+    },
+    {
+      "source": "Model.tla:Invariant",
+      "target": "verification.json (this packet)",
+      "kind": "invariant-to-self",
+      "note": "VERIFIED via SANY + TLC, 40 distinct states"
+    },
+    {
+      "source": "Model.tla:EventuallyCompensated",
+      "target": "verification.json (this packet)",
+      "kind": "temporal-to-property-check",
+      "note": "Holds on complete state graph"
+    },
+    {
+      "source": "Roadmap.md:1.5 unverifiable-as-design",
+      "target": "verification.json",
+      "kind": "status-link",
+      "note": "Roadmap entry updated to verified"
+    },
+    {
+      "source": "Roadmap.ru.md:1.5 unverifiable-as-design",
+      "target": "verification.json",
+      "kind": "status-link",
+      "note": "Russian Roadmap mirror updated in lockstep"
+    },
+    {
+      "source": "MathCodingBase/ru/02-Protocols/Verification Evidence Protocol.ru.md",
+      "target": "MathCodingBase/02-Protocols/Verification Evidence Protocol.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/03-Architecture/Mechanical Verification Model.ru.md",
+      "target": "MathCodingBase/03-Architecture/Mechanical Verification Model.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/03-Architecture/Artifact-Centered Architecture.ru.md",
+      "target": "MathCodingBase/03-Architecture/Artifact-Centered Architecture.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/03-Architecture/Agent Portability Model.ru.md",
+      "target": "MathCodingBase/03-Architecture/Agent Portability Model.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/04-Fractal-Self/Self Problem.ru.md",
+      "target": "MathCodingBase/04-Fractal-Self/Self Problem.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/04-Fractal-Self/Self Assumptions.ru.md",
+      "target": "MathCodingBase/04-Fractal-Self/Self Assumptions.md",
+      "kind": "translation-mirror"
+    },
+    {
+      "source": "MathCodingBase/ru/04-Fractal-Self/Self Justification.ru.md",
+      "target": "MathCodingBase/04-Fractal-Self/Self Justification.md",
+      "kind": "translation-mirror"
+    }
+  ]
+}

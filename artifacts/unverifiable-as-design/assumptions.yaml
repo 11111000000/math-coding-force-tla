@@ -1,0 +1,23 @@
+task_id: unverifiable-as-design
+assumptions:
+  - id: A1
+    statement: There exist artifact kinds where mechanical verification is categorically inapplicable (prose quality, UX, aesthetics, ethics, strategy). For such artifacts, forcing a fake "VERIFIED" claim is worse than admitting unverifiability.
+    status: user-confirmed
+  - id: A2
+    statement: There exist verification obligations inside MathCoding's normal scope that current tools cannot discharge (e.g. arithmetic invariants beyond TLC's bounded model checking, refinement relations that need TLAPS). For these, an "UNVERIFIABLE" verdict is a tool-coverage gap, not a category denial.
+    status: user-confirmed
+  - id: A3
+    statement: A single "UNVERIFIABLE" verdict conflates tool failures, scope denials, deferred obligations, and refusals. Discriminating them is a precondition for treating unverifiability as design rather than as failure.
+    status: agent-inferred
+  - id: A4
+    statement: Each unverifiable subtype must declare a compensation obligation: a named reviewer, a review process, and a trigger. Without compensation, unverifiability degrades into rejection-by-default.
+    status: user-confirmed
+  - id: A5
+    statement: For UNVERIFIABLE:OUT_OF_SCOPE, the agent may legitimately write verification.json itself, since no tool runs. For UNVERIFIABLE:TOOL_MISSING, the agent writes the diagnostic; the infrastructure owner repairs. The bin/verify writer-restriction is relaxed for unverifiable subtypes by design.
+    status: agent-inferred
+  - id: A6
+    statement: UNVERIFIABLE:REJECTED (agent decides not to verify) is forbidden. If the agent believes verification is unnecessary, the right response is to reformulate the task into a smaller verifiable task, not to skip verification.
+    status: user-confirmed
+  - id: A7
+    statement: The change touches protocol documents and the architectural model. It must itself go through a packet by the Fractal Rule, and the methodology's own self-spec packet should be updated.
+    status: user-confirmed
