@@ -1,4 +1,12 @@
-# MathCoding
+# MathCoding (Force-TLA+ edition)
+
+> **This is the historical Force-TLA+ edition of MathCoding.**
+> Every task packet here is required to carry a formal TLA+ model that
+> passes SANY + TLC before any code is written. The newer, more flexible
+> edition lives at [`11111000000/math-coding`](https://github.com/11111000000/math-coding).
+> The flexible edition accepts `UNVERIFIABLE:*` verdicts with named
+> human review as a substitute for mechanical verification; this
+> edition does not. Treat this repo as a strict subset.
 
 MathCoding is a methodology plus a portable scaffold. It replaces vibe-coding with math-coding, and it works with any coding agent that can read a file and run a shell command.
 

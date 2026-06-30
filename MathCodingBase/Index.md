@@ -1,4 +1,11 @@
-# MathCoding Index
+# MathCoding Index — Force-TLA+ Edition
+
+> **Force-TLA+ edition.** This repository requires a formal TLA+ model
+> that passes SANY + TLC on every task packet. The newer, more flexible
+> edition at [`11111000000/math-coding`](https://github.com/11111000000/math-coding)
+> relaxes this to a `VERIFIED` / `NEEDS_REVISION` / `UNVERIFIABLE:*`
+> verdict space, accepting human-review as a substitute for mechanical
+> verification. This edition does not.
 
 A reader's map of the knowledge base. The methodology is small enough to read end-to-end in one sitting, but most people come with a specific question. Start from the section that matches yours.
 

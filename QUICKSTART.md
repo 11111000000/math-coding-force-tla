@@ -1,4 +1,8 @@
-# Quickstart
+# Quickstart (Force-TLA+ edition)
+
+> **Strict edition.** Every behavior packet requires a TLA+ model that
+> passes SANY + TLC. The newer, more flexible edition is at
+> [`11111000000/math-coding`](https://github.com/11111000000/math-coding).
 
 This repo is a methodology scaffold for math-coding. If you have never seen it before, read `README.md` and `MathCodingBase/Index.md` first.
 

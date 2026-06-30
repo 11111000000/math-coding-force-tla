@@ -3,7 +3,7 @@
 ## Provenance
 
 `Landing/index.html` is the public landing page deployed to
-`https://11111000000.github.io/math-coding/`. It is the first artifact a
+`https://11111000000.github.io/math-coding-force-tla/`. It is the first artifact a
 visitor sees and the surface where the methodology is presented in three
 languages. The page is part of the repository (`Landing/index.html` is
 copied to `_site/index.html` by `.github/workflows/deploy.yml`), so any

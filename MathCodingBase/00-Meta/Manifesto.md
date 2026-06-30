@@ -1,6 +1,12 @@
-# Manifesto
+# Manifesto (Force-TLA+ edition)
 
-MathCoding replaces vibe-coding with math-coding.
+MathCoding replaces vibe-coding with math-coding. The **Force-TLA+**
+edition hardens this: every behavior artifact must pass a formal TLA+
+model through SANY and TLC before code is written. The newer, more
+flexible edition at
+[`11111000000/math-coding`](https://github.com/11111000000/math-coding)
+allows `UNVERIFIABLE:*` verdicts with named-review compensation;
+this edition treats those as escape hatches only.
 
 ## Thesis
 

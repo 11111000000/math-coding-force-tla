@@ -1,4 +1,11 @@
-# MathCoding Rules
+# MathCoding Rules — Force-TLA+ Edition
+
+> **Strict edition.** This repository enforces mechanical verification
+> (SANY + TLC, optionally TLAPS) on every task packet that has any
+> behavior model. `UNVERIFIABLE:*` verdicts are accepted only as
+> documented escape hatches (see `Mechanical Verification Model.md`),
+> not as a default. Newer, more flexible edition at
+> [`11111000000/math-coding`](https://github.com/11111000000/math-coding).
 
 This repository treats artifacts as the source of rigor, not chat messages. Prompts pass through. Files remain.
 

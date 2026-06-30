@@ -1,4 +1,10 @@
-# Roadmap
+# Roadmap (Force-TLA+ edition)
+
+> **Force-TLA+ edition.** This roadmap applies to the strict Force-TLA+
+> repository. The newer, more flexible edition at
+> [`11111000000/math-coding`](https://github.com/11111000000/math-coding)
+> has additional phases for unverifiability as compensation and
+> literature grounding.
 
 This document is the work plan for MathCoding, maintained by the agent that drives the methodology. It lists the task packets that extend the methodology, in priority order, with their current status. Statuses change as packets move through `bin/verify` and `bin/validate-packet`.
 
