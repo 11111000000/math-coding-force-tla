@@ -23,6 +23,24 @@ artifacts.
   has a named reviewer and an 11-panel checklist. v1 panels kept
   as provenance at Comic_v1.md; v2 panels kept as model artifact
   at artifacts/comic-v2/ but not promoted to primary narrative.
+
+- [x] **0.2 comic-v4-en** (`artifacts/comic-v4-en/`) — `verified`
+  Production-ready v4 (English edition). Builds on v3's aesthetic
+  foundation with IT humor as layer-2 easter eggs (Stack Overflow
+  sticker, "0 regrets", "all your tests are belong to us") and
+  readability constraints (panel sizes 800-1200 wide, min 18px
+  text). Methodology gains Humor Discipline Rules and Readability
+  Constraints sections in refinement.md. New ReaderMomentInvariant
+  in Model.tla (CHUCKLED/READING/UNCERTAIN) gates where humor can
+  land. locale dimension allows v4-ru to share the same model.
+
+- [x] **0.3 comic-v4-ru** (`artifacts/comic-v4-ru/`) — `verified`
+  Russian edition of v4. Same TLA+ model, same panel layout, only
+  text labels translated to Russian. Cyrillic-specific readability
+  (min 20px text vs 18px latin). Quirks: «ёлочки» for dialog quotes,
+  code samples stay in English, VERIFIED stamp stays in English
+  (method symbol). Comic.ru.md links v4-ru panels in knowledge
+  base.
 - [x] **0.0 comic-v2-regression-analysis** (`artifacts/comic-v2-regression-analysis/`) — `verified`
   Diagnose the regression. 4-state model: shipped_v1, shipped_v2,
   detected, v3_planned. Records the gap between structural green
