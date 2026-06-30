@@ -1,0 +1,113 @@
+{
+  "task_id": "comic-v4-en",
+  "mappings": [
+    {
+      "source": "locale = \"en\"",
+      "target": "implementation/*.svg",
+      "kind": "locale-to-implementation",
+      "note": "All 11 panels render English text. Implementation path: artifacts/comic-v4-en/implementation/"
+    },
+    {
+      "source": "panelIndex = 0..10",
+      "target": "implementation/01-11-*.svg",
+      "kind": "panel",
+      "note": "11 panels indexed 01-11, dimensions 800-1200 wide"
+    },
+    {
+      "source": "TypeInvariant + PaletteInvariant + EmotionalBeatInvariant",
+      "target": "implementation/*.svg",
+      "kind": "invariant",
+      "note": "Each SVG has explicit dimensions, palette elements, and Maya's face encoding emotional_beat"
+    },
+    {
+      "source": "ReaderMomentInvariant",
+      "target": "implementation/*.svg",
+      "kind": "aesthetic-invariant",
+      "note": "ReaderMomentForPanel gates where IT humor can land (CHUCKLED + gentle READING panels)"
+    },
+    {
+      "source": "LocaleFixedInvariant",
+      "target": "Model.tla (locale' = locale)",
+      "kind": "invariant",
+      "note": "Locale is fixed for the duration of one read; no mid-read locale switches"
+    },
+    {
+      "source": "humor discipline rules",
+      "target": "refinement.md#humor-discipline-rules",
+      "kind": "methodology-extension",
+      "note": "5 rules: layer-2 only, CHUCKLED/READING only, ≤3 per panel, 12-22px, dev-only"
+    },
+    {
+      "source": "readability constraints",
+      "target": "refinement.md#readability-constraints",
+      "kind": "methodology-extension",
+      "note": "5 rules: 18px body min, 22px+ titles, contrast 4.5:1, no <4px strokes, panel min 800px"
+    },
+    {
+      "source": "v3 verified aesthetic baseline",
+      "target": "artifacts/comic-v3/refinement.md#aesthetic-invariants",
+      "kind": "preservation",
+      "note": "v4 inherits Aesthetic Invariants methodology from v3 and extends with humor/readability"
+    },
+    {
+      "source": "v4-ru localization",
+      "target": "artifacts/comic-v4-ru/implementation/*.svg",
+      "kind": "parallel-locale",
+      "note": "Same model, same panels layout, only text labels translated to Russian"
+    },
+    {
+      "source": "human_review obligation",
+      "target": "verification.json#human_review",
+      "kind": "compensation-contract",
+      "note": "OUT_OF_SCOPE for visual quality. Reviewer with named competence signs the 11-panel checklist before packet is shippable as primary narrative."
+    },
+    {
+      "source": "continuity (lighting panel 4 -> 5 -> 6)",
+      "target": "implementation/04-the-bug.svg + 05-alone.svg + 06-the-mentor.svg",
+      "kind": "continuity",
+      "note": "Red alarm glow -> red lingering lamp circle -> purple tablet glow replacing red"
+    },
+    {
+      "source": "continuity (constellation panel 6 -> 8 -> 10)",
+      "target": "implementation/06-the-mentor.svg + 08-tlc-finds-it.svg + 10-better-world.svg",
+      "kind": "continuity",
+      "note": "Faint constellation -> active with red bug-node -> stretched across sky"
+    },
+    {
+      "source": "humor: Stack Overflow sticker",
+      "target": "implementation/01-looks-right.svg",
+      "kind": "humor-easter-egg",
+      "note": "Developer-recognized: SO logo on laptop bezel. Layer-2, doesn't change Maya's emotional beat."
+    },
+    {
+      "source": "humor: red x in confetti",
+      "target": "implementation/02-ship-it.svg",
+      "kind": "humor-easter-egg",
+      "note": "Premonition hidden in deploy celebration. Visible on re-read."
+    },
+    {
+      "source": "humor: I ♡ TLA+",
+      "target": "implementation/06-the-mentor.svg",
+      "kind": "humor-easter-egg",
+      "note": "Formalist's mug sticker. Quiet fan-art homage."
+    },
+    {
+      "source": "humor: please work please work",
+      "target": "implementation/07-the-model.svg",
+      "kind": "humor-easter-egg",
+      "note": "Developer coping comment in TLA+ file. Universal."
+    },
+    {
+      "source": "humor: 0 regrets",
+      "target": "implementation/08-tlc-finds-it.svg",
+      "kind": "humor-easter-egg",
+      "note": "TLC stat panel. Lightens the panic moment without breaking seriousness."
+    },
+    {
+      "source": "humor: all your tests are belong to us",
+      "target": "implementation/11-the-stamp.svg",
+      "kind": "humor-easter-egg",
+      "note": "All Your Base meme in stamp subtitle. Terminal panel."
+    }
+  ]
+}

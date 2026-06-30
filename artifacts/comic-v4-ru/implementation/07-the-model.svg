@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="monitorGlow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="1000" height="700"/>
+  <ellipse cx="500" cy="320" rx="600" ry="280" fill="url(#monitorGlow4)"/>
+
+  <line x1="0" y1="580" x2="1000" y2="580" stroke="#1e293b" stroke-width="2"/>
+
+  <rect x="50" y="140" width="400" height="280" fill="#111827" stroke="#a855f7" stroke-width="3" rx="8"/>
+  <rect x="62" y="152" width="376" height="256" fill="#0d1117"/>
+  <rect x="62" y="152" width="376" height="256" fill="#a855f7" opacity="0.05"/>
+  <text x="74" y="180" font-size="20" fill="#94a3b8">---- MODULE Dialog ----</text>
+  <text x="74" y="208" font-size="20" fill="#a855f7">VARIABLES state,</text>
+  <text x="74" y="234" font-size="20" fill="#a855f7">  pendingResult</text>
+  <text x="74" y="266" font-size="20" fill="#cbd5e1">Init == /\ state = "closed"</text>
+  <text x="74" y="292" font-size="20" fill="#cbd5e1">        /\ pending = "none"</text>
+  <text x="74" y="324" font-size="20" fill="#22c55e" font-weight="bold">Confirm ==</text>
+  <text x="74" y="350" font-size="20" fill="#22c55e">  /\ state = "open"</text>
+  <text x="74" y="376" font-size="20" fill="#22c55e">  /\ state' = "confirming"</text>
+  <text x="74" y="404" font-size="20" fill="#ef4444">StateInvariant ==</text>
+  <text x="440" y="180" font-size="13" fill="#475569" font-style="italic">// пожалуйста, работай,</text>
+  <text x="440" y="198" font-size="13" fill="#475569" font-style="italic">// пожалуйста, работай</text>
+  <text x="440" y="222" font-size="13" fill="#475569" font-style="italic">// в крайнем случае:</text>
+  <text x="440" y="240" font-size="13" fill="#f97316" font-style="italic">// загуглить</text>
+  <text x="74" y="430" font-size="20" fill="#cbd5e1">====</text>
+  <rect x="40" y="418" width="420" height="10" fill="#1e293b" rx="2"/>
+
+  <rect x="550" y="140" width="400" height="280" fill="#111827" stroke="#22c55e" stroke-width="3" rx="8"/>
+  <rect x="562" y="152" width="376" height="256" fill="#0d1117"/>
+  <g>
+    <circle cx="620" cy="200" r="18" fill="#22c55e"/>
+    <text x="620" y="206" font-size="11" fill="#0d1117" text-anchor="middle" font-weight="bold">closed</text>
+    <circle cx="750" cy="200" r="18" fill="#22c55e"/>
+    <text x="750" y="206" font-size="11" fill="#0d1117" text-anchor="middle" font-weight="bold">open</text>
+    <circle cx="880" cy="200" r="18" fill="#22c55e"/>
+    <text x="880" y="206" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">conf</text>
+    <circle cx="750" cy="320" r="18" fill="#22c55e"/>
+    <text x="750" y="326" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">settle</text>
+    <circle cx="620" cy="320" r="18" fill="#22c55e"/>
+    <text x="620" y="326" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">cancel</text>
+
+    <line x1="638" y1="200" x2="732" y2="200" stroke="#22c55e" stroke-width="3"/>
+    <line x1="768" y1="200" x2="862" y2="200" stroke="#22c55e" stroke-width="3"/>
+    <line x1="750" y1="218" x2="750" y2="302" stroke="#22c55e" stroke-width="3"/>
+    <line x1="620" y1="218" x2="620" y2="302" stroke="#22c55e" stroke-width="3"/>
+    <line x1="732" y1="320" x2="638" y2="320" stroke="#22c55e" stroke-width="3"/>
+
+    <text x="685" y="240" font-size="11" fill="#22c55e" text-anchor="middle">Open</text>
+    <text x="815" y="240" font-size="11" fill="#22c55e" text-anchor="middle">Confirm</text>
+    <text x="775" y="280" font-size="11" fill="#22c55e">Resolve</text>
+    <text x="565" y="280" font-size="11" fill="#22c55e">Dismiss</text>
+    <text x="685" y="350" font-size="11" fill="#22c55e" text-anchor="middle">FinishClose</text>
+  </g>
+  <rect x="540" y="418" width="420" height="10" fill="#1e293b" rx="2"/>
+
+  <g transform="translate(470 470)" data-maya="present">
+    <ellipse cx="0" cy="120" rx="120" ry="22" fill="#0d1117" opacity="0.6"/>
+
+    <path d="M -65 50 L -65 100 L 65 100 L 65 50 Z" fill="#475569"/>
+    <path d="M -65 50 Q -70 30 -55 25 L 55 25 Q 70 30 65 50 Z" fill="#1e293b"/>
+    <path d="M -55 50 L -110 100" stroke="#c8a882" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-115" cy="105" rx="9" ry="11" fill="#c8a882"/>
+    <path d="M 55 50 L 110 100" stroke="#c8a882" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <ellipse cx="115" cy="105" rx="9" ry="11" fill="#c8a882"/>
+
+    <circle cx="0" cy="-15" r="26" fill="#c8a882"/>
+    <path d="M -26 -30 Q -26 -54 0 -58 Q 26 -54 26 -30 L 26 -15 L -26 -15 Z" fill="#1e1b1b"/>
+    <ellipse cx="-10" cy="-17" rx="3" ry="4" fill="#0d0807"/>
+    <ellipse cx="10" cy="-17" rx="3" ry="4" fill="#0d0807"/>
+    <ellipse cx="-12" cy="-19" rx="6" ry="2" fill="#c4b5fd" opacity="0.6"/>
+    <ellipse cx="8" cy="-19" rx="6" ry="2" fill="#c4b5fd" opacity="0.6"/>
+    <path d="M -12 -38 L -4 -36" stroke="#1e1b1b" stroke-width="2.5"/>
+    <path d="M 4 -36 L 12 -38" stroke="#1e1b1b" stroke-width="2.5"/>
+    <path d="M -9 0 Q 0 6 9 0" stroke="#1e1b1b" stroke-width="2" fill="none"/>
+  </g>
+
+  <g transform="translate(910 360)">
+    <path d="M -10 8 L 0 -10 L 10 8 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <text x="500" y="60" font-size="40" fill="#a855f7" text-anchor="middle" font-weight="bold">Модель</text>
+
+  <rect x="80" y="630" width="840" height="50" fill="#111827" stroke="#1e293b" stroke-width="2" rx="6" opacity="0.85"/>
+  <text x="500" y="660" font-size="20" fill="#cbd5e1" text-anchor="middle">Четверг. 47 строк TLA+. Состояния ясны. Баг невидим.</text>
+  <rect x="200" y="688" width="600" height="40" fill="#0d1117" stroke="#f59e0b" stroke-width="2" rx="4" opacity="0.85"/>
+  <text x="500" y="712" font-size="20" fill="#f59e0b" text-anchor="middle" font-style="italic">«Если state = 'confirming', пользователь не сможет кликнуть снова... да?»</text>
+</svg>

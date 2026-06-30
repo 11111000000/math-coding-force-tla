@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="sunGlow4" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mayaFaceGlow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="1000" height="700"/>
+
+  <rect x="50" y="60" width="340" height="240" fill="#111827" stroke="#1e293b" stroke-width="3" rx="6"/>
+  <ellipse cx="290" cy="160" rx="140" ry="100" fill="url(#sunGlow4)"/>
+  <circle cx="290" cy="160" r="40" fill="#f59e0b" opacity="0.75"/>
+  <g fill="#1e293b">
+    <rect x="74"  y="220" width="26" height="80"/>
+    <rect x="105" y="200" width="30" height="100"/>
+    <rect x="140" y="220" width="22" height="80"/>
+    <rect x="166" y="190" width="28" height="110"/>
+    <rect x="200" y="210" width="24" height="90"/>
+    <rect x="228" y="205" width="22" height="95"/>
+    <rect x="254" y="220" width="24" height="80"/>
+    <rect x="282" y="210" width="28" height="90"/>
+    <rect x="314" y="225" width="22" height="75"/>
+    <rect x="340" y="200" width="20" height="100"/>
+  </g>
+  <g fill="#475569" opacity="0.7">
+    <rect x="80" y="208" width="3" height="20"/>
+    <rect x="112" y="184" width="3" height="20"/>
+    <rect x="170" y="174" width="3" height="20"/>
+    <rect x="232" y="194" width="3" height="20"/>
+  </g>
+  <text x="220" y="288" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle" opacity="0.6">WWW</text>
+
+  <line x1="0" y1="580" x2="1000" y2="580" stroke="#1e293b" stroke-width="2"/>
+  <line x1="0" y1="586" x2="1000" y2="586" stroke="#0d1117" stroke-width="3"/>
+
+  <rect x="540" y="380" width="290" height="180" fill="#111827" stroke="#1e293b" stroke-width="3" rx="6"/>
+  <rect x="552" y="392" width="266" height="156" fill="#0d1117"/>
+  <text x="564" y="418" font-size="18" fill="#3b82f6">const onConfirm = async</text>
+  <text x="564" y="442" font-size="18" fill="#3b82f6">  () =&gt; {</text>
+  <text x="564" y="466" font-size="18" fill="#3b82f6">  setState('confirming');</text>
+  <text x="564" y="490" font-size="18" fill="#3b82f6">  await api.confirm();</text>
+  <text x="564" y="514" font-size="18" fill="#3b82f6">  setState('closing');</text>
+  <text x="564" y="538" font-size="18" fill="#3b82f6">};</text>
+  <ellipse cx="685" cy="350" rx="60" ry="30" fill="url(#mayaFaceGlow4)"/>
+
+  <g transform="translate(498 305)">
+    <rect x="-50" y="-30" width="100" height="60" fill="#f97316" stroke="#c2410c" stroke-width="2" rx="4"/>
+    <text x="0" y="6" font-size="22" font-weight="bold" fill="#fff" text-anchor="middle">[SO]</text>
+  </g>
+
+  <g data-maya="present">
+    <ellipse cx="465" cy="350" rx="70" ry="36" fill="url(#mayaFaceGlow4)"/>
+    <path d="M 425 220 Q 425 195 465 192 Q 505 195 505 220 L 505 240 L 425 240 Z" fill="#1e1b1b"/>
+    <circle cx="465" cy="305" r="44" fill="#c8a882"/>
+    <path d="M 425 270 Q 415 310 420 340 L 510 340 Q 515 310 505 270" fill="#1e1b1b" opacity="0"/>
+    <ellipse cx="452" cy="300" rx="4" ry="5" fill="#0d0807"/>
+    <ellipse cx="478" cy="300" rx="4" ry="5" fill="#0d0807"/>
+    <ellipse cx="450" cy="298" rx="7" ry="3" fill="#c4b5fd" opacity="0.5"/>
+    <ellipse cx="480" cy="298" rx="7" ry="3" fill="#c4b5fd" opacity="0.5"/>
+    <path d="M 445 287 L 456 290" stroke="#1e1b1b" stroke-width="3"/>
+    <path d="M 474 290 L 485 287" stroke="#1e1b1b" stroke-width="3"/>
+    <path d="M 450 322 Q 465 332 480 322 Q 472 330 465 331 Q 458 330 450 322" fill="#c4b5fd" opacity="0.4" stroke="#1e1b1b" stroke-width="2.5" fill="none"/>
+    <path d="M 425 340 Q 410 360 405 400 Q 405 460 425 500 L 505 500 Q 525 460 525 400 Q 520 360 505 340 Z" fill="#475569"/>
+    <path d="M 425 360 L 425 540 L 505 540 L 505 360 Z" fill="#475569" opacity="0.5"/>
+    <path d="M 415 360 Q 380 400 395 460" stroke="#94a3b8" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <ellipse cx="392" cy="475" rx="11" ry="14" fill="#c8a882"/>
+    <path d="M 388 460 Q 380 445 380 430" stroke="#94a3b8" stroke-width="14" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <rect x="555" y="450" width="32" height="48" fill="#1e293b" stroke="#3b82f6" stroke-width="2" rx="3"/>
+  <ellipse cx="571" cy="450" rx="16" ry="5" fill="#3b82f6" opacity="0.7"/>
+  <ellipse cx="571" cy="440" rx="11" ry="3" fill="#1e293b" opacity="0.5"/>
+
+  <rect x="540" y="558" width="290" height="10" fill="#1e293b" rx="2"/>
+
+  <text x="500" y="60" font-size="40" fill="#3b82f6" text-anchor="middle" font-weight="bold">Looks Right</text>
+
+  <g transform="translate(880 60)">
+    <circle r="36" fill="#1e293b" stroke="#475569" stroke-width="3"/>
+    <text y="-4" font-size="22" fill="#f59e0b" text-anchor="middle" font-weight="bold">4:47</text>
+    <text y="18" font-size="13" fill="#94a3b8" text-anchor="middle">PM FRIDAY</text>
+  </g>
+
+  <rect x="80" y="640" width="840" height="50" fill="#111827" stroke="#1e293b" stroke-width="2" rx="6" opacity="0.8"/>
+  <text x="500" y="664" font-size="20" fill="#cbd5e1" text-anchor="middle">Friday afternoon. 4:47 PM. Maya is about to ship a payment confirmation dialog.</text>
+  <rect x="200" y="688" width="600" height="40" fill="#0d1117" stroke="#f59e0b" stroke-width="2" rx="4" opacity="0.85"/>
+  <text x="500" y="712" font-size="20" fill="#f59e0b" text-anchor="middle" font-style="italic">"It compiles. Tests pass. Ship it."</text>
+</svg>

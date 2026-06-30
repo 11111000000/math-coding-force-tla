@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="serverGlow4" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="800" height="600"/>
+
+  <rect x="60" y="280" width="200" height="130" fill="#111827" stroke="#1e293b" stroke-width="3" rx="6"/>
+  <rect x="72" y="292" width="176" height="106" fill="#0d1117"/>
+  <text x="84" y="316" font-size="16" fill="#3b82f6">git push</text>
+  <text x="84" y="338" font-size="16" fill="#22c55e">→ origin main</text>
+  <text x="84" y="362" font-size="14" fill="#94a3b8"># деплоим...</text>
+  <text x="84" y="386" font-size="16" fill="#22c55e" font-weight="bold">✓ запушено</text>
+  <rect x="48" y="408" width="224" height="10" fill="#1e293b" rx="2"/>
+
+  <rect x="540" y="180" width="140" height="240" fill="#1e293b" stroke="#475569" stroke-width="3" rx="6"/>
+  <ellipse cx="610" cy="300" rx="130" ry="160" fill="url(#serverGlow4)"/>
+  <g fill="#22c55e">
+    <circle cx="558" cy="200" r="3"/>
+    <circle cx="558" cy="214" r="3"/>
+    <circle cx="558" cy="228" r="3"/>
+    <circle cx="558" cy="242" r="3"/>
+    <circle cx="558" cy="256" r="3"/>
+    <circle cx="558" cy="270" r="3"/>
+  </g>
+  <g fill="#22c55e">
+    <circle cx="662" cy="200" r="3"/>
+    <circle cx="662" cy="214" r="3"/>
+    <circle cx="662" cy="228" r="3"/>
+    <circle cx="662" cy="242" r="3"/>
+    <circle cx="662" cy="256" r="3"/>
+    <circle cx="662" cy="270" r="3"/>
+  </g>
+  <rect x="555" y="290" width="110" height="22" fill="#0d1117" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="610" y="306" font-size="14" fill="#22c55e" text-anchor="middle" font-weight="bold">PROD</text>
+  <rect x="555" y="320" width="110" height="22" fill="#0d1117" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="610" y="336" font-size="14" fill="#22c55e" text-anchor="middle">v2.1.0</text>
+  <rect x="555" y="350" width="110" height="22" fill="#0d1117" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="610" y="366" font-size="14" fill="#22c55e" text-anchor="middle">ЖИВ ✓</text>
+
+  <path d="M 270 340 Q 380 290 540 310" stroke="#3b82f6" stroke-width="3" fill="none" stroke-dasharray="6 4" opacity="0.7"/>
+  <path d="M 270 350 Q 380 320 540 330" stroke="#3b82f6" stroke-width="3" fill="none" stroke-dasharray="6 4" opacity="0.5"/>
+  <path d="M 270 360 Q 380 360 540 350" stroke="#22c55e" stroke-width="3" fill="none" stroke-dasharray="6 4" opacity="0.8"/>
+
+  <g data-maya="present">
+    <path d="M 175 280 Q 145 240 175 220 Q 220 215 245 230 Q 270 245 270 280 L 270 295 L 175 295 Z" fill="#1e1b1b"/>
+    <circle cx="222" cy="335" r="32" fill="#c8a882"/>
+    <ellipse cx="210" cy="330" rx="3" ry="4" fill="#0d0807"/>
+    <ellipse cx="234" cy="330" rx="3" ry="4" fill="#0d0807"/>
+    <ellipse cx="208" cy="328" rx="5" ry="2" fill="#c4b5fd" opacity="0.5"/>
+    <ellipse cx="236" cy="328" rx="5" ry="2" fill="#c4b5fd" opacity="0.5"/>
+    <path d="M 205 318 L 213 320" stroke="#1e1b1b" stroke-width="2"/>
+    <path d="M 231 320 L 239 318" stroke="#1e1b1b" stroke-width="2"/>
+    <path d="M 207 350 Q 222 372 237 350 Q 230 360 222 362 Q 214 360 207 350 Z" fill="#7f1d1d" stroke="#1e1b1b" stroke-width="2"/>
+    <path d="M 175 295 Q 155 320 155 380 L 165 470 L 280 470 L 290 380 Q 290 320 270 295 Z" fill="#475569"/>
+    <path d="M 290 350 Q 340 290 360 230" stroke="#c8a882" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <ellipse cx="365" cy="220" rx="14" ry="18" fill="#c8a882"/>
+    <path d="M 358 215 Q 372 195 386 188" stroke="#c8a882" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <ellipse cx="386" cy="180" rx="11" ry="7" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <ellipse cx="386" cy="178" rx="6" ry="3" fill="#3b82f6" opacity="0.7"/>
+    <text x="386" y="182" font-size="14" fill="#cbd5e1" text-anchor="middle" font-weight="bold">☕</text>
+    <path d="M 155 360 Q 110 410 115 470" stroke="#94a3b8" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <ellipse cx="110" cy="475" rx="11" ry="14" fill="#c8a882"/>
+  </g>
+
+  <g fill="#22c55e">
+    <circle cx="320" cy="100" r="3"/>
+    <circle cx="380" cy="80" r="2.5"/>
+    <circle cx="420" cy="110" r="3"/>
+    <circle cx="450" cy="70" r="2.5"/>
+    <circle cx="490" cy="100" r="3"/>
+  </g>
+  <g fill="#ef4444" opacity="0.55">
+    <circle cx="350" cy="140" r="3"/>
+    <circle cx="430" cy="160" r="3"/>
+    <circle cx="395" cy="180" r="2.5"/>
+  </g>
+
+  <text x="400" y="50" font-size="32" fill="#3b82f6" text-anchor="middle" font-weight="bold">Деплой!</text>
+
+  <g transform="translate(720 80)">
+    <circle r="36" fill="#1e293b" stroke="#475569" stroke-width="3"/>
+    <line x1="0" y1="0" x2="0" y2="-20" stroke="#f59e0b" stroke-width="3"/>
+    <line x1="0" y1="0" x2="14" y2="10" stroke="#f59e0b" stroke-width="3"/>
+    <text y="55" font-size="13" fill="#94a3b8" text-anchor="middle">17:00</text>
+  </g>
+
+  <g transform="translate(740 50)">
+    <circle r="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text y="4" font-size="14" fill="#f59e0b" text-anchor="middle" font-weight="bold">i</text>
+  </g>
+
+  <rect x="60" y="510" width="680" height="40" fill="#111827" stroke="#1e293b" stroke-width="2" rx="6" opacity="0.85"/>
+  <text x="400" y="535" font-size="18" fill="#cbd5e1" text-anchor="middle">17:00. Деплой завершён. Maya уходит на выходные.</text>
+  <rect x="100" y="555" width="600" height="40" fill="#0d1117" stroke="#f59e0b" stroke-width="2" rx="4" opacity="0.85"/>
+  <text x="400" y="580" font-size="18" fill="#f59e0b" text-anchor="middle" font-style="italic">"Залито в прод. До понедельника!"</text>
+</svg>

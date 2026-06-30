@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <defs>
+    <radialGradient id="alarmGlow4" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect fill="#0d1117" width="1200" height="900"/>
+  <ellipse cx="600" cy="450" rx="900" ry="350" fill="url(#alarmGlow4)"/>
+
+  <g font-size="20" fill="#ef4444">
+    <rect x="50" y="50" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="70" y="80" font-weight="bold" font-size="22">⚠ СПИСАЛИ ДВАЖДЫ!</text>
+    <text x="70" y="106" font-size="14" fill="#fca5a5">user_2841 — 9 min ago</text>
+
+    <rect x="50" y="138" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="70" y="168" font-weight="bold" font-size="22">⚠ ГДЕ МОЙ ВОЗВРАТ?</text>
+    <text x="70" y="194" font-size="14" fill="#fca5a5">user_2839 — 12 min ago</text>
+
+    <rect x="50" y="226" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="70" y="256" font-weight="bold" font-size="20">⚠ УХОЖУ В ДРУГОЙ БАНК</text>
+    <text x="70" y="282" font-size="14" fill="#fca5a5">user_2837 — 18 min ago</text>
+
+    <rect x="430" y="50" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="450" y="80" font-weight="bold" font-size="22">⚠ ДВОЙНАЯ ОПЛАТА!!!</text>
+    <text x="450" y="106" font-size="14" fill="#fca5a5">user_2834 — 22 min ago</text>
+
+    <rect x="430" y="138" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="450" y="168" font-weight="bold" font-size="22">⚠ МОШЕННИЧЕСТВО</text>
+    <text x="450" y="194" font-size="14" fill="#fca5a5">user_2831 — 27 min ago</text>
+
+    <rect x="430" y="226" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="450" y="256" font-weight="bold" font-size="22">⚠ ОТКРЫТ СПОР</text>
+    <text x="450" y="282" font-size="14" fill="#fca5a5">user_2828 — 31 min ago</text>
+
+    <rect x="810" y="50" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="830" y="80" font-weight="bold" font-size="22">⚠ ЖАЛОБ: 847</text>
+    <text x="830" y="106" font-size="14" fill="#fca5a5">last 48 hours</text>
+
+    <rect x="810" y="138" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="830" y="168" font-weight="bold" font-size="22">⚠ ОТТОК: +340%</text>
+    <text x="830" y="194" font-size="14" fill="#fca5a5">last 48 hours</text>
+
+    <rect x="810" y="226" width="340" height="76" fill="#1a0808" stroke="#ef4444" stroke-width="2" rx="6"/>
+    <text x="830" y="256" font-weight="bold" font-size="22">⚠ ЗВОНОК ОТ CEO</text>
+    <text x="830" y="282" font-size="14" fill="#fca5a5">right now</text>
+  </g>
+
+  <text x="600" y="370" font-size="36" fill="#ef4444" text-anchor="middle" font-weight="bold">847 пользователей. Списали дважды. За выходные.</text>
+
+  <rect x="80" y="400" width="1040" height="170" fill="#111827" stroke="#ef4444" stroke-width="3" rx="8"/>
+  <text x="100" y="430" font-size="18" fill="#94a3b8">СХЕМА ПЛАТЕЖА</text>
+  <line x1="160" y1="490" x2="430" y2="490" stroke="#22c55e" stroke-width="3"/>
+  <text x="295" y="475" font-size="16" fill="#cbd5e1" text-anchor="middle">клик</text>
+  <text x="295" y="525" font-size="14" fill="#cbd5e1" text-anchor="middle">пользователь жмёт «ОК»</text>
+  <line x1="430" y1="490" x2="780" y2="490" stroke="#22c55e" stroke-width="3"/>
+  <text x="605" y="475" font-size="16" fill="#cbd5e1" text-anchor="middle">async-запрос</text>
+  <text x="605" y="525" font-size="14" fill="#cbd5e1" text-anchor="middle">api.confirm() — гонка?</text>
+  <line x1="780" y1="490" x2="1060" y2="490" stroke="#22c55e" stroke-width="3"/>
+  <text x="920" y="475" font-size="16" fill="#cbd5e1" text-anchor="middle">закрытие</text>
+  <text x="920" y="525" font-size="14" fill="#cbd5e1" text-anchor="middle">state = closing</text>
+  <circle cx="240" cy="490" r="16" fill="#22c55e" opacity="0.4"/>
+  <circle cx="605" cy="490" r="16" fill="#22c55e" opacity="0.4"/>
+  <circle cx="970" cy="490" r="16" fill="#22c55e" opacity="0.4"/>
+
+  <g transform="translate(605 490)">
+    <path d="M -32 18 L 0 -36 L 32 18 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="-12" cy="-6" r="4" fill="#0d1117"/>
+    <circle cx="12" cy="-6" r="4" fill="#0d1117"/>
+    <path d="M -8 8 L 8 8" stroke="#0d1117" stroke-width="3"/>
+    <path d="M -6 8 L 0 22 L 6 8" fill="#0d1117"/>
+  </g>
+  <text x="605" y="552" font-size="16" fill="#ef4444" text-anchor="middle" font-weight="bold">БАГ: состояние гонки</text>
+
+  <g transform="translate(880 700)">
+    <g transform="rotate(-8 -110 -30)">
+      <rect x="-220" y="-90" width="180" height="120" fill="#0d1117" stroke="#1e293b" stroke-width="2" rx="4"/>
+      <text x="-130" y="-65" font-size="11" fill="#ef4444" text-anchor="middle">ОШИБКА 500</text>
+      <text x="-130" y="-50" font-size="11" fill="#ef4444" text-anchor="middle">payment-failed</text>
+      <text x="-130" y="-35" font-size="10" fill="#94a3b8" text-anchor="middle">в handler.ts:47</text>
+    </g>
+    <g transform="rotate(-3 -130 10)">
+      <rect x="-220" y="-50" width="180" height="120" fill="#0d1117" stroke="#1e293b" stroke-width="2" rx="4"/>
+      <text x="-130" y="-25" font-size="11" fill="#94a3b8" text-anchor="middle">логи --tail -f</text>
+      <text x="-130" y="-10" font-size="10" fill="#ef4444" text-anchor="middle">404: не найдено</text>
+    </g>
+  </g>
+
+  <g transform="translate(880 700)" data-maya="present">
+    <ellipse cx="0" cy="160" rx="180" ry="20" fill="#0d1117" opacity="0.6"/>
+
+    <path d="M -40 -130 Q -65 -180 -10 -200 Q 50 -198 52 -150 Q 75 -120 50 -85 Q 42 -90 38 -85 Q 32 -90 26 -85 Q 20 -90 14 -85 Q 8 -90 2 -85 Q -4 -90 -10 -85 Q -22 -88 -40 -130 Z" fill="#1e1b1b"/>
+    <path d="M -10 -85 L -10 -45" stroke="#475569" stroke-width="3"/>
+    <path d="M 10 -85 L 10 -45" stroke="#475569" stroke-width="3"/>
+    <path d="M -42 -120 Q -65 -55 -38 -10 L 38 -10 Q 65 -55 52 -120 Z" fill="#475569"/>
+    <path d="M -42 -120 Q -60 -75 -55 -20" stroke="#475569" stroke-width="4" fill="none"/>
+    <path d="M 52 -120 Q 70 -75 65 -20" stroke="#475569" stroke-width="4" fill="none"/>
+    <rect x="-40" y="-10" width="80" height="40" fill="#475569"/>
+
+    <circle cx="0" cy="-60" r="48" fill="#c8a882"/>
+    <path d="M -45 -68 Q -45 -110 0 -115 Q 45 -110 45 -68 L 45 -55 L -45 -55 Z" fill="#1e1b1b"/>
+    <circle cx="-16" cy="-58" r="5" fill="#0d1117"/>
+    <circle cx="16" cy="-58" r="5" fill="#0d1117"/>
+    <ellipse cx="-19" cy="-55" rx="8" ry="3" fill="#fef3c7" opacity="0.6"/>
+    <ellipse cx="19" cy="-55" rx="8" ry="3" fill="#fef3c7" opacity="0.6"/>
+    <path d="M -19 -76 L -10 -72" stroke="#1e1b1b" stroke-width="3"/>
+    <path d="M 10 -72 L 19 -76" stroke="#1e1b1b" stroke-width="3"/>
+    <ellipse cx="0" cy="-30" rx="10" ry="6" fill="#0d1117"/>
+    <ellipse cx="0" cy="-32" rx="6" ry="4" fill="#7f1d1d"/>
+    <ellipse cx="-6" cy="-22" rx="3" ry="2" fill="#7f1d1d" opacity="0.5"/>
+
+    <path d="M -55 -120 Q -85 -160 -90 -200" stroke="#c8a882" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-92" cy="-205" rx="13" ry="16" fill="#c8a882"/>
+    <path d="M 55 -120 Q 85 -160 90 -200" stroke="#c8a882" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <ellipse cx="92" cy="-205" rx="13" ry="16" fill="#c8a882"/>
+  </g>
+
+  <rect x="100" y="830" width="1000" height="50" fill="#0d1117" stroke="#ef4444" stroke-width="2" rx="6" opacity="0.85"/>
+  <text x="600" y="862" font-size="20" fill="#ef4444" text-anchor="middle" font-style="italic">"Как?! Тесты прошли. Ревью чистое. ОТКУДА это взялось?!"</text>
+</svg>

@@ -1,0 +1,39 @@
+task_id: comic-v4-en
+assumptions:
+  - id: A1
+    statement: Comic v4 is the production narrative version, distinct
+      from v3 which is the verified aesthetic baseline.
+    status: user-confirmed
+    note: v3 stays as the methodology's L4 mitigation artifact; v4 is
+      the version that ships to a wider audience with humor and accessibility.
+  - id: A2
+    statement: Panel dimensions scale up from v3: 800-1200 wide instead of
+      600-1000. Climax panels get 1200x900, narrative 1000x700, pacing 800x600.
+    status: user-confirmed
+  - id: A3
+    statement: Minimum text size 18px for body, 22-28px for titles,
+      14-18px monospace for code inside scene.
+    status: agent-inferred
+  - id: A4
+    statement: IT humor lives as layer-2 easter eggs — visible on re-read,
+      not on first scan. Cap at 2-3 per panel. Never in panels 4 (panic)
+      or 5 (alone) where reader_state = UNCERTAIN.
+    status: agent-inferred
+    note: ReaderMomentInvariant in Model.tla enforces where humor lands.
+  - id: A5
+    statement: locale dimension tracks the read's language ("en" or "ru").
+      Fixed for the entire read per LocaleFixedInvariant.
+    status: agent-inferred
+  - id: A6
+    statement: v3 stays as verified aesthetic baseline; v4 inherits its
+      Aesthetic Invariants methodology and extends it with humor and
+      readability constraints.
+    status: agent-inferred
+  - id: A7
+    statement: v4-ru is a localization, not a re-design. Same model,
+      same panels layout, only text labels change.
+    status: user-confirmed
+  - id: A8
+    statement: State machine (7 cognitive states + emotional_beat +
+      reader_state) is identical across v4-en and v4-ru.
+    status: agent-inferred

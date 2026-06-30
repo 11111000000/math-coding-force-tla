@@ -65,6 +65,7 @@ nav:
   - Home: Index.md
   - Comic:
     - The Math of Trust: 00-Meta/Comic.md
+    - Математика доверия (RU): 00-Meta/Comic.ru.md
     - The Math of Trust (v1): 00-Meta/Comic_v1.md
   - Meta:
     - Manifesto: 00-Meta/Manifesto.md

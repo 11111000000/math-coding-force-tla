@@ -31,9 +31,11 @@ jobs:
           mkdir -p MathCodingBase/assets/comic-panels/v1
           mkdir -p MathCodingBase/assets/comic-panels/v2
           mkdir -p MathCodingBase/assets/comic-panels/v3
+          mkdir -p MathCodingBase/assets/comic-panels/v4
           cp -r comic/panels/*.svg MathCodingBase/assets/comic-panels/v1/
           cp -r artifacts/comic-v2/implementation/*.svg MathCodingBase/assets/comic-panels/v2/
           cp -r artifacts/comic-v3/implementation/*.svg MathCodingBase/assets/comic-panels/v3/
+          cp -r artifacts/comic-v4-en/implementation/*.svg MathCodingBase/assets/comic-panels/v4/
 
       - name: Build docs
         run: mkdocs build --strict

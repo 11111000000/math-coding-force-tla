@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <rect fill="#0d1117" width="1000" height="700"/>
+
+  <line x1="0" y1="580" x2="1000" y2="580" stroke="#1e293b" stroke-width="2"/>
+
+  <rect x="50" y="140" width="400" height="280" fill="#111827" stroke="#22c55e" stroke-width="3" rx="8"/>
+  <rect x="62" y="152" width="376" height="256" fill="#0d1117"/>
+  <text x="74" y="180" font-size="18" fill="#94a3b8">// Verified model → Code</text>
+  <text x="74" y="208" font-size="20" fill="#22c55e" font-weight="bold">type DialogState =</text>
+  <text x="74" y="234" font-size="20" fill="#22c55e">  | "closed" | "opening"</text>
+  <text x="74" y="260" font-size="20" fill="#22c55e">  | "open" | "confirming"</text>
+  <text x="74" y="286" font-size="20" fill="#22c55e">  | "canceling" | "closing"</text>
+  <text x="74" y="312" font-size="20" fill="#22c55e">  | "error";</text>
+  <text x="74" y="344" font-size="20" fill="#cbd5e1">function reduce(s, a) {</text>
+  <text x="74" y="370" font-size="20" fill="#cbd5e1">  switch (a.type) {</text>
+  <text x="74" y="396" font-size="20" fill="#22c55e">    case "OPEN":</text>
+  <text x="74" y="420" font-size="20" fill="#ef4444">      // StateInvariant</text>
+  <text x="74" y="440" font-size="20" fill="#ef4444">      // enforced: no</text>
+  <text x="74" y="460" font-size="20" fill="#ef4444">      // closed→confirming</text>
+  <text x="74" y="486" font-size="20" fill="#22c55e">  }</text>
+  <rect x="40" y="418" width="420" height="10" fill="#1e293b" rx="2"/>
+
+  <rect x="550" y="140" width="400" height="280" fill="#111827" stroke="#22c55e" stroke-width="3" rx="8"/>
+  <rect x="562" y="152" width="376" height="256" fill="#0d1117"/>
+  <g>
+    <circle cx="620" cy="200" r="18" fill="#22c55e"/>
+    <text x="620" y="206" font-size="11" fill="#0d1117" text-anchor="middle" font-weight="bold">closed</text>
+    <circle cx="750" cy="200" r="18" fill="#22c55e"/>
+    <text x="750" y="206" font-size="11" fill="#0d1117" text-anchor="middle" font-weight="bold">open</text>
+    <circle cx="880" cy="200" r="18" fill="#22c55e"/>
+    <text x="880" y="206" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">conf</text>
+    <circle cx="750" cy="320" r="18" fill="#22c55e"/>
+    <text x="750" y="326" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">settle</text>
+    <circle cx="620" cy="320" r="18" fill="#22c55e"/>
+    <text x="620" y="326" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">cancel</text>
+
+    <line x1="638" y1="200" x2="732" y2="200" stroke="#22c55e" stroke-width="3"/>
+    <line x1="768" y1="200" x2="862" y2="200" stroke="#22c55e" stroke-width="3"/>
+    <line x1="750" y1="218" x2="750" y2="302" stroke="#22c55e" stroke-width="3"/>
+    <line x1="620" y1="218" x2="620" y2="302" stroke="#22c55e" stroke-width="3"/>
+    <line x1="732" y1="320" x2="638" y2="320" stroke="#22c55e" stroke-width="3"/>
+  </g>
+  <line x1="620" y1="200" x2="880" y2="200" stroke="#ef4444" stroke-width="3" stroke-dasharray="6 3" opacity="0.7"/>
+  <text x="745" y="386" font-size="13" fill="#ef4444" text-anchor="middle" font-style="italic">closed→confirming path blocked</text>
+  <rect x="540" y="418" width="420" height="10" fill="#1e293b" rx="2"/>
+
+  <g transform="translate(220 510)" data-maya="present">
+    <ellipse cx="0" cy="100" rx="100" ry="20" fill="#0d1117" opacity="0.6"/>
+
+    <path d="M -36 30 L -36 90 L 36 90 L 36 30 Z" fill="#475569"/>
+    <path d="M -36 30 Q -42 10 -28 5 L 28 5 Q 42 10 36 30 Z" fill="#1e293b"/>
+    <path d="M 36 0 L 130 -40" stroke="#c8a882" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <ellipse cx="135" cy="-42" rx="9" ry="7" fill="#c8a882"/>
+    <path d="M -36 30 L -60 90" stroke="#c8a882" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+    <circle cx="0" cy="-15" r="26" fill="#c8a882"/>
+    <path d="M -26 -30 Q -26 -52 0 -56 Q 26 -52 26 -30 L 26 -15 L -26 -15 Z" fill="#1e1b1b"/>
+    <ellipse cx="-9" cy="-15" rx="3" ry="4" fill="#0d0807"/>
+    <ellipse cx="9" cy="-15" rx="3" ry="4" fill="#0d0807"/>
+    <ellipse cx="-11" cy="-17" rx="6" ry="2" fill="#86efac" opacity="0.7"/>
+    <ellipse cx="7" cy="-17" rx="6" ry="2" fill="#86efac" opacity="0.7"/>
+    <path d="M -10 -34 L -4 -32" stroke="#1e1b1b" stroke-width="2.5"/>
+    <path d="M 4 -32 L 10 -34" stroke="#1e1b1b" stroke-width="2.5"/>
+    <path d="M -7 0 Q 0 6 7 0" stroke="#1e1b1b" stroke-width="2" fill="none"/>
+  </g>
+
+  <g transform="translate(680 530)">
+    <rect x="-50" y="-30" width="100" height="60" fill="#1a0808" stroke="#ef4444" stroke-width="3" rx="6"/>
+    <text y="-2" font-size="14" fill="#ef4444" text-anchor="middle" font-weight="bold">FIXED</text>
+    <text y="18" font-size="11" fill="#ef4444" text-anchor="middle">IN MODEL</text>
+    <path d="M -30 22 L 0 -16 L 30 22 Z" fill="#ef4444" opacity="0.7" stroke="#7f1d1d" stroke-width="1"/>
+    <circle cx="-6" cy="4" r="2" fill="#0d1117"/>
+    <circle cx="6" cy="4" r="2" fill="#0d1117"/>
+  </g>
+
+  <g transform="translate(880 560)">
+    <circle r="28" fill="#22c55e"/>
+    <path d="M -12 0 L -2 10 L 12 -10" stroke="#0d1117" stroke-width="4" fill="none"/>
+    <text y="48" font-size="13" fill="#22c55e" text-anchor="middle" font-weight="bold">VERIFIED</text>
+  </g>
+
+  <text x="500" y="60" font-size="40" fill="#22c55e" text-anchor="middle" font-weight="bold">Fix First, Then Code</text>
+
+  <rect x="80" y="630" width="840" height="50" fill="#111827" stroke="#1e293b" stroke-width="2" rx="6" opacity="0.85"/>
+  <text x="500" y="660" font-size="20" fill="#cbd5e1" text-anchor="middle">The fix happens in the model first. Then the code follows the model.</text>
+  <rect x="200" y="688" width="600" height="40" fill="#0d1117" stroke="#f59e0b" stroke-width="2" rx="4" opacity="0.85"/>
+  <text x="500" y="712" font-size="20" fill="#f59e0b" text-anchor="middle" font-style="italic">"If the model is right, and the code matches the model, then the code is right."</text>
+</svg>

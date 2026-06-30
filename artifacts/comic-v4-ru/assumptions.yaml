@@ -1,0 +1,32 @@
+task_id: comic-v4-ru
+assumptions:
+  - id: A1
+    statement: Russian edition of v4. Same TLA+ model, same panel
+      layout, only text labels translated.
+    status: user-confirmed
+  - id: A2
+    statement: Cyrillic requires larger minimum text size (20px vs 18px
+      latin) for visual parity.
+    status: agent-inferred
+    note: Documented in refinement.md#readability.
+  - id: A3
+    statement: Code samples inside panels (TypeScript, TLA+, shell) stay
+      in English — developers read code in English regardless of locale.
+    status: agent-inferred
+  - id: A4
+    statement: locale = "ru" invariant for the duration of the read.
+      Locale is set at Init and never changes.
+    status: agent-inferred
+  - id: A5
+    statement: Russian "ёлочки" («») used instead of " " for dialog quotes.
+    status: agent-inferred
+  - id: A6
+    statement: VERIFIED stamp text stays in English as the symbol of the
+      method, even in Russian version. SANK + TLC also English.
+    status: agent-inferred
+    note: VERIFIED is a brand/method artifact, not a Russian word.
+  - id: A7
+    statement: Word counts in captions increase ~30% when translated
+      to Russian (Russian tends to be longer). Captions stay one line;
+      verbosity compressed where possible.
+    status: agent-inferred

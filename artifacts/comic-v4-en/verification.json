@@ -1,0 +1,59 @@
+{
+  "module": "Model",
+  "verdict": "VERIFIED",
+  "l1_gate": {
+    "precondition": "FOUND",
+    "postcondition": "FOUND",
+    "invariant": "FOUND",
+    "result": "PASS"
+  },
+  "sany": {
+    "command": "java -cp $TLA2TOOLS_JAR tla2sany.SANY /home/za/Desktop/MathCodingFractal/artifacts/comic-v4-en/Model.tla",
+    "exit_code": 0,
+    "result": "PASS",
+    "stderr": ""
+  },
+  "tlc": {
+    "tool": "TLC",
+    "result": "NO_ERRORS",
+    "details": "Model checking completed. No error has been found. | 17 states generated, 13 distinct states found, 0 states left on queue."
+  },
+  "tlaps": {
+    "tool": "TLAPS",
+    "result": "UNATTEMPTED",
+    "theorems_attempted": 0,
+    "theorems_proved": 0
+  },
+  "validator": {
+    "panel_check": "PASS",
+    "panels_validated": 11,
+    "command": "./implementation/validate-panels.sh",
+    "output": "All 11 panels pass dimensions (800/1000/1200 wide), palette discipline, Maya presence, and SVG tag balance."
+  },
+  "human_review": {
+    "scope": "Visual quality of comic panels (UNVERIFIABLE:OUT_OF_SCOPE - mechanical verification cannot speak to expressive quality)",
+    "required": true,
+    "by": "za (project owner)",
+    "process": "For each of the 11 panels, the reviewer confirms: (a) emotional_beat visible in Maya's face/posture, (b) background carries meaning, (c) continuity with previous panel, (d) text sizes ≥ 18px, (e) IT humor lands in CHUCKLED panels only (1, 2, 3, 6, 7, 11) and not in UNCERTAIN panels (4, 5).",
+    "trigger": "before-merge to main; before-release as primary narrative",
+    "re_verification": "If a panel is reworked, run bin/verify and validate-panels.sh, then this human_review trigger fires for the affected panel only.",
+    "checklist": [
+      "panel 01 (1000x700): Maya confident, SO logo sticker, 'it compiles' comment",
+      "panel 02 (800x600): Maya triumphant, red x in confetti premonition, clock tooltip",
+      "panel 03 (800x600): three users, 'works on my machine' joke",
+      "panel 04 (1200x900 CLIMAX): Maya panicked face LARGE, multiple tabs, bug at intersection",
+      "panel 05 (1000x700): Maya alone, lamp, red glow, empty chair",
+      "panel 06 (1000x700): Mentor + tablet, I ♡ TLA+ easter egg",
+      "panel 07 (1000x700): Maya focused, 'please work' comments, 'try Stack Overflow'",
+      "panel 08 (1200x900 CLIMAX): TLC beam, bug in spotlight, '0 regrets' easter",
+      "panel 09 (1000x700): Maya pointing at verified diagram, bug in box",
+      "panel 10 (1000x700): panoramic, 'yes, really' italic, dual-verified badges",
+      "panel 11 (800x600): VERIFIED stamp rotated, 'all your tests are belong to us'"
+    ],
+    "signature": {
+      "reviewer": "",
+      "date": "",
+      "notes": ""
+    }
+  }
+}
